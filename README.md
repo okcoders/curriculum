@@ -22,7 +22,7 @@ We love other technologies, but we have found this stack (a selection of differe
 
 ## Other Resources:
 
-- [Slack]
-- [Email]
-- [Linkedin]
-- [Website]
+- [Slack](okcokcoders.slack.com)
+- [Email](okcoders@gmail.com)
+- [Linkedin](https://www.linkedin.com/company/okcoders/)
+- [Website](okcoders.com)
