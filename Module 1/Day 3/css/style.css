@@ -1,0 +1,50 @@
+/* 
+    Ids: Highest Priority
+    Classes: Next
+    Elements: After Classes
+
+*/
+* {
+    box-sizing: border-box;
+}
+
+#id_name {
+    color: red;
+}
+
+.class_name {
+    color: pink;
+    font-size: 50px;
+}
+
+.class2 {
+    text-align: center;
+}
+
+h2 {
+    color: purple;
+}
+
+h1, p, h2, h3, h4 {
+    color: blue;
+}
+
+.box {
+   width: 200px;
+   height: 200px;
+   background-color: grey;
+   border: solid;
+   border-width: 10px;
+   padding: 20px;
+   /* margin: 30px; */
+   /* margin-top: 50px;
+   margin-bottom: 50px; */
+   /* box-sizing: border-box; */
+}
+
+
+[name=box1] {
+    color: purple
+}
+
+
