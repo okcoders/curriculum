@@ -1,0 +1,67 @@
+.header-img {
+    background-image: url(../img/macbook.jpg);
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-txt {
+    background-color: white;
+    width: 33%;
+    padding: 20px 40px;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    /* text-transform: uppercase; */
+}
+
+.btn {
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    box-shadow: 10px 20px 25px black;
+}
+
+.mr {
+    margin-right: 30px;
+}
+
+.mb {
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    background-color: navy;
+}
+
+.container {
+    height: 60px;
+    width: 100%;
+}
+
+.green {
+    background-color: green;
+}
+
+/* Max-width: biggest break point to smallest */
+@media (max-width: 1200px) {
+    .green {
+        background-color: red;
+    }
+}
+
+@media (max-width: 800px) {
+    .green {
+        background-color: blue;
+    }
+}
+
+@media (max-width: 600px) {
+    .green {
+        background-color: yellow;
+    }
+}
