@@ -1,0 +1,11 @@
+:root {
+    /* Colors */
+    --light-blue: #edf6f9;
+    --olive-green: #475f44;
+    --white: #ffffff;
+
+
+    /* Fonts */
+    --header-font: 'Montserrat', sans-serif;
+    --paragraph-font: 'Lora', serif;
+}
