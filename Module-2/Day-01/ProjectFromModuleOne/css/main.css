@@ -1,0 +1,49 @@
+/* Header Section */
+.header-bg {
+    background-image: url(../img/home_office.jpg);
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* About Section */
+
+.about-img {
+    max-height: 400px;
+}
+
+/* Skills Section */
+.section_skills {
+    background-color: var(--light-blue);
+}
+
+/* Projects Section */
+.project-img {
+    height: 400px;
+}
+
+.project-img:hover {
+    transform: scale(1.2);
+    transition: ease-in-out;
+    transition-duration: 1.2s;
+}
+
+.project-img-container {
+    overflow: hidden;
+}
+
+/* Contact Section */
+.section_contact {
+    background-color: var(--light-blue);
+}
+
+/* Buttons Section */
+.btn-green {
+    color: var(--olive-green);
+    border: solid var(--olive-green);
+}
+
+.btn-green:hover {
+    background-color: var(--olive-green);
+    border: solid var(--olive-green);
+}

@@ -1,0 +1,39 @@
+/* Headers */
+.header-1 {
+    font-family: var(--header-font);
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.header-2 {
+    font-family: var(--header-font);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.header-3 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+/* Paragraphs/Subheadings */
+.paragraph-1 {
+    font-family: var(--paragraph-font);
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.paragraph-2 {
+    font-family: var(--paragraph-font);
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.paragraph-3 {
+    font-family: var(--paragraph-font);
+    font-size: .9rem;
+    font-weight: 200;
+}
