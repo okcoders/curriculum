@@ -5,7 +5,7 @@
 - more on arrays next class
 
 # Exercise 
-- Better prompting word blanks, remove bad words
+- Better prompting word blanks (with button to start), remove bad words
 
 # Homework
 
