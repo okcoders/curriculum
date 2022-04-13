@@ -12,4 +12,4 @@ What are functions good for?
 
 # exercise
 
-- license string padding
+- license string padding function
