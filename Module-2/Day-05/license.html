@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>License</title>
+</head>
+
+<body>
+    <h1>Renew Your License</h1>
+</body>
+
+<script defer>
+    const name = window.prompt("What is your name?")
+    const age = window.prompt("What is your age?")
+    const address = window.prompt("What is your address?")
+
+    function makeLicenseLine(header, headerValue, lineWidth) {
+        const headerWidth = header.length
+        const headerValueWidth = headerValue.length
+        const spacesLeft = lineWidth - headerWidth - headerValueWidth - 5
+        return `| ${header}: ${headerValue}${" ".repeat(spacesLeft)}|`
+    }
+
+    console.log("==============================")
+    console.log(makeLicenseLine("name", name, 30))
+    console.log(makeLicenseLine("age", age, 30))
+    console.log(makeLicenseLine("address", address, 30))
+    console.log('==============================')
+</script>
+
+</html>
