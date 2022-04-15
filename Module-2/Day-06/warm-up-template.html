@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Warm-up</title>
+</head>
+
+<body>
+
+    <label>Name: </label>
+    <input id="name" type="text">
+    <button id="submit">submit</button>
+
+    <script>
+        const nameInput = document.getElementById("name")
+        const submitButton = document.getElementById("submit")
+
+        function onSubmit() {
+            console.log(nameInput.value)
+            console.log("submitted")
+        }
+
+        submitButton.addEventListener("click", onSubmit)
+
+    </script>
+</body>
+
+</html>
