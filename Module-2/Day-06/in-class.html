@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>In Class</title>
+</head>
+
+<body>
+    <script>
+        const firstBoolean = true
+        const secondBoolean = false
+        console.log(firstBoolean)
+        console.log(secondBoolean)
+        console.log(!firstBoolean)
+        console.log(firstBoolean === secondBoolean)
+
+        console.log("Zach" === "Mays")
+        console.log(1 > 2)
+        console.log(1 >= 1)
+        console.log("Zach" != "Zach")
+        const shoppingCart = []
+
+        function updatePageIfCartEmpty() {
+            const isEmpty = shoppingCart.length === 0
+            // const isEmpty = shoppingCart.length < 1
+
+            if (isEmpty) {
+                console.log("cart is empty")
+            } else if (shoppingCart.length >= 5) {
+                console.log("discount")
+            } else if (shoppingCart.length === 4 || shoppingCart.length === 3) {
+                console.log("just buy a few more things!")
+            } else {
+                console.log("not empty but less than 4")
+            }
+        }
+
+        shoppingCart.push("almond milk")
+        shoppingCart.push("oat milk")
+        shoppingCart.push("tofu")
+
+        updatePageIfCartEmpty()
+    </script>
+</body>
+
+</html>

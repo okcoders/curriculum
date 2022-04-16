@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Warm-up</title>
+</head>
+
+<body>
+
+    <form>
+        <label>Name: </label>
+        <input id="name" type="text">
+        <button id="submit">submit</button>
+    </form>
+
+    <script>
+        const nameInput = document.getElementById("name")
+        const submitButton = document.getElementById("submit")
+
+        function onSubmit(event) {
+            event.preventDefault()
+            const newMessage = showInputLength(nameInput.value)
+            nameInput.value = ""
+            console.log(newMessage)
+        }
+
+        function showInputLength(input) {
+            const length = input.length
+            return `Here is what you passed in: ${input}, the length of it is ${length}`
+        }
+
+        submitButton.addEventListener("click", onSubmit)
+
+    </script>
+</body>
+
+</html>

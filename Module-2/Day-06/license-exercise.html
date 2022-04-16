@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>License</title>
+</head>
+
+<body>
+    <h1>Renew Your License</h1>
+</body>
+
+<script defer>
+    const name = window.prompt("What is your name?")
+    const age = window.prompt("What is your age?")
+    const address = window.prompt("What is your address?")
+
+    function makeLicenseLine(header, headerValue, lineWidth) {
+        const headerWidth = header.length
+        const headerValueWidth = headerValue.length
+        const spacesLeft = lineWidth - headerWidth - headerValueWidth - 5
+        return `| ${header}: ${headerValue}${" ".repeat(spacesLeft)}|`
+    }
+
+    function printLicense() {
+        console.log("==============================")
+        console.log(makeLicenseLine("name", name, 30))
+        console.log(makeLicenseLine("age", age, 30))
+        console.log(makeLicenseLine("address", address, 30))
+        console.log('==============================')
+    }
+
+    function validateInputs() {
+        const maxNameInputCharacters = 10
+        const maxAge = 110
+        const minAge = 16
+        const parsedAge = parseInt(age)
+        if (name.length > maxNameInputCharacters) {
+            console.log(`Sorry, your name is too long, max name is ${maxNameInputCharacters} characters. Use this chance, to make up a nickname`)
+        } else if (age > maxAge || age < minAge) {
+            console.log(`Sorry, that age is not correct, must be less than ${maxAge} and greater than ${minAge}`)
+        } else {
+            printLicense()
+        }
+    }
+
+    function validateInputsImproved() {
+        const maxNameInputCharacters = 10
+        const maxAge = 110
+        const minAge = 16
+        const parsedAge = parseInt(age)
+        const nameInvalid = name.length > maxNameInputCharacters
+        const ageInvalid = parsedAge === NaN || parsedAge > maxAge || parsedAge < minAge
+        console.log(age)
+        console.log(parsedAge)
+        console.log(ageInvalid)
+        if (nameInvalid || ageInvalid) {
+            var message = ""
+            if (nameInvalid) {
+                message += `Sorry, your name is too long, max name is ${maxNameInputCharacters} characters. Use this chance, to make up a nickname.`
+            }
+            if (ageInvalid) {
+                message += `Sorry, that age is not correct, must be less than ${maxAge} and greater than ${minAge}`
+            }
+
+            console.log(message)
+        } else {
+            printLicense()
+        }
+    }
+
+    validateInputsImproved()
+
+</script>
+
+</html>
