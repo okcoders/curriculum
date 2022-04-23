@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>In Class</title>
+</head>
+
+<body>
+    <script>
+        const myData = {
+            name: "Zach",
+            addresses: ["plaza", "paseo"],
+            pets: ["carl", "cooper", "fitz"],
+            married: true,
+            status: "married",
+            birthday: new Date("1970-01-01"),
+            salaries: [0, 0, 100, 200, 300]
+        }
+
+        for (var i = 0; i < 10; i++) {
+            console.log("hello")
+        }
+
+        for (var i = 0; i < myData.pets.length; i++) {
+            console.log(myData.pets[i])
+        }
+
+        var total = 0
+        for (var i = 0; i < myData.salaries.length; i++) {
+            total += myData.salaries[i]
+        }
+
+        console.log(total)
+    </script>
+</body>
+
+</html>
