@@ -17,12 +17,15 @@ order of following ?
 - Importing and exporting
 - Command line
 - Promises
-
+- backend, node, front-end, rest, fetch, promises, async await
 
 # Projects
 
 - web app swiss army knife
 - cli swiss army knife
+- social media
+- weather
+- recipe book
 
 ## Pre-Work For Day 2
 
