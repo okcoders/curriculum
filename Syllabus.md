@@ -64,9 +64,18 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Auth?
 - Testing
 - MUI/Component Library
-- 
+- Fetch (Network tab, headers and auth tokens)
+- Gitflow
+- Programming principles
+- hashes and signatures
 
 ### Module 6: Typescript
+- type signatures
+- classes
+- enums
+- interfaces
+- generics
+- 
 
 ### Module 7: 
 
