@@ -1,6 +1,4 @@
 
-console.log("hello")
-
 const itemsForSale = [
     {
         id: "coffee-pot",
@@ -22,31 +20,94 @@ const shoppingCart = []
 
 const itemsSlot = document.getElementById("items-slot")
 
-function itemToDisplayHtml(item) {
+function itemToDisplayHtml(item, inCart) {
+    // yes, very fancy, you can call a function inside a template string (e.g buttonHtml)
     const html = `
         <div class="item-card">
             <h4>${item.name}</h4>
             <img src=${item.image}>
             <p>${item.description}</p>
             <em>${item.price}</em>
-            <button onclick="addItemToCart('${item.id}')">Add To Cart</button>
+            ${buttonHtml(item.id, inCart)}
         </div>
     `
     return html
 }
 
-function addItemToCart(id) {
-    shoppingCart.push(id)
-}
-
-function addItemsForSaleToPage() {
-    for (var i = 0; i < itemsForSale.length; i++) {
-        const item = itemsForSale[i]
-        const htmlForItem = itemToDisplayHtml(item)
-        const appendableElement = document.createElement('div')
-        appendableElement.innerHTML = htmlForItem
-        itemsSlot.append(appendableElement)
+function buttonHtml(itemId, inCart) {
+    if (inCart) {
+        return `<button onclick="removeItemFromCart('${itemId}')">Remove From Cart</button>`
+    } else {
+        return `<button onclick="addItemToCart('${itemId}')">Add To Cart</button>`
     }
 }
 
-addItemsForSaleToPage()
+function removeItemFromCart(id) {
+    for (var i = 0; i < shoppingCart.length; i++) {
+        if (shoppingCart[i] === id) {
+            shoppingCart.splice(i, 1)
+            renderPage()
+            return
+        }
+    }
+}
+
+function addItemToCart(id) {
+    shoppingCart.push(id)
+    renderPage()
+}
+
+function renderPage() {
+    // remove existing elements so we have a clean page to append to
+    itemsSlot.innerHTML = ""
+    // loop through and create each item card
+    for (var i = 0; i < itemsForSale.length; i++) {
+        const item = itemsForSale[i]
+        renderItemCard(item)
+    }
+}
+
+function renderItemCard(item) {
+    const itemInCart = isItemInShoppingCart(item.id)
+    const htmlForItem = itemToDisplayHtml(item, itemInCart)
+    const appendableElement = document.createElement('div')
+    appendableElement.innerHTML = htmlForItem
+    itemsSlot.append(appendableElement)
+
+}
+
+function isItemInShoppingCart(itemId) {
+    var itemInCart = false
+    for (var i = 0; i < shoppingCart.length; i++) {
+        if (shoppingCart[i] === itemId) {
+            itemInCart = true
+            // not necessary, but stops the loop
+            return itemInCart
+        }
+    }
+    return itemInCart
+}
+
+function checkout() {
+    const items = shoppingCart.length
+    var price = 0
+    // two loops, one to go through the shopping cart, and then a nested loop to look up by id the item
+    for (var i = 0; i < shoppingCart.length; i++) {
+        for (var j = 0; j < itemsForSale.length; j++) {
+            const item = itemsForSale[j]
+            if (item.id === shoppingCart[i]) {
+                price += item.price
+            }
+        }
+    }
+    var pluralOrNot = "items"
+    if (items === 1) {
+        pluralOrNot = "item"
+    }
+    window.alert(`Thanks for shopping with us! You are buying ${items} ${pluralOrNot} for a total price of \$${price.toFixed(2)}.`)
+}
+
+const checkoutButton = document.getElementById("checkout-button")
+checkoutButton.addEventListener('click', checkout)
+
+renderPage()

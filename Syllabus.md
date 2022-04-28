@@ -1,5 +1,6 @@
+## 6 Month Part-Time Bootcamp
 
-# Module 1: Html and CSS
+### Module 1: Html and CSS
 
 - Week 1: Intro to HTML and CSS
 - Week 2: CSS Box Model, Positioning, Icons/Fonts, Centering, and Responsive Design
@@ -8,7 +9,7 @@
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/responsive-web-design/)
 
-# Module 2: Intro to Javascript
+### Module 2: Intro to Javascript
 
 - Week 1: Intro To Javascript
 - Week 2: Operations, Arrays, and Functions
@@ -17,7 +18,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/responsive-we
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
-# Module 3: Intermediate Javascript
+### Module 3: Intermediate Javascript
 
 - Week 1: ES6 continued
 - Week 2: Data Structures Continued
@@ -31,7 +32,7 @@ Above follows multiple free code camp sections:
 - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
 - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
-# Module 4: React
+### Module 4: React
 
 - Week 1: Intro to React
 - Week 2: JSX and Rendering Components
@@ -40,7 +41,7 @@ Above follows multiple free code camp sections:
 
 Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
-# Module 5: Backend (Node, Express, MongoDB)
+### Module 5: Backend (Node, Express, MongoDB)
 
 - Week 1: Node and NPM
 - Week 2: Intro to Express
@@ -48,3 +49,24 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 - Week 4: Intro to building Restful Apis
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
+
+
+## 3 Month Full-Time Bootcamp
+
+Full-Time bootcamp picks-up where part-time leaves off.
+
+- Typeorm or Mongoose?
+- Nestjs or express?
+- Graphql or rest?
+- Typescript
+- Redux or Recoil?
+- React-Router
+- Auth?
+- Testing
+- MUI/Component Library
+- 
+
+### Module 6: Typescript
+
+### Module 7: 
+
