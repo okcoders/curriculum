@@ -55,27 +55,68 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
 
 Full-Time bootcamp picks-up where part-time leaves off.
 
-- Typeorm or Mongoose?
-- Nestjs or express?
-- Graphql or rest?
-- Typescript
-- Redux or Recoil?
-- React-Router
-- Auth?
-- Testing
-- MUI/Component Library
-- Fetch (Network tab, headers and auth tokens)
-- Gitflow
-- Programming principles
-- hashes and signatures
+### Programming Principles to cover throughout
+- researching, and learning something new
+- debugging, and pushing through having difficulty completing something (getting stuck)
+- stepping away, and knowing when to get another set of eyes
+- staying curious and open to other ways of doing things, there are many ways to solve a problem
+- give input but don't be opinionated 
+- SOLID, YAGNI, other abstract design principles
 
-### Module 6: Typescript
+### Module 6: Typescript (Week 1)
 - type signatures
 - classes
 - enums
 - interfaces
 - generics
-- 
 
-### Module 7: 
+### Module 7: Advanced Express (Weeks 2 and 3)
+- Many routers
+- Middleware
+- Error Handling
+- Cors
+- Configuration
+- Services
+- Files
+- Other Apis (stripe)
+- Logging
 
+### Module 8: Advanced Databases (Week 4)
+- Advanced Modeling
+- Related Data
+- Search
+- Aggregation
+- Indexes
+- Permissions
+- Paging and Sorting
+- Mongoose
+
+### Module 9: Graphql (Week 5)
+- Models
+- Resolvers
+- Mutations
+
+### Module 10: Advanced React (Weeks 6 and 7)
+- Routing
+- Single Store
+- Auth
+- Component Libraries
+- Themes
+- Mobile and Desktop views
+
+### Module 11: Testing (Week 8)
+- unit tests
+- integration tests
+- e2e tests
+
+### Module 12: Real-world flow (Weeks 9, 10, 11, and 12)
+
+- Gitflow
+- Issue based tasks and prs
+- Working with others
+- Real world group projects
+- performance
+- monitoring
+- deploying
+- logging
+- prod down
