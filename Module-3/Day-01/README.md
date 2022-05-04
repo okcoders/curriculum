@@ -10,7 +10,8 @@
 
 ## HTTP
 ![image](https://user-images.githubusercontent.com/15235244/166834908-5c1da38f-9d32-470d-942c-c4719a18846f.png)
-from [How HTTP Works](https://dev.to/inambe/how-http-works-2492)
+
+source: [How HTTP Works](https://dev.to/inambe/how-http-works-2492)
 
 ## Further Reading
 - [A brief history of JavaScript](https://dev.to/enigma6174/a-brief-history-of-javascript-4oo8)
