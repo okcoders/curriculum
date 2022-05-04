@@ -12,3 +12,8 @@
 - [staying motivated](https://www.codecademy.com/resources/blog/how-to-stay-motivated-learning-to-code/)
 - [code kata](http://codekata.com/)
 - [codewars](https://www.codewars.com/)
+- [Shay Howe HTML/CSS Basics](https://learn.shayhowe.com/)
+- [Modern JavaScript Tutorial](https://javascript.info/)
+- [Codecademy Cheatsheets](https://www.codecademy.com/resources/cheatsheets/all)
+- [LinkedIn Learning (formerly Lynda.com) Free via Tulsa Library](https://www.linkedin.com/learning-login/go/tccl)
+- [LinkedIn Learning (formerly Lynda.com) Free via Metro Library](https://www.linkedin.com/learning-login/go/mls)
