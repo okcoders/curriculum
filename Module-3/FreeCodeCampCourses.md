@@ -6,23 +6,9 @@
 - [algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting)
 - [functional programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
 - [intermediate algorithms](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
-
-?
 - [command line](https://launchschool.com/books/command_line)
-- [classes](https://www.freecodecamp.org/news/javascript-classes-how-they-work-with-use-case/)
-
-
-order of following ?
-- Classes 
-- Importing and exporting
-- Command line
-- Promises
-- backend, node, front-end, rest, fetch, promises, async await
 
 # Projects
-
-- web app swiss army knife
-- cli swiss army knife
 - social media
 - weather
 - recipe book
@@ -44,12 +30,6 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Use * to Import Everything from a File
 - Create an Export Fallback with export default
 - Import a Default Export
-
-
-- Create a JavaScript Promise
-- Complete a Promise with resolve and reject
-- Handle a Fulfilled Promise with then
-- Handle a Rejected Promise with catch
 
 
 ## Pre-Work For Day 2
@@ -96,6 +76,9 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Check For The Presence of an Element With indexOf()
 - Iterate Through All an Array's Items Using For Loops
 - Create complex multi-dimensional arrays
+
+## Pre-Work For Day 5
+
 - Add Key-Value Pairs to JavaScript Objects
 - Modify an Object Nested Within an Object
 - Access Property Names with Bracket Notation
@@ -104,9 +87,11 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Iterate Through the Keys of an Object with a for...in Statement
 - Generate an Array of All Object Keys with Object.keys()
 - Modify an Array Stored in an Object
-
-## Pre-Work For Day 5
-
+- Create a JavaScript Promise
+- Complete a Promise with resolve and reject
+- Handle a Fulfilled Promise with then
+- Handle a Rejected Promise with catch
+- TODO: async await resource needed
 
 ## Pre-Work For Day 6
 
@@ -122,6 +107,9 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Implement the filter Method on a Prototype
 - Return Part of an Array Using the slice Method
 - Remove Elements from an Array Using slice Instead of splice
+
+## Pre-Work For Day 7
+
 - Combine Two Arrays Using the concat Method
 - Add Elements to the End of an Array Using concat Instead of push
 - Use the reduce Method to Analyze Data
@@ -134,10 +122,8 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Use the every Method to Check that Every Element in an Array Meets a Criteria
 - Use the some Method to Check that Any Elements in an Array Meet a Criteria
 
-## Pre-Work For Day 7
-
-
 ## Pre-Work For Day 8
+- [command line](https://launchschool.com/books/command_line)
 
 ## Coding Challenges (to be done throughout)
 
