@@ -9,9 +9,9 @@
 - [command line](https://launchschool.com/books/command_line)
 
 # Projects
-- social media
-- weather
-- recipe book
+- [social media](https://dummyapi.io/)
+- [weather](https://www.weatherapi.com/)
+- [recipe book](https://spoonacular.com/food-api)
 
 ## Note:
 Please note we are skipping certain lessons, though feel free to do the ones we don't have listed
