@@ -34,3 +34,7 @@ nvm install 16
 ## Make sure it worked
 
 - from your terminal, you should now be able to type `node` and be in the node repl. You should see a carrot. Type some javascript and press enter to execute it. Press ctrl+c twice to exit.
+
+## If it didn't work
+
+- hit up a mentor or instructor to get help, issues happen all the time.
