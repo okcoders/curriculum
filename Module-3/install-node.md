@@ -13,11 +13,11 @@ wsl --install
 - after restart, it should open the ubuntu terminal (ubuntu is a linux os), and ask for a username and password (just use same you use for your laptop, and note, when typing passwords on the command line, it looks like nothing is happening)
 
 ### install nvm
-```
-sudo apt install curl
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
-source ~/.bashrc
-```
+Execute these commands one at a time in the ubuntu terminal
+- `sudo apt install curl`
+- `curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
+- `source ~/.bashrc`
+
 ### install node v16
 ```
 nvm install 16
@@ -30,3 +30,7 @@ nvm install 16
 - install [homebrew](https://brew.sh/), by pasting and executing this `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in the terminal
 - install nvm with this command `brew install nvm`
 - install node v16 with this command `nvm install 16`
+
+## Make sure it worked
+
+- from your terminal, you should now be able to type `node` and be in the node repl. You should see a carrot. Type some javascript and press enter to execute it. Press ctrl+c twice to exit.
