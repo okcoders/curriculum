@@ -22,23 +22,11 @@ source ~/.bashrc
 ```
 nvm install 16
 ```
-- install this vs code extension: [remote development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+### install this vs code extension: [remote development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
 ## Install node mac
 
-- first, check to see if you already have node. Open the terminal, then type (and press enter), if nothing shows up after pressing enter, you don't have node:
-```
-node -v
-```
-- install [homebrew](https://brew.sh/), by pasting and executing this in the terminal
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-- install nvm
-```
-brew install nvm
-```
-- install node v16 from terminal
-```
-nvm install 16
-```
+- first, check to see if you already have node. Open the terminal, then type `node -v` (and press enter), if nothing shows up after pressing enter, you don't have node
+- install [homebrew](https://brew.sh/), by pasting and executing this `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in the terminal
+- install nvm with this command `brew install nvm`
+- install node v16 with this command `nvm install 16`
