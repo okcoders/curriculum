@@ -30,9 +30,9 @@ nvm install 16
 - install [homebrew](https://brew.sh/), by pasting and executing this `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in the terminal
 - install nvm with this command `brew install nvm` (if you get error "nvm not found", close the terminal and open a new one and try again)
 - setup nvm: `mkdir ~/.nvm`
-- setup nvm command: ```echo "export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion" >> ~/.zshrc```
+- ```echo "export NVM_DIR="$HOME/.nvm" >> ~/.zshrc```
+- ```echo "[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm " >> ~/.zshrc```
+- ```echo "[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion" >> ~/.zshrc```
 - install node v16 with this command `nvm install 16`
 
 ## Make sure it worked
