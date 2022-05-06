@@ -3,6 +3,8 @@
 
 ## Install node windows
 
+- [video guide](https://www.youtube.com/watch?v=YCuf_Bo3XaQ)
+
 ### Install [windows subsystem for linux](https://docs.microsoft.com/en-us/windows/wsl/install)
 - open the windows command prompt (as administrator)
 - enter this command: 
