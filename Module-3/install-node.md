@@ -4,7 +4,7 @@
 ## Install node windows
 
 ### Install [windows subsystem for linux](https://docs.microsoft.com/en-us/windows/wsl/install)
-- open the windows command prompt
+- open the windows command prompt (as administrator)
 - enter this command: 
 ```
 wsl --install
