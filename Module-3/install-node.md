@@ -28,7 +28,7 @@ nvm install 16
 
 - first, check to see if you already have node. Open the terminal, then type `node -v` (and press enter), if nothing shows up after pressing enter, you don't have node
 - install [homebrew](https://brew.sh/), by pasting and executing this `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in the terminal
-- install nvm with this command `brew install nvm`
+- install nvm with this command `brew install nvm` (if you get error "nvm not found", close the terminal and open a new one and try again)
 - install node v16 with this command `nvm install 16`
 
 ## Make sure it worked
