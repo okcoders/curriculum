@@ -17,4 +17,6 @@ numbers.forEach(<arrow function here>)
 
 # In Class Exercise
 
-- prompting, writing to a file with node ([good starting place](https://www.codecademy.com/article/getting-user-input-in-node-js))
+- prompting, writing to a file with node
+  - [Good tutorial](https://www.codecademy.com/article/getting-user-input-in-node-js)
+  - [Node Read Line API Reference](https://nodejs.org/api/readline.html)
