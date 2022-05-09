@@ -17,4 +17,4 @@ numbers.forEach(<arrow function here>)
 
 # In Class Exercise
 
-- prompting, writing to a file with node
+- prompting, writing to a file with node ([good starting place](https://www.codecademy.com/article/getting-user-input-in-node-js))
