@@ -51,7 +51,7 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
 
-## 3 Month Full-Time Bootcamp
+## 3 Month (14 weeks) Full-Time Bootcamp
 
 Full-Time bootcamp picks-up where part-time leaves off.
 
@@ -63,14 +63,20 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - give input but don't be opinionated 
 - SOLID, YAGNI, other abstract design principles
 
-### Module 6: Typescript (Week 1)
+### Module 1: Intermediate Command Line and Docker (Week 1)
+- all basic and intermediate commands
+- bash scripts
+- running docker images
+- creating an image
+
+### Module 2: Typescript (Week 2)
 - type signatures
 - classes
 - enums
 - interfaces
 - generics
 
-### Module 7: Advanced Express (Weeks 2 and 3)
+### Module 3: Advanced Express (Weeks 3 and 4)
 - Many routers
 - Middleware
 - Error Handling
@@ -78,10 +84,10 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Configuration
 - Services
 - Files
-- Other Apis (stripe)
+- Other Apis (stripe, twillio, mailchimp)
 - Logging
 
-### Module 8: Advanced Databases (Week 4)
+### Module 4: Advanced Databases (Week 5)
 - Advanced Modeling
 - Related Data
 - Search
@@ -91,12 +97,12 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Paging and Sorting
 - Mongoose
 
-### Module 9: Graphql (Week 5)
+### Module 5: Graphql (Week 6)
 - Models
 - Resolvers
 - Mutations
 
-### Module 10: Advanced React (Weeks 6 and 7)
+### Module 6: Advanced React (Weeks 7 and 8)
 - Routing
 - Single Store
 - Auth
@@ -104,12 +110,12 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Themes
 - Mobile and Desktop views
 
-### Module 11: Testing (Week 8)
+### Module 7: Testing (Week 9)
 - unit tests
 - integration tests
 - e2e tests
 
-### Module 12: Real-world flow (Weeks 9, 10, 11, and 12)
+### Module 8: Real-world flow (Weeks 10, 11, 12, 13, 14)
 
 - Gitflow
 - Issue based tasks and prs
