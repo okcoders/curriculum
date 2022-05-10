@@ -56,25 +56,25 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
 Full-Time bootcamp picks-up where part-time leaves off.
 
 ### Programming Principles to cover throughout
-- researching, and learning something new
-- debugging, and pushing through having difficulty completing something (getting stuck)
-- stepping away, and knowing when to get another set of eyes
-- staying curious and open to other ways of doing things, there are many ways to solve a problem
-- give input but don't be opinionated 
+- Researching, and learning something new
+- Debugging, and pushing through having difficulty completing something (getting stuck)
+- Stepping away, and knowing when to get another set of eyes
+- Staying curious and open to other ways of doing things, there are many ways to solve a problem
+- Give input but don't be opinionated 
 - SOLID, YAGNI, other abstract design principles
 
 ### Module 1: Intermediate Command Line and Docker (Week 1)
-- all basic and intermediate commands
-- bash scripts
-- running docker images
-- creating an image
+- All basic and intermediate commands
+- Bash scripts
+- Running docker images
+- Creating an image
 
 ### Module 2: Typescript (Week 2)
-- type signatures
-- classes
-- enums
-- interfaces
-- generics
+- Type signatures
+- Classes
+- Enums
+- Interfaces
+- Generics
 
 ### Module 3: Advanced Express (Weeks 3 and 4)
 - Many routers
@@ -111,18 +111,19 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Mobile and Desktop views
 
 ### Module 7: Testing (Week 9)
-- unit tests
-- integration tests
-- e2e tests
+- Unit tests
+- Integration tests
+- E2e tests
 
-### Module 8: Real-world flow (Weeks 10, 11, 12, 13, 14)
+### Module 8: Real-world flow and interview prep (Weeks 10, 11, 12, 13, 14)
 
 - Gitflow
 - Issue based tasks and prs
 - Working with others
 - Real world group projects
-- performance
-- monitoring
-- deploying
-- logging
-- prod down
+- Performance
+- Monitoring
+- Deploying
+- Logging
+- Prod down
+- Algorithm and interview prep
