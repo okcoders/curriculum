@@ -28,3 +28,8 @@ Continue to work on the license program, but create the bugs below while doing i
 - misspell require
 - miss closing bracket of higher order rocket function
 - mix template string with single quote
+
+## Resources
+
+- [Asynchronous JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
+- [Front End Dev Course by MDN](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer)
