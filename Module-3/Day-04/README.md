@@ -17,8 +17,11 @@ mainEntryPiont("sunshin')
 - console.log a bunch to see how the execution of a program is unfolding
 - read the error, then go to the code
 - how to read a stack trace
-- Promises + async/await
-- APIs and docs
+- Concepts we need for Midway Challenge:
+  - JavaScript is made to be Asynchronous
+  - Promises or async/await, which allow us to write asynchronous code
+  - APIs and docs
+  - JSON
 
 # exercise
 
@@ -33,3 +36,5 @@ Continue to work on the license program, but create the bugs below while doing i
 
 - [Asynchronous JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
 - [Front End Dev Course by MDN](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer)
+- [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
