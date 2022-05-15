@@ -9,14 +9,17 @@
 - [command line](https://launchschool.com/books/command_line)
 
 # Projects
+
 - [social media](https://dummyapi.io/)
 - [weather](https://www.weatherapi.com/)
 - [recipe book](https://spoonacular.com/food-api)
 
 ## Note:
+
 Please note we are skipping certain lessons, though feel free to do the ones we don't have listed
 
 ## Skipped Lessons:
+
 - Use the Rest Parameter with Function Parameters
 - Use Destructuring Assignment to Assign Variables from Objects
 - Use Destructuring Assignment to Assign Variables from Nested Objects
@@ -27,10 +30,9 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Create a Module Script
 - Use export to Share a Code Block
 - Reuse JavaScript Code Using import
-- Use * to Import Everything from a File
+- Use \* to Import Everything from a File
 - Create an Export Fallback with export default
 - Import a Default Export
-
 
 ## Pre-Work For Day 2
 
@@ -91,7 +93,7 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Complete a Promise with resolve and reject
 - Handle a Fulfilled Promise with then
 - Handle a Rejected Promise with catch
-- TODO: async await resource needed
+- Promises and Async Await guide: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
 
 ## Pre-Work For Day 6
 
@@ -123,6 +125,7 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 - Use the some Method to Check that Any Elements in an Array Meet a Criteria
 
 ## Pre-Work For Day 8
+
 - [command line](https://launchschool.com/books/command_line)
 
 ## Coding Challenges (to be done throughout)

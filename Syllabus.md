@@ -26,6 +26,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/javascript-al
 - Week 4: Algorithm Scripting
 
 Above follows multiple free code camp sections:
+
 - [ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6)
 - [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
 - [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
@@ -50,26 +51,28 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
-
 ## 3 Month (14 weeks) Full-Time Bootcamp
 
 Full-Time bootcamp picks-up where part-time leaves off.
 
 ### Programming Principles to cover throughout
+
 - Researching, and learning something new
 - Debugging, and pushing through having difficulty completing something (getting stuck)
 - Stepping away, and knowing when to get another set of eyes
 - Staying curious and open to other ways of doing things, there are many ways to solve a problem
-- Give input but don't be opinionated 
+- Give input but don't be opinionated
 - SOLID, YAGNI, other abstract design principles
 
-### Module 1: Intermediate Command Line and Docker (Week 1)
+### Module 1: Intermediate Command Line, Git, and Docker (Week 1)
+
 - All basic and intermediate commands
+- Git
 - Bash scripts
 - Running docker images
-- Creating an image
 
 ### Module 2: Typescript (Week 2)
+
 - Type signatures
 - Classes
 - Enums
@@ -77,6 +80,7 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Generics
 
 ### Module 3: Advanced Express (Weeks 3 and 4)
+
 - Many routers
 - Middleware
 - Error Handling
@@ -88,6 +92,7 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Logging
 
 ### Module 4: Advanced Databases (Week 5)
+
 - Advanced Modeling
 - Related Data
 - Search
@@ -98,11 +103,13 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Mongoose
 
 ### Module 5: Graphql (Week 6)
+
 - Models
 - Resolvers
 - Mutations
 
 ### Module 6: Advanced React (Weeks 7 and 8)
+
 - Routing
 - Single Store
 - Auth
@@ -111,6 +118,7 @@ Full-Time bootcamp picks-up where part-time leaves off.
 - Mobile and Desktop views
 
 ### Module 7: Testing (Week 9)
+
 - Unit tests
 - Integration tests
 - E2e tests
