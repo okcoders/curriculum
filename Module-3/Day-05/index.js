@@ -1,32 +1,33 @@
-const WEATHER_API_KEY = 'bcdefa17d9b7477db50225739221805';
+const WEATHER_API_KEY = "bcdefa17d9b7477db50225739221805";
 const FORECAST_ENDPOINT =
-  'http://api.weatherapi.com/v1/forecast.json?key=bcdefa17d9b7477db50225739221805&q=73008';
+  "http://api.weatherapi.com/v1/forecast.json?key=bcdefa17d9b7477db50225739221805&q=73008";
 
 window.onload = () => {
   attachGetWeatherDataButtonListener();
 };
 
 function attachGetWeatherDataButtonListener() {
-  const getWeatherDataButton = document.getElementById('get-weather-data');
+  const getWeatherDataButton = document.getElementById("get-weather-data");
   if (getWeatherDataButton) {
-    getWeatherDataButton.addEventListener('click', () =>
+    getWeatherDataButton.addEventListener("click", () =>
       fetch(FORECAST_ENDPOINT)
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
           // now maybe we do this here?
           const days = getForecastByDay(data);
           // {'2022-05-18': { maxTemp: 89}, '2022-05-19': {maxTemp}}
           addToUnorderderedList(data);
         })
         .catch((error) =>
-          console.log('Error in fetch for forecast.json: ', error.message)
+          console.log("Error in fetch for forecast.json: ", error.message)
         )
     );
   }
 }
 
 function addDataToPreTag(data) {
-  const resultsPreTag = document.getElementById('data-results');
+  const resultsPreTag = document.getElementById("data-results");
   resultsPreTag.innerText = JSON.stringify(data, null, 2);
 }
 
