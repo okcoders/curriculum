@@ -16,6 +16,8 @@ const evenNumbers = numbers.filter((n) => <implement your code here>)
 - restful urls
 - json
 - api, this is one of the most overused words in programming
+  - server (the url and resources you can get)
+  - code api (methods and properties available on a js array)
 - documentation
 
 ## Where we are and where we are going:
