@@ -17,3 +17,6 @@
 - [Codecademy Cheatsheets](https://www.codecademy.com/resources/cheatsheets/all)
 - [LinkedIn Learning (formerly Lynda.com) Free via Tulsa Library](https://www.linkedin.com/learning-login/go/tccl)
 - [LinkedIn Learning (formerly Lynda.com) Free via Metro Library](https://www.linkedin.com/learning-login/go/mls)
+- [DigitalOcean Tutorials, over 4000! (main search page)](https://www.digitalocean.com/community/tutorials)
+  - [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript)
+  - [Understanding the DOM](https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model)
