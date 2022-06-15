@@ -10,6 +10,5 @@
   - App.jsx
     - Header.jsx
     - Body.jsx
-      - GarageSale.jsx
-        - GarageSaleItem.jsx
+      - Weather.jsx
 - we will be using hooks only, and will be ignoring class based components
