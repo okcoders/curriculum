@@ -50,15 +50,18 @@
 
 ## Day 5 Pre-work
 
+- props re-hash
 - bootstrap
 
 ## Day 6 Pre-work
 
+- hooks re-hash
 - [react router quick start](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 ## Day 7 Pre-work
 
 - example project work
+- context api
 
 ## Day 8 Pre-work
 
