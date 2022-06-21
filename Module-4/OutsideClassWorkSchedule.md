@@ -54,7 +54,7 @@
 
 ## Day 6 Pre-work
 
-- router
+- [react router quick start](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 ## Day 7 Pre-work
 
