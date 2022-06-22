@@ -14,7 +14,7 @@
 - age
 - inputs from flowchart (see below).
 
-![flowchart]('images/flowchart.png')
+![flowchart](images/flowchart.png)
 
 ### ouputs
 
