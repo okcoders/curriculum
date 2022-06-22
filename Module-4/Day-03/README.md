@@ -4,6 +4,7 @@
 
 - connecting form input to state
 - conditional rendering based on previous form data
+- passing props down to dynamic/reusable components
 
 ## Recommender of quarantine or get tested
 
@@ -24,5 +25,5 @@
 
 ## homework
 
-- extend the covid tester
+- extend the covid tester to finish out the flowchart
 - save form state to local storage so refresh keeps data
