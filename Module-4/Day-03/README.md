@@ -7,24 +7,20 @@
 
 ## Recommender of quarantine or get tested
 
+### fields
+
 - first name
 - last name
 - age
-- been exposed
-  - exposed days ago
-- do you have symptoms?
-  - days ago symptoms
-- have you tested positive
-  - yes
-    - days ago
-  - no
-    - days ago
+- inputs from flowchart (see below).
 
-outputs:
+![flowchart]('images/flowchart.png')
+
+### ouputs
 
 - good to go,
 - quarantine
-- be cautious and wear mask indoors
+- be cautious and wear mask
 
 ## homework
 
