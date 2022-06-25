@@ -69,3 +69,4 @@
 ## Day 8 Pre-work
 
 - example project work
+- [awesome react](https://github.com/enaqx/awesome-react)
