@@ -50,13 +50,16 @@
 
 ## Day 5 Pre-work
 
-- props re-hash
-- bootstrap
+- [react bootstrap intro](https://react-bootstrap.github.io/getting-started/introduction)
+- [why react bootstrap](https://react-bootstrap.github.io/getting-started/why-react-bootstrap/)
+- [bootstrap sandbox](https://codesandbox.io/s/github/react-bootstrap/code-sandbox-examples/tree/master/basic-v5) - look through all the code in this sandbox
+- [spinner docs](https://react-bootstrap.github.io/components/spinners/)
+- try to add the spinner to the sandbox
 
 ## Day 6 Pre-work
 
-- hooks re-hash
 - [react router quick start](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- [react router tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
 
 ## Day 7 Pre-work
 
