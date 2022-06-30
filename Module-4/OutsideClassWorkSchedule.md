@@ -58,6 +58,10 @@
 
 ## Day 6 Pre-work
 
+- [review app.js file from last class](https://github.com/okcoders/curriculum/blob/main/Module-4/Day-05/weather-bootstrap/src/App.js)
+- [review components and props react docs](https://reactjs.org/docs/components-and-props.html)
+- [review conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+- [review rendering arrays/looping](https://reactjs.org/docs/lists-and-keys.html)
 - [react router quick start](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - [react router tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
 
