@@ -67,8 +67,13 @@
 
 ## Day 7 Pre-work
 
+- [es6 imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [es6 imports and exports video](https://www.youtube.com/watch?v=Q3SBogjUfMk&ab_channel=DaveGray)
+- [hooks re-hash](https://reactjs.org/docs/hooks-intro.html)
+- [hooks re-hash 2](https://reactjs.org/docs/hooks-overview.html)
+- [hooks re-hash 3](https://reactjs.org/docs/hooks-state.html)
+- [use effect hook re-hash](https://reactjs.org/docs/hooks-effect.html)
 - example project work
-- context api
 
 ## Day 8 Pre-work
 
