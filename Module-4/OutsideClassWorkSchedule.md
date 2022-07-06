@@ -77,5 +77,5 @@
 
 ## Day 8 Pre-work
 
-- example project work
-- [awesome react](https://github.com/enaqx/awesome-react)
+- continue to play with and tweak the weather app
+- explore some of the things in this repo - [awesome react](https://github.com/enaqx/awesome-react)
