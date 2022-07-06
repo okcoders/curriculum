@@ -8,4 +8,5 @@
   - forecast
 - use react bootstrap
 - use react router to make three different pages
-- use local storage to store preferences (celsius vs fahrenheit)
+- update the url with the query string
+- if the url is there, go ahead and search
