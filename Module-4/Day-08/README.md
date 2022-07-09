@@ -2,17 +2,17 @@
 
 Going from where we left off with our weather app at the end of Day 7, in groups, collaborate together to solve the following challenges:
 
-### project setup
+### Project setup
 
 - copy weather-continued folder from Day 7 to a new location of your choice
 - open it in vs-code
 - from the terminal, start the project by running `npm start` from the root of the project
 
-### daily forecast cards spacing
+### Daily forecast cards spacing
 
 The padding and spacing of the daily forecast weather cards could be improved. Have the cards from a grid instead of a stacked column, and make sure the cards have some space between where they start and the search button
 
-### daily forecast card condition
+### Daily forecast card condition
 
 Display the image and text description for the condition provided for the weather description (e.g sunny, cloudy image) in the daily forecast card. This is in an object called condition in the same object where we pull maxtemp_f and mintemp_c
 
