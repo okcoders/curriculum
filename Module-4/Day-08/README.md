@@ -39,4 +39,5 @@ Display the image and text description for the condition provided for the weathe
 ### Bonus
 
 - make it look really good
+- add a logo to the header
 - use the user's location to set the weather location query for the home page: https://dev.to/codebucks/how-to-get-user-s-location-in-react-js-1691
