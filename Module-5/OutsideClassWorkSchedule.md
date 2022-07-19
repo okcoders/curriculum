@@ -6,6 +6,7 @@
 - [Mongodb](https://www.mongodb.com/docs/manual/introduction/)
 - [Mongoose](https://mongoosejs.com/)
 - [Express](https://expressjs.com/)
+- [Postman](https://postman.com)
 
 ## Day 1 Pre-work
 
@@ -23,7 +24,7 @@
 
 ## Day 3 Pre-work
 
-- mongodb atlas
+- mongodb compass
 - creating and retrieving data from mongodb
 
 ## Day 4 Pre-work
