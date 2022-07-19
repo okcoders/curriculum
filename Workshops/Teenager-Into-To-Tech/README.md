@@ -2,7 +2,7 @@
 
 ## Intro
 
-I'm Zach and am so excited to be talking with you all about a career and vocation that is highly rewarding, fun, and creative. One where ideas you have can quickly be prototyped and provided to others. I have been a coder/programmer/software engineer/developer for a decade and have been teaching people to code for ~8 years. A coder works on the software that runs the world. We have a lot to cover, but before I dive in, I'd love to hear from each of you, a few things:
+I'm Zach and am so excited to be talking with you all about a career and vocation that is highly rewarding, fun, and creative. One where ideas you have can quickly be prototyped and provided to others. I have been a coder/programmer/software engineer/developer for a decade and have been teaching people to code for ~8 years. And I still enjoy every day of it. A coder works on the software that runs the world. We have a lot to cover, but before I dive in, I'd love to hear from each of you, a few things:
 
 - what do you think of when you hear the term "tech"
 - what are some of your favorite apps/websites/web-apps
@@ -12,7 +12,7 @@ I'm Zach and am so excited to be talking with you all about a career and vocatio
 ## Roles in tech
 
 - not just coders. Other roles: Product, Project, Data analysis, QA, UI/UX, Accessability
-- for example: roles in making a todo app
+- for example: roles in making a todo app (or the project I just worked on)
   - ui/ux designer that decides how it should look, and the flow users would go through (designs this in software made for this)
     - open page, all todos are listed
     - radio button to toggle between active and completed
