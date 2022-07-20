@@ -1,7 +1,5 @@
 # Day 1
 
-## Capstone!
-
 ## Stuff to go over
 
 - servers
