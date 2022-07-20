@@ -1,5 +1,9 @@
 # Day 1
 
+## Capstone!
+
+## Stuff to go over
+
 - servers
   - responsible for:
     - handling data
@@ -10,12 +14,17 @@
       - payment
       - messaging
       - job scheduling
-- http
+    - think about our weather api
+    - companies often have their own apis
+- http (dummy api you can play around with: https://dummyjson.com/)
   - get
   - post
   - put
   - delete
   - urls for backend vs. frontend
+  - responses
+  - headers
+  - body
 - databases
   - persist our data
   - allow for updating, inserting, finding, and deleting information
