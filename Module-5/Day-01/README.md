@@ -1,6 +1,15 @@
 # Day 1
 
 - servers
+  - responsible for:
+    - handling data
+    - creating permission boundaries
+    - running business logic
+    - connecting with other services like
+      - email
+      - payment
+      - messaging
+      - job scheduling
 - http
   - get
   - post
@@ -8,5 +17,8 @@
   - delete
   - urls for backend vs. frontend
 - databases
+  - persist our data
+  - allow for updating, inserting, finding, and deleting information
 - postman
+  - allows us to test talking with servers, does more than just GET requests
 - a bare minimum node server, and hitting it with browser/postman
