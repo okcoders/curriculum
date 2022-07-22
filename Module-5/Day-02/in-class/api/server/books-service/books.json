@@ -8,7 +8,8 @@
     "publisher": "No Starch Press",
     "pages": 472,
     "description": "JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
-    "website": "http://eloquentjavascript.net/"
+    "website": "http://eloquentjavascript.net/",
+    "reading": false
   },
   {
     "id": "9781491943533",
@@ -19,7 +20,8 @@
     "publisher": "O'Reilly Media",
     "pages": 334,
     "description": "To get the most out of modern JavaScript, you need learn the latest features of its parent specification, ECMAScript 6 (ES6). This book provides a highly practical look at ES6, without getting lost in the specification or its implementation details.",
-    "website": "https://github.com/mjavascript/practical-modern-javascript"
+    "website": "https://github.com/mjavascript/practical-modern-javascript",
+    "reading": false
   },
   {
     "id": "9781593277574",
@@ -30,7 +32,8 @@
     "publisher": "No Starch Press",
     "pages": 352,
     "description": "ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
-    "website": "https://leanpub.com/understandinges6/read"
+    "website": "https://leanpub.com/understandinges6/read",
+    "reading": false
   },
   {
     "id": "9781449365035",
@@ -41,7 +44,8 @@
     "publisher": "O'Reilly Media",
     "pages": 460,
     "description": "Like it or not, JavaScript is everywhere these days -from browser to server to mobile- and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
-    "website": "http://speakingjs.com/"
+    "website": "http://speakingjs.com/",
+    "reading": false
   },
   {
     "id": "9781449331818",
@@ -52,7 +56,8 @@
     "publisher": "O'Reilly Media",
     "pages": 254,
     "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
-    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
+    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
+    "reading": false
   },
   {
     "id": "9798602477429",
@@ -63,7 +68,8 @@
     "publisher": "Independently published",
     "pages": 143,
     "description": "The worldwide best selling You Don't Know JS book series is back for a 2nd edition: You Don't Know JS Yet. All 6 books are brand new, rewritten to cover all sides of JS for 2020 and beyond.",
-    "website": "https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started"
+    "website": "https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started",
+    "reading": false
   },
   {
     "id": "9781484200766",
@@ -74,7 +80,8 @@
     "publisher": "Apress; 2nd edition",
     "pages": 458,
     "description": "Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro.",
-    "website": "https://git-scm.com/book/en/v2"
+    "website": "https://git-scm.com/book/en/v2",
+    "reading": false
   },
   {
     "id": "9781484242216",
@@ -85,7 +92,8 @@
     "publisher": "Apress",
     "pages": 310,
     "description": "Get the most out of this foundational reference and improve the productivity of your software teams. This open access book collects the wisdom of the 2017 \"Dagstuhl\" seminar on productivity in software engineering, a meeting of community leaders, who came together with the goal of rethinking traditional definitions and measures of productivity.",
-    "website": "https://doi.org/10.1007/978-1-4842-4221-6"
+    "website": "https://doi.org/10.1007/978-1-4842-4221-6",
+    "reading": false
   },
   {
     "id": "12351234",
@@ -95,7 +103,8 @@
     "published": "2018-12-04T00:00:00.000Z",
     "pages": 800,
     "description": "A book that was written by your mom",
-    "website": "google.com"
+    "website": "google.com",
+    "reading": false
   },
   {
     "id": "12532634653453254",
@@ -105,7 +114,8 @@
     "published": "2018-12-04T00:00:00.000Z",
     "pages": 800,
     "description": "Your mom keeps writing books!",
-    "website": "google.com"
+    "website": "google.com",
+    "reading": false
   },
   {
     "id": "12532634653453254",
@@ -115,6 +125,7 @@
     "published": "2018-12-04T00:00:00.000Z",
     "pages": 800,
     "description": "Your mom keeps writing books!",
-    "website": "google.com"
+    "website": "google.com",
+    "reading": false
   }
 ]
