@@ -21,15 +21,12 @@
 
 - [High level intro to databases](https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712)
 - [Install Mongodb Compass](https://www.mongodb.com/try/download/compass)
-- [Install Docker](https://docs.docker.com/get-docker/)
+- [Create a free mongodb hosted database](https://www.mongodb.com/docs/atlas/getting-started/)
 
 ## Day 4 Pre-work
 
-- more complex queries with mongodb
-  - and or logic
-  - selecting fields
-  - ordering
-  - paging
+- [Mongodb intro](https://www.sitepoint.com/an-introduction-to-mongodb/)
+- [Crud (read the insert, query, update, and delete sections), make sure to set the guide to compass mode](https://www.mongodb.com/docs/manual/crud/)
 
 ## Day 5 Pre-work
 
@@ -41,7 +38,9 @@
 
 ## Day 7 Pre-work
 
-- local react app and server talking to each other (e.g putting it all together)
+- auth?
+- build out goodreads site more
+- images
 
 ## Day 8 Pre-work
 
