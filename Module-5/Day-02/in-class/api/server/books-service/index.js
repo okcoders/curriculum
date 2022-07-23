@@ -10,14 +10,15 @@ const add = (newBook) => {
   const newBooks = [...books, newBook];
   books = newBooks;
 
-  return books;
+  return newBook;
 };
 
 const updateById = (id, updates) => {
   const bookIndex = books.findIndex((book) => book.id === id);
-  books[bookIndex] = { ...books[bookIndex], ...updates };
+  const updatedBook = { ...books[bookIndex], ...updates };
+  books[bookIndex] = updatedBook;
 
-  return books;
+  return updatedBook;
 };
 
 const deleteById = (id) => {
