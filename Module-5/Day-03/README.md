@@ -5,8 +5,9 @@
 - signing up for free mongo account
 - downloading compass
 - connecting compass to free account
-- adding data
+- adding data in compass
   - \_id is auto created
-- querying for data
-  - various types of filters
-- compass vs shell vs mongoose
+- querying for data (e.g by title)
+- adding mongoose to our project
+- adding an authors schema definition
+- using mongoose instead of our fake db service
