@@ -1,11 +1,12 @@
 import { Router } from "express";
 import BooksService from "../books-service";
+import Book from "../models/book";
 
 const router = Router();
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const search = req.query.bookTitle;
-  const books = BooksService.getAll();
+  const books = await Book.find();
 
   if (search) {
     const filteredBooks = books.filter((book) => book.title.includes(search));
@@ -19,12 +20,16 @@ router.get("/:id", (req, res) => {
   const { id } = req.params;
   const books = BooksService.getAll();
   const requestedBook = books.find((book) => book.id === id);
+
   res.json(requestedBook);
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const book = req.body;
-  const createdBook = BooksService.add(book);
+
+  const createdBook = new Book(book);
+  await createdBook.save();
+
   res.json(createdBook);
 });
 
