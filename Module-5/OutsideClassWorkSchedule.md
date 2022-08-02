@@ -34,7 +34,8 @@
 
 ## Day 6 Pre-work
 
-- more mongoose
+- read the [query](https://mongoosejs.com/docs/queries.html) docs
+- read the [schema](https://mongoosejs.com/docs/guide.html) docs
 
 ## Day 7 Pre-work
 
