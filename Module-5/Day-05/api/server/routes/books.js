@@ -1,5 +1,4 @@
 import { Router } from "express";
-import BooksService from "../books-service";
 import Book from "../models/book";
 
 const router = Router();
@@ -16,12 +15,11 @@ router.get("/", async (req, res) => {
   res.json(books);
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const books = BooksService.getAll();
-  const requestedBook = books.find((book) => book.id === id);
+  const foundBook = await Book.findById(id);
 
-  res.json(requestedBook);
+  res.json(foundBook);
 });
 
 router.post("/", async (req, res) => {
@@ -33,22 +31,28 @@ router.post("/", async (req, res) => {
   res.json(createdBook);
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", async (req, res) => {
   const { id } = req.params;
   const book = req.body;
-  const updatedBook = BooksService.updateById(id, book);
+  const updatedBook = await Book.findByIdAndUpdate(id, book, {
+    returnDocument: "after",
+  });
+
   res.json(updatedBook);
 });
 
-router.put("/mark-reading/:id", (req, res) => {
+router.put("/mark-reading/:id", async (req, res) => {
   const { id } = req.params;
-  const updatedBook = BooksService.updateById(id, { reading: true });
-  res.json(updatedBook);
+  const foundBook = await Book.findById(id);
+  foundBook.reading = true;
+  await foundBook.save();
+
+  res.json(foundBook);
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  BooksService.deleteById(id);
+  await Book.findByIdAndDelete(id);
   res.sendStatus(200);
 });
 

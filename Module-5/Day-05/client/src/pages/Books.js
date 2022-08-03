@@ -17,7 +17,7 @@ function Books() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       {books.map((book) => (
-        <Link to={`/${book.id}`}>{book.title}</Link>
+        <Link to={`/${book._id}`}>{book.title}</Link>
       ))}
     </div>
   );
