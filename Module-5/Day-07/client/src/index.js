@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Books from "./pages/Books";
 import BookDetails from "./pages/BookDetails";
 import Authors from "./pages/Author";
+import AuthorDetails from "./pages/AuthorDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<Books />} />
         <Route path="/:id" element={<BookDetails />} />
         <Route path="/authors" element={<Authors />} />
+        <Route path="/authors/:id" element={<AuthorDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>

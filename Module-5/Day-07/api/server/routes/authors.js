@@ -9,6 +9,13 @@ router.get("/", async (req, res) => {
   res.json(authors);
 });
 
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  const author = await Author.findById(id).populate("books");
+
+  res.json(author);
+});
+
 router.post("/", async (req, res) => {
   const author = req.body;
 

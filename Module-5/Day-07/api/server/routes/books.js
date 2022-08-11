@@ -1,11 +1,12 @@
 import { Router } from "express";
 import Book from "../models/book";
+import Author from "../models/author";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
   const search = req.query.bookTitle;
-  const books = await Book.find();
+  const books = await Book.find().populate("author");
 
   if (search) {
     const filteredBooks = books.filter((book) => book.title.includes(search));
@@ -36,6 +37,10 @@ router.post("/", async (req, res) => {
 
   const createdBook = new Book(book);
   await createdBook.save();
+
+  const author = await Author.findById(book.author);
+  author.books = [...author.books, createdBook._id];
+  await author.save();
 
   res.json(createdBook);
 });

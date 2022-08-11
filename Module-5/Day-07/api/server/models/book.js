@@ -1,14 +1,11 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 
-const BookSchema = new mongoose.Schema({
+const BookSchema = new Schema({
   title: {
     type: String,
     required: true,
   },
-  author: {
-    type: String,
-    required: true,
-  },
+  author: { type: Schema.Types.ObjectId, ref: "Author", required: true },
   subtitle: String,
   published: { type: Date, default: Date.now() },
   pages: Number,
@@ -17,6 +14,6 @@ const BookSchema = new mongoose.Schema({
   reading: Boolean,
 });
 
-const Book = mongoose.model("Book", BookSchema);
+const Book = model("Book", BookSchema);
 
 export default Book;

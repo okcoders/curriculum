@@ -3,8 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 
 const defaultBookValues = {
   title: "",
-  lastName: "",
-  age: 18,
+  author: "",
 };
 
 const BookModal = ({ bookDetails, onSubmit, onClose, isCreating, authors }) => {
@@ -25,6 +24,14 @@ const BookModal = ({ bookDetails, onSubmit, onClose, isCreating, authors }) => {
     handleClose();
   };
 
+  const createAuthorOptions = () => {
+    return authors.map(({ _id, firstName, lastName }) => (
+      <option value={_id}>
+        {firstName} {lastName}
+      </option>
+    ));
+  };
+
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -33,37 +40,27 @@ const BookModal = ({ bookDetails, onSubmit, onClose, isCreating, authors }) => {
       <Modal.Body>
         <Form>
           <Form.Group className="mb-3">
-            <Form.Label>First Name</Form.Label>
+            <Form.Label>Title</Form.Label>
             <Form.Control
               type="text"
-              placeholder="First Name"
+              placeholder="Title"
               onChange={(e) =>
-                setBookForm({ ...bookForm, firstName: e.target.value })
+                setBookForm({ ...bookForm, title: e.target.value })
               }
-              value={bookForm.firstName}
+              value={bookForm.title}
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Last Name"
+            <Form.Label>Author</Form.Label>
+            <Form.Select
               onChange={(e) =>
-                setBookForm({ ...bookForm, lastName: e.target.value })
+                setBookForm({ ...bookForm, author: e.target.value })
               }
-              value={bookForm.lastName}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Age</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Age"
-              onChange={(e) =>
-                setBookForm({ ...bookForm, age: e.target.value })
-              }
-              value={bookForm.age}
-            />
+              value={bookForm.author}
+            >
+              <option>Open this select menu</option>
+              {createAuthorOptions()}
+            </Form.Select>
           </Form.Group>
         </Form>
       </Modal.Body>
