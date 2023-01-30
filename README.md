@@ -16,13 +16,12 @@
 
 We love other technologies, but we have found this stack (a selection of different tech to solve a problem, e.g make a web app) to be a great way to get going.
 
-## More detailed syllabus 
+## More detailed syllabus
 
 - [Syllabus](Syllabus.md)
 
 ## Other Resources:
 
-- [Slack](okcokcoders.slack.com)
-- [Email](okcoders@gmail.com)
+- [Email](okcoders@techlahoma.org)
 - [Linkedin](https://www.linkedin.com/company/okcoders/)
-- [Website](okcoders.com)
+- [Website](https://okcoders.com)
