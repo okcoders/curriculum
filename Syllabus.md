@@ -51,9 +51,7 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
-## 3 Month (14 weeks) Full-Time Bootcamp
-
-Full-Time bootcamp picks-up where part-time leaves off.
+## Continued Learning
 
 ### Programming Principles to cover throughout
 
