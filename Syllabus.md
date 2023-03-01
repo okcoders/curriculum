@@ -7,7 +7,7 @@
 - Week 3: CSS Units, Intro to Bootstrap
 - Week 4: Example Project (Build a Portfolio)
 
-Above follows this [curriculum](https://www.freecodecamp.org/learn/responsive-web-design/)
+Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsive-web-design)
 
 ### Module 2: Intro to Javascript
 
