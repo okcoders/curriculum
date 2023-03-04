@@ -2,52 +2,66 @@
 
 ### Module 1: Html and CSS
 
-- Week 1: Intro to HTML and CSS
-- Week 2: CSS Box Model, Positioning, Icons/Fonts, Centering, and Responsive Design
-- Week 3: CSS Units, Intro to Bootstrap
-- Week 4: Example Project (Build a Portfolio)
+## Week 1: Intro to HTML and CSS
+
+    - Wed: Into to Class
+        - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1
+    - Sat: Machine Setup & Intro to HTML
+        - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1
+
+## Week 2: Positioning, Icons/Fonts, Centering, and Responsive Design Example Project
+
+    - Wed: Learning Basic Css
+    - Sat: In Class group creating Coffee Shop Menu with basic HTML and CSS
+
+## Week 3: CSS Box Model,CSS Units
+
+    - Wed: Learning Box Model &
+    - Sat: Tailwind???
+
+## Week 4: Example Project (Build a Coffee Shop)
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsive-web-design)
 
 ### Module 2: Intro to Javascript
 
-- Week 1: Intro To Javascript
-- Week 2: Operations, Arrays, and Functions
-- Week 3: Objects, Branching Logic, Loops
-- Week 4: ES6 and Basic Data Structures
+    - Week 1: Intro To Javascript
+    - Week 2: Operations, Arrays, and Functions
+    - Week 3: Objects, Branching Logic, Loops
+    - Week 4: ES6 and Basic Data Structures
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
 ### Module 3: Intermediate Javascript
 
-- Week 1: ES6 continued
-- Week 2: Data Structures Continued
-- Week 3: Functional Programming
-- Week 4: Algorithm Scripting
+    - Week 1: ES6 continued
+    - Week 2: Data Structures Continued
+    - Week 3: Functional Programming
+    - Week 4: Algorithm Scripting
 
 Above follows multiple free code camp sections:
 
-- [ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6)
-- [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
-- [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
-- [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
-- [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
+    - [ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6)
+    - [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
+    - [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
+    - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
+    - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
 ### Module 4: React
 
-- Week 1: Intro to React
-- Week 2: JSX and Rendering Components
-- Week 3: State
-- Week 4: Conditional Rendering and Events
+    - Week 1: Intro to React
+    - Week 2: JSX and Rendering Components
+    - Week 3: State
+    - Week 4: Conditional Rendering and Events
 
 Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
 ### Module 5: Backend (Node, Express, MongoDB)
 
-- Week 1: Node and NPM
-- Week 2: Intro to Express
-- Week 3: Intro to MongoDB
-- Week 4: Intro to building Restful Apis
+    - Week 1: Node and NPM
+    - Week 2: Intro to Express
+    - Week 3: Intro to MongoDB
+    - Week 4: Intro to building Restful Apis
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
@@ -55,81 +69,81 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
 
 ### Programming Principles to cover throughout
 
-- Researching, and learning something new
-- Debugging, and pushing through having difficulty completing something (getting stuck)
-- Stepping away, and knowing when to get another set of eyes
-- Staying curious and open to other ways of doing things, there are many ways to solve a problem
-- Give input but don't be opinionated
-- SOLID, YAGNI, other abstract design principles
+    - Researching, and learning something new
+    - Debugging, and pushing through having difficulty completing something (getting stuck)
+    - Stepping away, and knowing when to get another set of eyes
+    - Staying curious and open to other ways of doing things, there are many ways to solve a problem
+    - Give input but don't be opinionated
+    - SOLID, YAGNI, other abstract design principles
 
 ### Module 1: Intermediate Command Line, Git, and Docker (Week 1)
 
-- All basic and intermediate commands
-- Git
-- Bash scripts
-- Running docker images
+    - All basic and intermediate commands
+    - Git
+    - Bash scripts
+    - Running docker images
 
 ### Module 2: Typescript (Week 2)
 
-- Type signatures
-- Classes
-- Enums
-- Interfaces
-- Generics
+    - Type signatures
+    - Classes
+    - Enums
+    - Interfaces
+    - Generics
 
 ### Module 3: Advanced Express (Weeks 3 and 4)
 
-- Many routers
-- Middleware
-- Error Handling
-- Cors
-- Configuration
-- Services
-- Files
-- Other Apis (stripe, twillio, mailchimp)
-- Logging
+    - Many routers
+    - Middleware
+    - Error Handling
+    - Cors
+    - Configuration
+    - Services
+    - Files
+    - Other Apis (stripe, twillio, mailchimp)
+    - Logging
 
 ### Module 4: Advanced Databases (Week 5)
 
-- Advanced Modeling
-- Related Data
-- Search
-- Aggregation
-- Indexes
-- Permissions
-- Paging and Sorting
-- Mongoose
+    - Advanced Modeling
+    - Related Data
+    - Search
+    - Aggregation
+    - Indexes
+    - Permissions
+    - Paging and Sorting
+    - Mongoose
 
 ### Module 5: Graphql (Week 6)
 
-- Models
-- Resolvers
-- Mutations
+    - Models
+    - Resolvers
+    - Mutations
 
 ### Module 6: Advanced React (Weeks 7 and 8)
 
-- Routing
-- Single Store
-- Auth
-- Component Libraries
-- Themes
-- Mobile and Desktop views
+    - Routing
+    - Single Store
+    - Auth
+    - Component Libraries
+    - Themes
+    - Mobile and Desktop views
 
 ### Module 7: Testing (Week 9)
 
-- Unit tests
-- Integration tests
-- E2e tests
+    - Unit tests
+    - Integration tests
+    - E2e tests
 
 ### Module 8: Real-world flow and interview prep (Weeks 10, 11, 12, 13, 14)
 
-- Gitflow
-- Issue based tasks and prs
-- Working with others
-- Real world group projects
-- Performance
-- Monitoring
-- Deploying
-- Logging
-- Prod down
-- Algorithm and interview prep
+    - Gitflow
+    - Issue based tasks and prs
+    - Working with others
+    - Real world group projects
+    - Performance
+    - Monitoring
+    - Deploying
+    - Logging
+    - Prod down
+    - Algorithm and interview prep
