@@ -5,21 +5,21 @@
 ### Week 1: Intro to HTML
 
 -   Wed: Intro to Class
-    -   HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1
+    -   HW: [Intro to HTML](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1)
 -   Sat: Machine Setup & Intro to HTML
-    -   HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1
+    -   HW: [Basic CSS](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1)
 
 ### Week 2: Basic CSS
 
 -   Wed: Learning Basic Css
-    -   HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1
+    -   HW: [HTML Forms](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1)
 -   Sat: In Class group creating Coffee Shop Menu with basic HTML and CSS
-    -   HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1
+    -   HW: [CSS Box Model](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1)
 
 ### Week 3: Box Model and Tailwind
 
 -   Wed: Learning Box Model & Complex Units
-    -   HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1
+    -   HW: [CSS FlexBox](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
 -   Sat: Flex Box & Introduction to TailwindCSS
     -   HW: Build out
 
