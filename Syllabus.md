@@ -2,24 +2,31 @@
 
 ### Module 1: Html and CSS
 
-## Week 1: Intro to HTML and CSS
+### Week 1: Intro to HTML
 
-    - Wed: Into to Class
+    - Wed: Intro to Class
         - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1
     - Sat: Machine Setup & Intro to HTML
         - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1
 
-## Week 2: Positioning, Icons/Fonts, Centering, and Responsive Design Example Project
+### Week 2: Basic CSS
 
     - Wed: Learning Basic Css
+        - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1
     - Sat: In Class group creating Coffee Shop Menu with basic HTML and CSS
+        - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1
 
-## Week 3: CSS Box Model,CSS Units
+### Week 3: Box Model and Tailwind
 
-    - Wed: Learning Box Model &
-    - Sat: Tailwind???
+    - Wed: Learning Box Model & Complex Units
+        - HW: https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1
+    - Sat: Flex Box & Introduction to TailwindCSS
+        - HW: Build out
 
-## Week 4: Example Project (Build a Coffee Shop)
+### Week 4: Responsive Design and Final Project (Build a Coffee Shop)
+
+    - Wed: Learn Positioning by building out a navbar
+    - Sat: Final Project
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsive-web-design)
 
