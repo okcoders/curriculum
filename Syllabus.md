@@ -1,6 +1,6 @@
-## 6 Month Part-Time Bootcamp
+# 6 Month Part-Time Bootcamp
 
-### Module 1: Html and CSS
+## Module 1: Html and CSS
 
 ### Week 1: Intro to HTML
 
@@ -30,7 +30,7 @@
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsive-web-design)
 
-### Module 2: Intro to Javascript
+## Module 2: Intro to Javascript
 
     - Week 1: Intro To Javascript
     - Week 2: Operations, Arrays, and Functions
@@ -39,7 +39,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsi
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
-### Module 3: Intermediate Javascript
+## Module 3: Intermediate Javascript
 
     - Week 1: ES6 continued
     - Week 2: Data Structures Continued
@@ -54,7 +54,7 @@ Above follows multiple free code camp sections:
     - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
     - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
-### Module 4: React
+## Module 4: React
 
     - Week 1: Intro to React
     - Week 2: JSX and Rendering Components
@@ -63,7 +63,7 @@ Above follows multiple free code camp sections:
 
 Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
-### Module 5: Backend (Node, Express, MongoDB)
+## Module 5: Backend (Node, Express, MongoDB)
 
     - Week 1: Node and NPM
     - Week 2: Intro to Express
@@ -72,9 +72,9 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
 Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
-## Continued Learning
+# Continued Learning
 
-### Programming Principles to cover throughout
+## Programming Principles to cover throughout
 
     - Researching, and learning something new
     - Debugging, and pushing through having difficulty completing something (getting stuck)
@@ -83,14 +83,14 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
     - Give input but don't be opinionated
     - SOLID, YAGNI, other abstract design principles
 
-### Module 1: Intermediate Command Line, Git, and Docker (Week 1)
+## Module 1: Intermediate Command Line, Git, and Docker (Week 1)
 
     - All basic and intermediate commands
     - Git
     - Bash scripts
     - Running docker images
 
-### Module 2: Typescript (Week 2)
+## Module 2: Typescript (Week 2)
 
     - Type signatures
     - Classes
@@ -98,7 +98,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
     - Interfaces
     - Generics
 
-### Module 3: Advanced Express (Weeks 3 and 4)
+## Module 3: Advanced Express (Weeks 3 and 4)
 
     - Many routers
     - Middleware
@@ -110,7 +110,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
     - Other Apis (stripe, twillio, mailchimp)
     - Logging
 
-### Module 4: Advanced Databases (Week 5)
+## Module 4: Advanced Databases (Week 5)
 
     - Advanced Modeling
     - Related Data
@@ -121,13 +121,13 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
     - Paging and Sorting
     - Mongoose
 
-### Module 5: Graphql (Week 6)
+## Module 5: Graphql (Week 6)
 
     - Models
     - Resolvers
     - Mutations
 
-### Module 6: Advanced React (Weeks 7 and 8)
+## Module 6: Advanced React (Weeks 7 and 8)
 
     - Routing
     - Single Store
@@ -136,13 +136,13 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-deve
     - Themes
     - Mobile and Desktop views
 
-### Module 7: Testing (Week 9)
+## Module 7: Testing (Week 9)
 
     - Unit tests
     - Integration tests
     - E2e tests
 
-### Module 8: Real-world flow and interview prep (Weeks 10, 11, 12, 13, 14)
+## Module 8: Real-world flow and interview prep (Weeks 10, 11, 12, 13, 14)
 
     - Gitflow
     - Issue based tasks and prs
