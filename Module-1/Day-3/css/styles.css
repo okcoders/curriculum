@@ -1,0 +1,97 @@
+* {
+	font-size: 20px;
+}
+
+.styled-box {
+	background-color: antiquewhite;
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+	padding: 20px;
+}
+
+#okcoders-logo {
+	width: 50vw;
+}
+
+li {
+	color: rgb(82, 82, 150);
+}
+
+#google-link {
+	font-size: 1.5rem;
+}
+
+.big-button {
+	font-size: 2em;
+	width: 50%;
+}
+
+.blue-text {
+	color: blue;
+}
+
+.container {
+	font-size: 40px;
+	background-color: crimson;
+	width: 30rem;
+}
+
+#wrapper {
+	width: 200px;
+}
+
+.header {
+	height: 20vh;
+	background-color: aqua;
+}
+
+.container,
+.header {
+	margin: 10px;
+}
+
+.my-list li {
+	font-size: 0.8rem;
+}
+
+.my-list #second-item {
+	font-size: 1.5rem;
+}
+
+.big-button.blue-text {
+	background-color: orange;
+}
+
+.styled-input {
+	height: 40px;
+}
+
+.styled-input:hover {
+	height: 80px;
+}
+
+.styled-input:focus {
+	background-color: darkblue;
+	color: white;
+}
+
+.box {
+	text-align: center;
+	background-color: #d4e9e2;
+	width: 50vw;
+	padding: 20px;
+	line-height: 1.75;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #1e3932;
+}
+
+.round-button {
+	margin: 20px;
+	border-radius: 20px;
+	background-color: #d4e9e2;
+	border: 1px #1e3932 solid;
+	padding: 10px 20px;
+	font-size: 16px;
+}
