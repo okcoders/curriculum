@@ -12,7 +12,7 @@
 
 # Day 4
 
-    - work day + pushing to github
+    - work day
 
 # Day 5
 
@@ -32,13 +32,13 @@
 
 # above covers
 
-- learn html by building a cat photo app
-- learn basic css
-- colors
-- forms
-- box model
-- flex box
+-   learn html by building a cat photo app
+-   learn basic css
+-   colors
+-   forms
+-   box model
+-   flex box
 
 # break bonus
 
-- rest of responsive web design cert (e.g typography,accessability, etc.)
+-   rest of responsive web design cert (e.g typography,accessability, etc.)

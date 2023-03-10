@@ -14,6 +14,7 @@
 -   Wed: Learning Basic Css
     -   HW: [HTML Forms](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1)
 -   Sat: In Class group creating Coffee Shop Menu with basic HTML and CSS
+    -   In-Class: Build out https://elementalcoffee.com/contact/
     -   HW: [CSS Box Model](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1)
 
 ### Week 3: Box Model and Tailwind
