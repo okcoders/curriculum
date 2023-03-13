@@ -1,0 +1,107 @@
+body {
+	margin: 0;
+	color: #666;
+	background-color: #f2f2f2;
+	font-family: sans-serif;
+}
+
+input {
+	color: #666;
+	letter-spacing: 0.1rem;
+	background-color: #fafafa;
+	height: 32px;
+	border: none;
+}
+
+textarea {
+	border: none;
+}
+
+input:focus-visible {
+	border: none;
+}
+
+.header {
+	background-image: url('https://elementalcoffee.com/wp-content/uploads/2017/10/cropped-frontpage-1.jpg');
+	padding: 200px;
+	background-size: cover;
+	font-size: 30px;
+	text-align: center;
+	font-family: arial, monospace;
+	color: white;
+	text-shadow: 2px 2px 4px black;
+}
+
+.content {
+	margin-top: 140px;
+	margin-bottom: 200px;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.info {
+	font-size: 0.9rem;
+	margin-bottom: 30px;
+}
+
+.contact-label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.contact-input {
+	width: 100%;
+}
+
+.textarea {
+	height: 100px;
+}
+
+.input-wrapper {
+	margin-top: 2rem;
+}
+
+.submit-button {
+	margin-top: 2rem;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(17, 17, 17, 0.8);
+	color: white;
+	font-size: 0.9rem;
+	letter-spacing: 0.2rem;
+}
+
+.footer {
+	background-color: #111;
+	color: white;
+}
+
+.col {
+	display: inline-block;
+	width: 300px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.col-header {
+	border-bottom: 1px solid white;
+}
+
+.nav-link {
+	color: #aaa;
+}
+
+.nav-link:hover {
+	color: #fff;
+}
+
+.icon {
+	color: blue;
+}

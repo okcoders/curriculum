@@ -24,7 +24,7 @@ Create contact form
 Create the Footer
 
 -   The links in the navigation don't have to lead anywhere. For now just make them blank
--   The icons in the connect section can be found using a font library (font-awesome is a great resource for this)
+-   The icons in the connect section can be found using a icon library (font-awesome is a great resource for this)
 
 ### Step 4
 
