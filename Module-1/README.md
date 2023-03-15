@@ -16,15 +16,15 @@
 
 # Day 5
 
-    - colors and forms
+    - box model and complex units
 
 # Day 6
 
-    - box model
+    - flex box and positioning
 
 # Day 7
 
-    - flex box
+    - In-class example of building out multipage site
 
 # Day 8
 
