@@ -20,11 +20,11 @@
 
 # Day 6
 
-    - flex box and positioning
+    - flex box
 
 # Day 7
 
-    - In-class example of building out multipage site
+    - Positioning and Multi-page App setup
 
 # Day 8
 
@@ -32,9 +32,8 @@
 
 # above covers
 
--   learn html by building a cat photo app
+-   learn basic html
 -   learn basic css
--   colors
 -   forms
 -   box model
 -   flex box

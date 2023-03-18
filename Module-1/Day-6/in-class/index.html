@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex Box</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="section">
+			<h1>Display None vs Visibility Hidden</h1>
+			<div class="box box-size-100">1</div>
+			<div class="box box-size-100 display-none">2</div>
+			<div class="box box-size-100 visibility-hidden">3</div>
+			<div class="box box-size-100">4</div>
+		</div>
+		<div class="section">
+			<h1>Inline Block Faults</h1>
+			<div class="box inline-block box-size-100 stretch"></div>
+			<div class="box inline-block box-size-100 stretch"></div>
+			<div class="box inline-block box-size-100 stretch"></div>
+		</div>
+		<div class="section">
+			<h1>Flex Box</h1>
+			<div class="flex">
+				<div class="box full-width">1</div>
+				<div class="box full-width">2</div>
+				<div class="box full-width">3</div>
+				<div class="box box-size-100">4</div>
+			</div>
+		</div>
+		<div class="section">
+			<h1>Flex Property</h1>
+			<div class="flex">
+				<div class="box flex-1">1</div>
+				<div class="box flex-2">2</div>
+				<div class="box flex-3">3</div>
+				<div class="box box-size-100">4</div>
+			</div>
+		</div>
+		<div class="section">
+			<h1>Direction and Alignment</h1>
+			<h2>Flex Columns</h2>
+			<div class="flex flex-col align-items">
+				<div class="box box-size-100">1</div>
+				<div class="box box-size-100">2</div>
+				<div class="box box-size-100">3</div>
+			</div>
+			<h2>Justify Content</h2>
+			<div class="flex justify-content">
+				<div class="box box-size-100">1</div>
+				<div class="box box-size-100">2</div>
+				<div class="box box-size-100">3</div>
+				<div class="box box-size-100">4</div>
+			</div>
+			<h2>Align Items</h2>
+			<div class="flex align-items">
+				<div class="box box-size-100">1</div>
+				<div class="box box-size-200">2</div>
+				<div class="box box-size-100">3</div>
+			</div>
+		</div>
+		<div class="section">
+			<h1>Flex Wrap</h1>
+			<h2>Boxes</h2>
+			<div class="flex flex-wrap">
+				<div class="box box-size-100">1</div>
+				<div class="box box-size-100">2</div>
+				<div class="box box-size-100">3</div>
+				<div class="box box-size-100">4</div>
+				<div class="box box-size-100">5</div>
+				<div class="box box-size-100">6</div>
+				<div class="box box-size-100">7</div>
+			</div>
+			<h2>2 Wide Cards</h2>
+			<div class="flex flex-wrap">
+				<div class="box width-46">1</div>
+				<div class="box width-46">2</div>
+				<div class="box width-46">3</div>
+				<div class="box width-46">4</div>
+				<div class="box width-46">5</div>
+				<div class="box width-46">6</div>
+				<div class="box width-46">7</div>
+			</div>
+		</div>
+	</body>
+</html>
