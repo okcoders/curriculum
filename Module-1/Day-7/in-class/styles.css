@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html,
+body {
+	margin: 0;
+}
+
+header,
+footer {
+	background-color: #161b22;
+	color: #fafafa;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	margin-bottom: 20px;
+}
+
+footer {
+	position: sticky;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	color: #fafafa;
+	padding: 10px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.github-icon {
+	font-size: 30px;
+}
+
+.icon {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.alert-symbol {
+	width: 8px;
+	height: 8px;
+	background-color: aqua;
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.box {
+	height: 200px;
+	width: 100%;
+	background-color: green;
+	margin-bottom: 20px;
+	border: 1px solid black;
+}
+
+/* .test-position {
+	position: sticky;
+	top: 0;
+} */
+
+.position-relative {
+	position: relative;
+}
+
+.pos-absolute {
+	position: absolute;
+	left: 200px;
+}
+
+.chat {
+	position: fixed;
+	right: 30px;
+	bottom: 80px;
+	font-size: 30px;
+	padding: 12px;
+	background-color: fuchsia;
+	color: #fafafa;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
