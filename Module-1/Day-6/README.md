@@ -1,4 +1,4 @@
-# Module 1 - Day 5: Display Flex
+# Module 1 - Day 6: Display Flex
 
 ## Display Options
 
