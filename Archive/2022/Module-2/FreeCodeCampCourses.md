@@ -29,6 +29,8 @@
 
 - Compound Assignment With Augmented Addition
 - Compound Assignment With Augmented Subtraction
+- Compound Assignment With Augmented Multiplication
+- Compound Assignment With Augmented Division
 - Escaping Literal Quotes in Strings
 - Quoting Strings with Single Quotes
 - Escape Sequences in Strings
@@ -44,6 +46,9 @@
 - Use Bracket Notation to Find the Nth-to-Last Character in a String
 - Word Blanks
 - Store Multiple Values in one Variable using JavaScript Arrays
+
+## Pre-Work For Day 3
+
 - Nest one Array within Another Array
 - Access Array Data with Indexes
 - Modify Array Data With Indexes
@@ -54,7 +59,7 @@
 - Manipulate Arrays With unshift()
 - Shopping List
 
-## Pre-Work For Day 3
+## Pre-Work For Day 4
 
 - Write Reusable JavaScript with Functions
 - Passing Values to Functions with Arguments
@@ -65,10 +70,6 @@
 - Understanding Undefined Value returned from a Function
 - Assignment with a Returned Value
 - Stand in Line
-
-## Pre-Work For Day 4
-
-- Everything from here: https://www.freecodecamp.org/learn/front-end-development-libraries/#jquery
 
 ## Pre-Work For Day 5
 
@@ -126,7 +127,3 @@
 - Use the parseInt Function with a Radix
 - Use the Conditional (Ternary) Operator
 - Use Multiple Conditional (Ternary) Operators
-
-## Pre-Work For Day 8
-
-- catch-up and review
