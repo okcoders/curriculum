@@ -22,7 +22,7 @@
 - the shopping cart should update and have the current number of items in the cart
 - the shopping cart should also update and have the current total price of all items in the cart
 
-## Removing Items from the Shopping Cart
+### Removing Items from the Shopping Cart
 
 - if an item is in the shopping cart, there should be a button next to it that says "remove"
 - when the user clicks the remove button, the item should be removed from the shopping cart
