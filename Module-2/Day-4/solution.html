@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1d1d1d;
+        color: white;
+        padding: 1rem;
+      }
+      nav h1 {
+        font-size: 2rem;
+      }
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .menu-item {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        width: calc(33.33% - 1rem);
+      }
+      .menu-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .menu-item-details {
+        padding: 1rem;
+      }
+      .menu-item-name {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .menu-item-price {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+      .cart {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #1d1d1d;
+        color: white;
+        padding: 1rem;
+      }
+      .cart h2 {
+        margin-bottom: 1rem;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      .cart-item-name {
+        flex: 1;
+        margin-right: 1rem;
+      }
+      .cart-item-remove {
+        font-size: 0.8rem;
+        color: #ff6666;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Coffee Shop</h1>
+      <div id="user-avatar" class="hidden"></div>
+      <button id="login-btn">Login</button>
+    </nav>
+    <main>
+      <div class="menu">
+        <div class="menu-item">
+          <img src="coffee1.jpg" alt="" />
+          <div class="menu-item-details">
+            <div class="menu-item-name">Latte</div>
+            <div class="menu-item-price">$3.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="coffee2.jpg" alt="" />
+          <div class="menu-item-details">
+            <div class="menu-item-name">Cappuccino</div>
+            <div class="menu-item-price">$4.49</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="coffee3.jpg" alt="" />
+          <div class="menu-item-details">
+            <div class="menu-item-name">Americano</div>
+            <div class="menu-item-price">
+              $2.99
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="coffee4.jpg" alt="" />
+          <div class="menu-item-details">
+            <div class="menu-item-name">Espresso</div>
+            <div class="menu-item-price">$2.49</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart hidden">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+      </div>
+    </main>
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      const userAvatar = document.getElementById("user-avatar");
+      const cart = document.querySelector(".cart");
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      const addToCartBtns = document.querySelectorAll(".add-to-cart");
+      const cartItemsData = {};
+
+      // Prompt for user login
+      loginBtn.addEventListener("click", () => {
+        const name = prompt("Please enter your name:");
+        if (name) {
+          const [firstName, lastName] = name.split(" ");
+          const avatar = `${firstName[0]}${lastName[0]}`;
+          userAvatar.innerText = avatar.toUpperCase();
+          userAvatar.classList.remove("hidden");
+          loginBtn.classList.add("hidden");
+        }
+      });
+
+      // Add item to cart
+      addToCartBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const menuItem = btn.closest(".menu-item");
+          const itemName = menuItem.querySelector(".menu-item-name").innerText;
+          const itemPrice =
+            menuItem.querySelector(".menu-item-price").innerText;
+          if (cartItemsData[itemName]) {
+            cartItemsData[itemName].quantity++;
+          } else {
+            cartItemsData[itemName] = { price: itemPrice, quantity: 1 };
+          }
+          updateCart();
+        });
+      });
+
+      // Remove item from cart
+      cartItems.addEventListener("click", (e) => {
+        if (e.target.classList.contains("cart-item-remove")) {
+          const itemName = e.target
+            .closest(".cart-item")
+            .querySelector(".cart-item-name").innerText;
+          delete cartItemsData[itemName];
+          updateCart();
+        }
+      });
+
+      // Update cart
+      function updateCart() {
+        cartItems.innerHTML = "";
+        let totalItems = 0;
+        let totalPrice = 0;
+        for (let item in cartItemsData) {
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          const itemName = document.createElement("div");
+          itemName.classList.add("cart-item-name");
+          itemName.innerText = item;
+          const itemPrice = document.createElement("div");
+          itemPrice.classList.add("cart-item-price");
+          itemPrice.innerText = cartItemsData[item].price;
+          const itemQuantity = document.createElement("div");
+          itemQuantity.classList.add("cart-item-quantity");
+          itemQuantity.innerText = cartItemsData[item].quantity;
+          const itemRemoveBtn = document.createElement("button");
+          itemRemoveBtn.classList.add("cart-item-remove");
+          itemRemoveBtn.innerText = "Remove";
+          cartItem.appendChild(itemName);
+          cartItem.appendChild(itemPrice);
+          cartItem.appendChild(itemQuantity);
+          cartItem.appendChild(itemRemoveBtn);
+          cartItems.appendChild(cartItem);
+          totalItems += cartItemsData[item].quantity;
+          totalPrice +=
+            parseFloat(cartItemsData[item].price.slice(1)) *
+            cartItemsData[item].quantity;
+        }
+        cartTotal.innerText = `Total: $
+          ${totalPrice.toFixed(2)} (${totalItems} items)`;
+        if (totalItems > 0) {
+          cart.classList.remove("hidden");
+        } else {
+          cart.classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>

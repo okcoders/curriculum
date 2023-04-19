@@ -1,0 +1,53 @@
+<!-- write a full html file that solves the following
+ it should use a script tag for all javascript
+ all javascript should be plain js
+ prompt the user on page load for a number to start with
+ once you have the number from them, write in a <p> that many bottles of beer on the wall (e.g. 99 bottles of beer on the wall should be on the screen if they input 99)
+ add a button that says "take one down"
+after clicking that button, the number of bottles should go down by one, and you should add that new sentence to the page. You should not replace the sentence, but append a new one
+ the button should still be there, and clicking it should continue to decrement the number of bottles
+ you should use an event listener for the button rather than the button onclick property -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>99 Bottles of Beer</title>
+  </head>
+  <body>
+    <h1>99 Bottles of Beer</h1>
+    <p id="bottles"></p>
+    <button id="takeOne">Take one down</button>
+    <script>
+      let numBottles;
+      let takeOneButton = document.getElementById("takeOne");
+      let bottlesParagraph = document.getElementById("bottles");
+
+      function startGame() {
+        numBottles = prompt(
+          "Please enter the number of bottles to start with:"
+        );
+        bottlesParagraph.innerHTML =
+          numBottles + " bottles of beer on the wall";
+      }
+
+      function takeOne() {
+        numBottles--;
+        if (numBottles === 0) {
+          bottlesParagraph.innerHTML +=
+            "<br>No more bottles of beer on the wall";
+          takeOneButton.removeEventListener("click", takeOne);
+          takeOneButton.disabled = true;
+        } else {
+          bottlesParagraph.innerHTML +=
+            "<br>" +
+            "take one down, pass it around " +
+            numBottles +
+            " bottles of beer on the wall";
+        }
+      }
+
+      startGame();
+      takeOneButton.addEventListener("click", takeOne);
+    </script>
+  </body>
+</html>
