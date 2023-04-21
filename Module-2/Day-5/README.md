@@ -24,7 +24,7 @@ Write a function that returns the following, given the param passed in is a posi
 
 ```
 function fizzBuzz(num) {
-  // your code here
+  if ()
 }
 
 fizzBuzz(3) // Fizz
