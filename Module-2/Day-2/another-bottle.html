@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beer on the Wall</title>
+  </head>
+  <body>
+    <script>
+      var numBottles = prompt("How many bottles of beer on the wall?");
+      var beerText = numBottles + " bottles of beer on the wall";
+      var beerParagraph = document.createElement("p");
+      beerParagraph.innerHTML = beerText;
+      document.body.appendChild(beerParagraph);
+      var button = document.createElement("button");
+      button.innerHTML = "Take one down";
+      document.body.appendChild(button);
+
+      button.addEventListener("click", function () {
+        numBottles--;
+        var newBeerText = numBottles + " bottles of beer on the wall";
+        var newBeerParagraph = document.createElement("p");
+        newBeerParagraph.innerHTML = newBeerText;
+        document.body.appendChild(newBeerParagraph);
+      });
+    </script>
+  </body>
+</html>

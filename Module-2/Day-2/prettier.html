@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>99 Bottles of Beer</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      #bottles-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .bottle-verse {
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      #take-one-button {
+        margin-bottom: 20px;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+      #take-one-button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button id="take-one-button">Take one down</button>
+    <h1>99 Bottles of Beer</h1>
+    <div id="bottles-container"></div>
+    <script>
+      let numBottles;
+      let bottlesContainer = document.getElementById("bottles-container");
+      let takeOneButton = document.getElementById("take-one-button");
+
+      function startGame() {
+        numBottles = prompt(
+          "Please enter the number of bottles to start with:"
+        );
+        renderBottleVerse();
+      }
+
+      function renderBottleVerse() {
+        let verse = document.createElement("p");
+        verse.classList.add("bottle-verse");
+        verse.textContent = numBottles + " bottles of beer on the wall";
+        bottlesContainer.appendChild(verse);
+      }
+
+      function takeOne() {
+        numBottles--;
+        if (numBottles === 0) {
+          let lastVerse = document.createElement("p");
+          lastVerse.classList.add("bottle-verse");
+          lastVerse.textContent = "No more bottles of beer on the wall";
+          bottlesContainer.appendChild(lastVerse);
+          takeOneButton.disabled = true;
+        } else {
+          let newVerse = document.createElement("p");
+          newVerse.classList.add("bottle-verse");
+          newVerse.textContent = numBottles + " bottles of beer on the wall";
+          bottlesContainer.insertBefore(newVerse, bottlesContainer.firstChild);
+        }
+      }
+
+      startGame();
+      takeOneButton.addEventListener("click", takeOne);
+    </script>
+  </body>
+</html>
