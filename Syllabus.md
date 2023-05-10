@@ -180,6 +180,26 @@ Above follows multiple free code camp sections:
     - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
     - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
+### Pre-Work For Day 2
+
+- Compare Scopes of the var and let Keywords
+- Mutate an Array Declared with const
+- Prevent Object Mutation
+- Use Arrow Functions to Write Concise Anonymous Functions
+- Write Arrow Functions with Parameters
+- Set Default Parameters for Your Functions
+- Use the Rest Parameter with Function Parameters
+- Use the Spread Operator to Evaluate Arrays In-Place
+- Use Destructuring Assignment to Extract Values from Objects
+- Use Destructuring Assignment to Assign Variables from Objects
+- Use Destructuring Assignment to Assign Variables from Nested Objects
+- Use Destructuring Assignment to Assign Variables from Arrays
+- Destructuring via rest elements
+- Use Destructuring Assignment to Pass an Object as a Function's Parameters
+- Create Strings using Template Literals
+- Write Concise Object Literal Declarations Using Object Property Shorthand
+- Write Concise Declarative Functions with ES6
+
 ## Module 4: React
 
     - Week 1: Intro to React

@@ -20,11 +20,6 @@ Please note we are skipping certain lessons, though feel free to do the ones we 
 
 ## Skipped Lessons:
 
-- Use the Rest Parameter with Function Parameters
-- Use Destructuring Assignment to Assign Variables from Objects
-- Use Destructuring Assignment to Assign Variables from Nested Objects
-- Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
-- Use Destructuring Assignment to Pass an Object as a Function's Parameters
 - Use class Syntax to Define a Constructor Function
 - Use getters and setters to Control Access to an Object
 - Create a Module Script
