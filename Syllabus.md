@@ -200,6 +200,31 @@ Above follows multiple free code camp sections:
 - Write Concise Object Literal Declarations Using Object Property Shorthand
 - Write Concise Declarative Functions with ES6
 
+### Pre-Work For Day 3
+
+- everything in here: [debugging](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#debugging)
+- everything in here: - [data structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
+
+### Pre-Work For Day 4
+
+- everything in here: - [functional programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
+
+### Pre-Work For Day 5
+
+- everything in here: [algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting)
+
+### Pre-Work For Day 6
+
+- everything in here: [intermediate algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
+
+### Pre-Work For Day 7
+
+- promises and async await
+
+### Pre-Work For Day 8
+
+- fetching apis
+
 ## Module 4: React
 
     - Week 1: Intro to React
