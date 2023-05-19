@@ -215,7 +215,7 @@ Above follows multiple free code camp sections:
 
 ### Pre-Work For Day 6
 
-- everything in here: [intermediate algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
+- as much as you can in here: [intermediate algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
 ### Pre-Work For Day 7
 
