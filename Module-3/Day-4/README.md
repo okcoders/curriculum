@@ -2,11 +2,11 @@
 
 ## Terminal Based Library
 
-You are going to make a command line program that allows a user to keep track of books. Follow the steps bellow to do so.
+You are going to make a command line program that allows a user to keep track of books. Follow the steps bellow to do so. I have provided a starting point for you in the `library.js` file.
 
 ### 1. Create a Book:
 
-- In JavaScript, create a function createBook that takes in parameters for title, author, genre, and yearPublished and returns an object with these properties.
+- Create a function createBook that takes in parameters for title, author, genre, and yearPublished and returns an object with these properties.
 
 ### 2. Adding a Book to the Library:
 
@@ -26,7 +26,7 @@ You are going to make a command line program that allows a user to keep track of
 
 ### 6. Creating a User Interface:
 
-- Finally, use the readline module to create a user interface for this library. Prompt the user to add, remove, find, or list books, and call the appropriate functions based on their choices. You can use rl.question() to ask questions.
+- Finally, update the prompt function. Based on what the user inputs, call the appropriate functions based on their choices.
 
 ### 7. Prompting more than once:
 
