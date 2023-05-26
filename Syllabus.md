@@ -219,11 +219,13 @@ Above follows multiple free code camp sections:
 
 ### Pre-Work For Day 7
 
-- promises and async await
+- [promises and async/await](https://javascript.info/async) - read chapters 1, 2, 3, 4, and 8
+- [intro to http](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/)
+- [fetch api](https://dev.to/attacomsian/introduction-to-javascript-fetch-api-4f4c)
 
 ### Pre-Work For Day 8
 
-- fetching apis
+- catch-up
 
 ## Module 4: React
 
