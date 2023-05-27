@@ -1,0 +1,13 @@
+<script>
+  //   fetch("http://localhost:3000")
+  //     .then((res) => res.text())
+  //     .then((res) => console.log(res));
+
+  async function makeRequest() {
+    const res = await fetch("http://localhost:3000");
+    const data = await res.text();
+    console.log(data);
+  }
+
+  makeRequest();
+</script>
