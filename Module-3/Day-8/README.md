@@ -19,11 +19,11 @@ You will need the following:
 
 - create an array of objects, each object should have a name, price, and description for a menu item
 - create a function that will list the menu items, the description, and their prices
-- hook this function up the the cli/prompt
+- hook this function up to the cli/prompt
 
 ### Order
 
-- create a function that will add an item to the customers order (order would be an array stored in global state)
+- create a function that will add an item to the customers order (order would be an array stored in global state, that stores the item name)
 
 ### Checkout
 
@@ -31,14 +31,14 @@ You will need the following:
 
 ### Suggest
 
-- create a function that will suggest an item to the customer based on the current weather (perhaps iced coffee if it is hot?), allow the customer to input their location.
+- create a function that will suggest an item to the customer based on the current weather (perhaps iced coffee if it is hot?), allow the customer to input their location (zip code).
 
 ### Future Suggest
 
-- create a function that will suggest an item to the customer based on the weather in the future (perhaps hot coffee if it is going to be rainy?), allow the customer to input their location, and a time in the future. You will need to use the forecast api from weatherapi.com
+- create a function that will suggest an item to the customer based on the weather in the future (perhaps hot coffee if it is going to be rainy?), allow the customer to input their location, and a time (2 days from now, or 3 days from now) in the future. You will need to use the forecast api from weatherapi.com
 
 ### Bonus
 
-- read the below, try to incorporate some of the ideas into your program
+- read the below, try to incorporate some of the ideas from it into your program (specifically, using other npm libraries to enhance your program)
 
 https://medium.com/@manavshrivastava/lets-build-a-cli-command-line-interface-with-node-js-d3b5faacc5ea
