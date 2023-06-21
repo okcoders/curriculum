@@ -1,9 +1,5 @@
 # Day 03
 
-## HW Review
-
--   Questions?
-
 ## warm-up
 
 -   new react app
@@ -11,6 +7,10 @@
 -   hook both up to state
 -   add submit button
 -   console log the email and password values when the form is submitted
+
+## HW Review
+
+-   Questions?
 
 ## stuff to cover
 
