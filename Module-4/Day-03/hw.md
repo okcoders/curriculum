@@ -1,4 +1,4 @@
-# Day 2 Home Work!
+# Day 3 Home Work!
 
 -   [errors](https://egghead.io/lessons/react-using-react-error-boundaries-to-handle-errors-in-react-components)
 -   [key prop](https://egghead.io/lessons/react-use-the-key-prop-when-rendering-a-list-with-react-b31bfa42)
