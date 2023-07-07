@@ -10,8 +10,8 @@
 
 ## Day 5 - Introducting MUI
 
-## Day 6 - Layer in Next/React Router
+## Day 6 - Layer in React Router
 
-## Day 7 -
+## Day 7 - Creating Layouts using React Router and MUI
 
 ## Day 8 (Work Day) -
