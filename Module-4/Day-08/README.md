@@ -39,8 +39,9 @@ Welcome to the React Coffee Shop Website project! In this project, you will be b
 To get started with the project, follow the steps below:
 
 1. Set up a new React project using Create React App.
-2. Create the necessary components for the Login Page, Menu Page, and Contact Us Page.
-3. Implement the functionality for the Login Page, Menu Page, and Contact Us Page following the provided instructions.
-4. Style the cards on the Menu Page after completing the necessary functionality.
+2. Install react-router-dom and mui using the docs on
+3. Create the necessary components for the Login Page, Menu Page, and Contact Us Page.
+4. Implement the functionality for the Login Page, Menu Page, and Contact Us Page following the provided instructions.
+5. Style the cards on the Menu Page after completing the necessary functionality.
 
 #### Good luck with building your React Coffee Shop Website! If you have any questions, feel free to ask for assistance.
