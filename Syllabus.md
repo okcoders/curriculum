@@ -236,14 +236,12 @@ Above follows multiple free code camp sections:
 
 Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
 
-## Module 5: Backend (Node, Express, MongoDB)
+## Module 5: Backend (Nextjs, MongoDB)
 
-    - Week 1: Node and NPM
-    - Week 2: Intro to Express
-    - Week 3: Intro to MongoDB
+    - Week 1: Servers and Nextjs
+    - Week 2: Nextjs and MongoDb
+    - Week 3: Intro to Mongoose
     - Week 4: Intro to building Restful Apis
-
-Above follows this [curriculum](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
 # Continued Learning
 

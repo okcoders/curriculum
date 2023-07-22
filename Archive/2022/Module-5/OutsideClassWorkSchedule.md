@@ -22,7 +22,6 @@
 - [High level intro to databases](https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712)
 - [Install Mongodb Compass](https://www.mongodb.com/try/download/compass)
 - [Create a free mongodb hosted database](https://www.mongodb.com/docs/atlas/getting-started/)
-- [nextjs api routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
 
 ## Day 4 Pre-work
 
@@ -40,7 +39,9 @@
 
 ## Day 7 Pre-work
 
-- full-stack next
+- auth?
+- build out goodreads site more
+- images
 
 ## Day 8 Pre-work
 
