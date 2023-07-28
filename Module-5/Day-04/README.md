@@ -14,6 +14,12 @@
   - when was the first review and for which \_id?
   - how many listings are there where the host is a superhost?
 
+### Quick intro to mongoose
+
+- database connection
+- schema creation
+- methods similar to ones in mongodb (e.g find, findOne, findById, etc)
+
 ### Nextjs
 
 - create a new nextjs app
