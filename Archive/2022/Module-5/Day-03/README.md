@@ -11,3 +11,6 @@
 - adding mongoose to our project
 - adding an authors schema definition
 - using mongoose instead of our fake db service
+
+username: okcoders
+password: kiLlFf4JPIOPYcbx
