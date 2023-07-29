@@ -22,8 +22,9 @@
 
 ### Nextjs
 
-- create a new nextjs app
+- create a new nextjs app, then cd into it
 - npm i mongoose
+- add .env file from here
 - add schema file from here
 - add db file from here
 - add api file from here
