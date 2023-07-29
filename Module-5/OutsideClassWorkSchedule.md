@@ -32,7 +32,8 @@
 ## Day 5 Pre-work
 
 - read the [query](https://mongoosejs.com/docs/queries.html) docs
-- read the [schema](https://mongoosejs.com/docs/guide.html) docs
+- read the [schema](https://mongoosejs.com/docs/guide.html) docs (stop once you get to instance methods, do not read whole page!)
+- read the [schema-types](https://mongoosejs.com/docs/schematypes.html) docs
 
 ## Day 6 Pre-work
 
