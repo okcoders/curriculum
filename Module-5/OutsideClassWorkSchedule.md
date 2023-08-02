@@ -37,10 +37,13 @@
 
 ## Day 6 Pre-work
 
+- [populate](https://mongoosejs.com/docs/populate.html) read up to field selection
+
 ## Day 7 Pre-work
 
-- full-stack next
+- [next-auth](https://next-auth.js.org/getting-started/introduction)
+- [next-auth-getting-started](https://next-auth.js.org/getting-started/example)
 
 ## Day 8 Pre-work
 
-- review for in-class work day
+- review and catch-up
