@@ -1,3 +1,4 @@
 # Day 7
 
-- authentication
+- put/updates
+- relations
