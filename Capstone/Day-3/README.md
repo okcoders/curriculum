@@ -6,11 +6,6 @@
 
 - Team Leads present wire-frames and initial features ideas for their project to class
 
-### Setup Github
-
-- Team members clone the repo to their local machine (with the vscode source code extension), by clicking new window, then clicking the clone git repository button in the start section of the welcome page
-- Paste the clone link, click clone from url, then select a folder to clone into (it will create a new folder with the name of the repo inside that folder), after doing that, click open repository
-
 ### Setup Next App
 
 #### Teams follow these instructions to setup project on team leads machine
