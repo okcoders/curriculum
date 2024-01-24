@@ -22,7 +22,7 @@
 - Wed: Learning Box Model & Complex Units
   - HW: [CSS FlexBox](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
 - Sat: Flex Box & Introduction to TailwindCSS
-  - HW: [CSS Positioning](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-picasso-painting/step-1)
+  - HW: [CSS Positioning](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-cat-painting/step-1)
 
 ### Week 4: Responsive Design and Final Project (Build a Coffee Shop)
 
