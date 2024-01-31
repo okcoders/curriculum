@@ -17,11 +17,11 @@
   - In-Class: Build out https://elementalcoffee.com/contact/
   - HW: [CSS Box Model](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1)
 
-### Week 3: Box Model and Tailwind
+### Week 3: Box Model and Flexbox
 
 - Wed: Learning Box Model & Complex Units
   - HW: [CSS FlexBox](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
-- Sat: Flex Box & Introduction to TailwindCSS
+- Sat: Flex Box 
   - HW: [CSS Positioning](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-cat-painting/step-1)
 
 ### Week 4: Responsive Design and Final Project (Build a Coffee Shop)
