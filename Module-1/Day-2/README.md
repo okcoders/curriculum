@@ -6,6 +6,14 @@
 
 ## Curriculum
 
+- how page is loaded
+- anatomy of element
+- head and body
+- display content (text, images, videos, audio), input, navigation
+- dev tools
+- documentation
+- exercise
+
 ### Setting up your First HTML Document
 
 Explain what HTML is (HyperText Markup Language) and its role in creating web pages. Show how to create a basic HTML file.
@@ -111,32 +119,11 @@ Show how elements can be nested inside one another and explain the importance of
 </div>
 ```
 
-### HTML Style Tags
-
-Introduce the `<style>` tag for adding CSS directly within an HTML document. Mention that while inline styling is possible, external stylesheets are preferred for larger projects.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Styled Page</title>
-    <style>
-        body {
-            background-color: lightblue;
-        }
-        h1 {
-            color: navy;
-            margin-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Styled Text</h1>
-    <p>This is a paragraph.</p>
-</body>
-</html>
-```
-
 ## Exercise if time
 
 Try to re-create this [website](https://en.wikipedia.org/wiki/Tim_Berners-Lee)
+
+## Additional Reading
+
+- [Intro to html](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [All Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
