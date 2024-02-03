@@ -127,3 +127,9 @@ Try to re-create this [website](https://en.wikipedia.org/wiki/Tim_Berners-Lee)
 
 - [Intro to html](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [All Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+## Homework
+
+- spend a little time trying to re-create this [website](https://en.wikipedia.org/wiki/Tim_Berners-Lee)
+- lookup the html video tag. See if you can embed a video from your computer
+- learn [css](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1)
