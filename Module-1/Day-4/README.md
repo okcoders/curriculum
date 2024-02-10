@@ -42,7 +42,7 @@ We will be replicating https://elementalcoffee.com/contact/ in your groups
    - Adjust the layout and font sizes based on the screen size.
 
 8. **Present Your Work:**
-   - Pair up and review each other's work. Provide constructive feedback.
+   - Show your work to your group members.
    - Discuss the challenges you faced and how you overcame them.
 
 #### Additional Tips:
