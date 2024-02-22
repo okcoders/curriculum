@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    border: 1px solid black;
+    background-color: blue;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-around;
+}
+
+.item {
+    border: 1px solid black;
+    background-color: cyan;
+    padding: 5px;
+}
+
+.container-2 {
+    display: flex;
+    width: 200px;
+    gap: 10px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: cyan;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 100px;
+}
