@@ -1,4 +1,3 @@
-Creating a quiz based on the curriculum covered from Days 2 to 7 in Module 1 will help reinforce students' understanding of HTML and CSS. Below is a set of questions ranging from basic to more advanced topics covered in the lessons.
 
 ### Module 1 Quiz: HTML & CSS Fundamentals
 
