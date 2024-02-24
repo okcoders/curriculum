@@ -115,6 +115,3 @@
     ```html
     <a href="about.html">About Us</a>
     ```
-
-### Summary
-This detailed curriculum guide through Module 1 of the OK Coders course provides a foundational overview of HTML and CSS, from basic structure and styling to more advanced layout techniques using Flexbox. Through practical exercises like replicating a contact form and understanding the box model, students gain hands-on experience in web design. The inclusion of code samples offers a glimpse into the coding practices taught, equipping students with the knowledge to create responsive and well-styled web pages.
