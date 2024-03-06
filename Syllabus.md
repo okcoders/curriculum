@@ -34,7 +34,7 @@ Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsi
 
 ## Module 2: Intro to Javascript
 
-[follows this](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+[follows this - Free Code Camp intro to JS](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
 
 Core concepts:
 - DOM (Concept, querying, manipulating)
@@ -51,14 +51,12 @@ Core concepts:
 ### Pre-Work
 - [Learn Basic Javascript by Building a Role Playing Game](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-javascript-by-building-a-role-playing-game/step-1) 
 
-** Through step 140 'Feature Complete' is fine
-
 ### Week 1
 - Weds: Intro to JS Ecosystem and Data Structures
   - HW:
     - Finish RPG (if needed) 
     - review:
-      - [https://javascript.info/](The Modern JS Tutorial) 1.1-2.8 OR 
+      - [The Modern JS Tutorial](https://javascript.info) 1.1-2.8 OR 
       - [Legacy FCC Intro to JS **through "Shopping List**"](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 - Sat: Interacting with the DOM, Strings, and Arrays
   - HW: [Learn Form Validation by Building a Calorie Counter](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter)
@@ -69,7 +67,7 @@ Core concepts:
 - Sat: Build Day - Coffee Shop 2.0! 
   - HW: FCC / Coffee Shop catch up as needed
     - review:
-      - [https://javascript.info/](The Modern JS Tutorial) 2.9-2.18 OR 
+      - [The Modern JS Tutorial](https://javascript.info/) 2.9-2.18 OR 
       - [Legacy FCC Intro to JS **Shopping list through multiple ternary operators**"](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
 ### Week 3
