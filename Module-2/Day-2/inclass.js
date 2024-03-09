@@ -8,7 +8,18 @@
  * - Has no methods or properties
  * 7 of these in JS - string | number | bigint | boolean | undefined | symbol | null
  * 
+ * 
  * primitives are IMMUTABLE (do not confuse this with variables being, well....variable)
+ * note that there's only one number type for both ints and floats (and scientific notation 1e...)
+ * in JS all numbers are 64bit floating point and floating point 
+ * BigInt is there to deal with numbers too large for a standard double precision float
+ * ! https://www.w3schools.com/js/js_numbers.asp
+ * 
+ * Symbols are identifiers that are guaranteed to be unique (often used to avoid collisions in object properties)
+ * 
+ * null !== undefined (but null == undefined)
+ * typeof undefined = undefined, but typeof null = object (don't ask it's a historical glitch)
+ * Number(undefined) = NaN; Number(null) = 0
  * 
  * When you're accessing properties and methods on these items,
  * Javascript is 'auto-boxing' them in ephemeral objects 
@@ -73,7 +84,11 @@
  */
 
 /* ------As Time Allows ---------*/
-// TODO Exercise - Simple Shopping Cart
+// TODO Exercise - Simple Shopping Cart 
+	// - multidimensional array item = [name:string, qty: number, price: number]
+	// - add and delete functions
+	// - index input
+
 // TODO 99 bottles of beer
 
 /*------Homework ------------*/
