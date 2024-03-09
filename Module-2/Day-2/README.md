@@ -6,8 +6,8 @@
 - getting information from user with prompt
 - changing the html on the page with js
 - changing the html on the page in response to events
-  - string concatenation
-  - user avatar first name initial and last name initial from name string
+- string concatenation and indexing
+- user avatar first name initial and last name initial from name string
 
 ## pt. 2
 
