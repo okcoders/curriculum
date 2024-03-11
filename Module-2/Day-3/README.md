@@ -10,14 +10,25 @@ function descriptiveFunctionName(parameters + types) -> return value(+ type)
 }
 ```
 
-- 'pure' functions
+- Function expressions
+```js
+const descriptiveOtherFunctionName = (someParam) => {
+	//implementation
+}
+```
+- arrow function implicit v explicit return
+
+- conditional early return
 - side effects
+- 'pure' functions
+
 - common 'smells':
 	- too many parameters
 	- multiple responsibilities
 	- side effects + return values
 	- multiple return types
 
+
 ## pt. 2 - Local Scope vs Global Scope
-- local scope vs global scope
-- closures (high level introduction - function bound with enclosing state - useful in event driven js)
+- local scope vs global scope (variables)
+- function expressions vs funciton declarations - hoisting and context(this)
