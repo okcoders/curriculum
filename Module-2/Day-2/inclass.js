@@ -75,7 +75,7 @@
  * - sort()
  * - find() / findLast()
  * - findIndex() / findLastIndex()
- * - every()
+ * - every() / some() 
  *
  * - reduce()/reduceRight() (we're going to leave this alone for now, it's a potential quagmire)
  *

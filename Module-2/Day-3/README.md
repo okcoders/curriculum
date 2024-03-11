@@ -28,6 +28,15 @@ const descriptiveOtherFunctionName = (someParam) => {
 	- side effects + return values
 	- multiple return types
 
+// TODO - revisit some Array methods that take functions:
+// "Truth tests"
+- find()/findlast()
+- filter()
+- every()/some()
+
+// "Operations"
+- sort()
+- map()
 
 ## pt. 2 - Local Scope vs Global Scope
 - local scope vs global scope (variables)
