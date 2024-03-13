@@ -39,5 +39,8 @@ const descriptiveOtherFunctionName = (someParam) => {
 - map()
 
 ## pt. 2 - Local Scope vs Global Scope
-- local scope vs global scope (variables)
+- local scope vs global scope
 - function expressions vs funciton declarations - hoisting and context(this)
+- brief intro to boolean logic (will cover in more depth next week):
+	- &&, ||, and ! operators
+	- Ternary operator
