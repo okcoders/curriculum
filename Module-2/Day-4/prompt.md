@@ -6,7 +6,7 @@ You should use html, css, and plain js all in the same file. You should not use 
 
 Below are the instructions for the coffee shop website. You should follow the instructions and build the website.
 
-Please reply with only the code for the site, do not explain it.
+Please reply with only the code for the site, do not explain it. Use Snippets with syntax highlighting (set file type) if possible. 
 
 This code should be as simple as possible and should not use advanced things like looping or map
 

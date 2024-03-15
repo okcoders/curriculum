@@ -3,8 +3,6 @@
 ## Coffee Shop 2.0!
 
 - continue building on top of the coffee shop you built in module 1
-- do not worry about using jquery, the lesson there was more about libraries and frameworks
-  - jquery used to be essential, but the document api has come a long way and has added many of the things jquery has
 - google search and reference prior classes for help
 
 ### Prompt based login
