@@ -1,16 +1,7 @@
-<!--
-    Rough breakdown of new Beta JS DS&A certification:
-    21 'courses'
-    5 'certification projects'
-    The stuff in project chunks 4 and 5 is more dense/abstract and I assume will take more time.
-    To me then it makes sense to try and get through projects 1-3 in module 2,
-    and then do 4-5 and the more in depth coffee shop stuff in module 3
--->
 # Module 2 - Intro to Javascript 2024
 
 We won't follow this exactly or do all of it but we'll use this for material
 [https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/](Free Code Camp Course)
-
 
 ## Prework for day 1:
     - SLAY THE DRAGON! Work through `Learn Basic JavaScript by Building a Role Playing Game`.  
@@ -40,19 +31,18 @@ We won't follow this exactly or do all of it but we'll use this for material
     - Boolean Logic
     - Control Flow
 
-    Homework: FCC Palindrome Checker Certification Project
+    Homework: Review / Catchup
 
 ## Class 6
     - Objects
     - Maps & Sets
     - Classes
-
     Homework: FCC Date Formatter project
 
 ## Class 7 
     - Iterators (for, while, do/while, for...of, for...in)
 
-    Homework: FCC Football cards project
+    Homework: FCC Palindrome Checker Certification Project
 
 ## Class 8
     - Build day - Coffee Shop 2.5!
