@@ -11,6 +11,12 @@
 - property access via dot notation (if identifier) 
 - property access via bracket notation (either identifier or string)
 
+## creating objects
+- object literals
+- constructor functions
+- Object.create()
+- Classes
+
 ## objects in arrays
 
 - one of the most useful data types in js is an array of objects
