@@ -35,6 +35,7 @@ We won't follow this exactly or do all of it but we'll use this for material
 
 ## Class 6
     - Objects
+    - Prototypes (using Object.create())
     - Maps & Sets
     - Classes
     Homework: FCC Date Formatter project

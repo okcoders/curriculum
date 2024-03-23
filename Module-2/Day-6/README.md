@@ -7,6 +7,9 @@
 - once we make an object we can assign it to a variable
 - we can then update the object from the variable
 - we can also add new properties to the object
+- keys are strings but must be valid identifiers to use shorthand (no quotes)
+- property access via dot notation (if identifier) 
+- property access via bracket notation (either identifier or string)
 
 ## objects in arrays
 
@@ -17,7 +20,7 @@
 
 ## record collections
 
-- similar to array of objects, but the key is not the position, but a string called the key
+- similar to array of objects, but the access is a string known is the key, not the position
 
 ## exercise
 
@@ -26,3 +29,5 @@
 - if an item is already in the cart, you should update the quantity when they click the add to cart button again
 - try to use this method to update the quantity: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find (if you are using an array of objects)
 - You could also use an object of objects with the key being the name of the shopping cart item
+
+<em>Time allowing we can work through some of the Date object FCC exercise</em>
