@@ -1,7 +1,7 @@
 # Module 2 - Intro to Javascript 2024
 
 We won't follow this exactly or do all of it but we'll use this for material
-[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/](Free Code Camp Course)
+[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/ ](Free Code Camp Course)
 
 ## Prework for day 1:
     - SLAY THE DRAGON! Work through `Learn Basic JavaScript by Building a Role Playing Game`.  
