@@ -84,10 +84,16 @@ Core concepts:
 
 ## Module 3: Intermediate Javascript
 
-    - Week 1: ES6 continued
-    - Week 2: Data Structures Continued
-    - Week 3: Functional Programming
-    - Week 4: Algorithm Scripting
+Core Concepts:
+- Week 1: Terminal, Github, Node.js, 
+- Week 2: Data Structures Continued
+- Week 3: Functional Programming
+- Week 4: Algorithm Scripting
+
+### Pre-Work for Day 18
+
+- [First Github Tutorial](https://github.com/skills/introduction-to-github)
+- [Learn the Commandline](https://www.freecodecamp.org/news/command-line-for-beginners/)
 
 Above follows multiple free code camp sections:
 
@@ -97,6 +103,8 @@ Above follows multiple free code camp sections:
     - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
     - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
+### Week 1
+- 
 ### Pre-Work For Day 2
 
 - Compare Scopes of the var and let Keywords
