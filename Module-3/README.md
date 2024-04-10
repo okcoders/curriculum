@@ -7,8 +7,9 @@ We will continue along with some of the previous freecodecamp material, as well 
 ## Class 1
 
 - The Bash Command Line
-- Git/Github
+- Tech Stacks/Full Stack/MERN
 - Node.js
+- Git/Github
 
 ## Class 2
 
