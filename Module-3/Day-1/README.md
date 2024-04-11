@@ -10,8 +10,9 @@ Why do you need to learn the command line?
 
 ### Commands:
 
-- pwd
 - ls
+- man
+- pwd
 - mkdir
 - touch
 - mv
@@ -63,3 +64,7 @@ Github is a popular Git hosting service for both open source project and company
 
 - [Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
 - [Learn Github](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+
+## Requested Resources:
+
+* [Post MongoDB Compass](https://www.mongodb.com/products/tools/compass)
