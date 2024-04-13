@@ -13,6 +13,11 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 ## Class 2
 
+- Using Node for local development
+- The Node REPL
+- File/Folder Access 
+- Using Github
+
 ## Class 3
 
 ## Class 4
