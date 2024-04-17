@@ -4,6 +4,10 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 [https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/ ](Free Code Camp Course)
 
+## Project
+
+[Learn Higher Order Function, Making a Spreadsheet](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-telephone-number-validator-project/build-a-telephone-number-validator)
+
 ## Class 1
 
 - The Bash Command Line
@@ -15,10 +19,14 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 - Using Node for local development
 - The Node REPL
-- File/Folder Access 
+- File/Folder Access
 - Using Github
 
 ## Class 3
+
+- Setup New Github Project
+- Basic Node Project Setup
+- Higher Order Functions
 
 ## Class 4
 
@@ -26,6 +34,6 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 ## Class 6
 
-## Class 7 
+## Class 7
 
 ## Class 8
