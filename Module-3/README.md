@@ -6,7 +6,7 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 ## Project
 
-[Learn Higher Order Function, Making a Spreadsheet](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-telephone-number-validator-project/build-a-telephone-number-validator)
+[Learn Higher Order Function, Making a Spreadsheet](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-functional-programming-by-building-a-spreadsheet/step-1)
 
 ## Class 1
 
