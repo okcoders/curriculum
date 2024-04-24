@@ -1,38 +1,17 @@
-# Class 04
+# Day 04
 
-## Review Higher Order Functions
+We are going to use npm/npx to run a local web server to host your spreadsheet.
+The module we are using is `live-server` and it includes auto-refresh.
 
-- fat arrow, implicit returns, no need for brackets
+## Setup
 
-## More 3rd party modules
+We will use npx to temporarily download and run so we don't have to install it. 
+npx is a run once tool for npm
 
-### lodash
+In your local project folder run:
 
-- [unique](https://lodash.com/docs/4.17.15#uniq)
-- [order by](https://lodash.com/docs/4.17.15#orderBy)
+npx live-server
 
-## Other Javascript Functionality
+Now just open web broswer to:
 
-- [default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [destructuring, pattern matching](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-- object key property shorthand notation
-
-## Filsystem Access
-
-Let's access files on the local filesystem
-
-- [write file](https://nodejs.org/docs/latest-v9.x/api/fs.html#fs_fs_writefile_file_data_options_callback)
-- [read file](https://nodejs.org/docs/latest-v9.x/api/fs.html#fs_fs_readfile_path_options_callback)
-
-## Making Web Requests
-
-### request
-
-[docs](https://github.com/request/request)
-
-### Example API
-
-- [posts](https://jsonplaceholder.typicode.com/posts)
-- [todos](https://jsonplaceholder.typicode.com/todos)
-
-
+http://127.0.0.1:8080

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Zach Mays",
+		"age": 5,
+		"address": {
+			"street": "235 NW 14th St",
+			"zip": 12345,
+			"city": "OKC",
+			"state": "OK"
+		},
+		"sex": "M",
+		"favoriteToy": "Yo Yo"
+	},
+	{
+		"name": "Bob Rockers",
+		"age": 24,
+		"address": {
+			"street": "277 NW 28th St",
+			"zip": 1289009,
+			"city": "Norman",
+			"state": "OK"
+		},
+		"sex": "M",
+		"favoriteToy": "Linux Computer"
+	}
+]
