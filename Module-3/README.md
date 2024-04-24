@@ -27,8 +27,18 @@ We will continue along with some of the previous freecodecamp material, as well 
 - Setup New Github Project
 - Basic Node Project Setup
 - Higher Order Functions
+    - forEach
+    - map
+    - reduce
+    - filter
 
 ## Class 4
+
+- Higher Order Functions (Review)
+    - Fat arrow, implicit returns, no brackets
+- ES6 Functionality
+- File-system IO
+- URL Requests
 
 ## Class 5
 
