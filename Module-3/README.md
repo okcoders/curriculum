@@ -36,6 +36,7 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 - Higher Order Functions (Review)
     - Fat arrow, implicit returns, no brackets
+    - Using lodash
 - ES6 Functionality
 - File-system IO
 - URL Requests
