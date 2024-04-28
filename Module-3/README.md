@@ -34,6 +34,10 @@ We will continue along with some of the previous freecodecamp material, as well 
 
 ## Class 4
 
+- Using live-server for local webpage hosting
+
+## Class 5
+
 - Higher Order Functions (Review)
     - Fat arrow, implicit returns, no brackets
     - Using lodash
@@ -41,10 +45,27 @@ We will continue along with some of the previous freecodecamp material, as well 
 - File-system IO
 - URL Requests
 
-## Class 5
-
 ## Class 6
+
+- Review sync/async
+- Creating projects from scratch with npm
+    - using npm scripts
+- New Modules
+    - prompts
+    - browser-sync
+- Two new Projects
+    - ToDo List Command Line
+    - ToDo List Website
 
 ## Class 7
 
+- Hosting your application in Heroku/Vercel??
+- Jest
+- Testing (Automated vs Manual)
+    - Unit
+    - Integration
+    - E2E
+- Running Tests in Github
+
 ## Class 8
+
