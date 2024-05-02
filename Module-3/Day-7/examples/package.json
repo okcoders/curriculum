@@ -1,0 +1,25 @@
+{
+  "name": "command-line-todo",
+  "version": "1.0.0",
+  "description": "Command line todo application with all the features",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'We really need to add some testing!!!'",
+    "bobisawesome": "echo 'Bobby is REALLY awesome!!'",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brockers/command-line-todo.git"
+  },
+  "author": "Bobby Rockers <rrockers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brockers/command-line-todo/issues"
+  },
+  "homepage": "https://github.com/brockers/command-line-todo#readme",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}
