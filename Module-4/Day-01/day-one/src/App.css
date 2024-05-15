@@ -1,0 +1,6 @@
+.componentBorder {
+  border: 1px solid black;
+  height: 200px;
+  text-align: center;
+  padding-top: 50px;
+}
