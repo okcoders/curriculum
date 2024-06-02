@@ -1,0 +1,22 @@
+/* Nav.css */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ff6347;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  

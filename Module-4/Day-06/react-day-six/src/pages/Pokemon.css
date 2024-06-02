@@ -1,0 +1,33 @@
+/* Pokemon.css */
+.pokemon-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .pokemon-details {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .pokemon-details h1 {
+    color: #ff6347;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .pokemon-details img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .no-pokemon {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
