@@ -9,7 +9,7 @@
     - calculations
     - sending emails/texts
     - processing payments
-- api and databases - CRUD
+- to facilitate above, we need apis and databases - CRUD
 - getting information to your client - REST/Apis and JSON
 
 - What is happening locally and Nextjs
