@@ -23,6 +23,10 @@
 - /api/cart POST
 - /api/cart/:id DELETE
 
+- /api/auth/login POST
+- /api/auth/logout POST
+- /api/auth/sign-up POST
+
 ### Endpoints for our app
 
 - / Home
