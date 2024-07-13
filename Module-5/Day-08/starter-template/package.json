@@ -1,0 +1,28 @@
+{
+  "name": "starter-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@prisma/client": "5.16.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.4"
+  },
+  "devDependencies": {
+    "prisma": "5.16.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4"
+  },
+  "prisma": {
+    "seed": "node ./prisma/seed.js"
+  }
+}
