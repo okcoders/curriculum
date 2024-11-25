@@ -1,0 +1,62 @@
+[
+	{
+		"name": "Zach Mays",
+		"age": 5,
+		"address": {
+			"street": "235 NW 14th St",
+			"zip": 12345,
+			"city": "OKC",
+			"state": "OK"
+		},
+		"sex": "M",
+		"favoriteToy": "Yo Yo"
+	},
+	{
+		"name": "Bertrand Russell",
+		"age": 90,
+		"address": {
+			"street": "239 NW 16th St",
+			"zip": 1244445,
+			"city": "Tulsa",
+			"state": "OK"
+		},
+		"sex": "M",
+		"favoriteToy": "Pipe"
+	},
+	{
+		"name": "Susan Moring",
+		"age": 6,
+		"address": {
+			"street": "232 NW 19th St",
+			"zip": 125789,
+			"city": "Norman",
+			"state": "OK"
+		},
+		"sex": "F",
+		"favoriteToy": "Moisture Meter"
+	},
+	{
+		"name": "Ada Lovelace",
+		"age": 32,
+		"address": {
+			"street": "269 NW 24th St",
+			"zip": 1289,
+			"city": "Austin",
+			"state": "TX"
+		},
+		"sex": "F",
+		"favoriteToy": "Calculator"
+	},
+	{
+		"name": "Bob Rockers",
+		"age": 24,
+		"address": {
+			"street": "277 NW 28th St",
+			"zip": 1289009,
+			"city": "Norman",
+			"state": "OK"
+		},
+		"sex": "M",
+		"favoriteToy": "Linux Computer"
+	}
+]

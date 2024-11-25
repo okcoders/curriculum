@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>Collection</title>
+</head>
+
+<body>
+    <script>
+        const shoppingCartObject = {
+            name: "dog toy",
+            price: 4.99,
+            description: "your dogs will love it",
+            quantity: 2,
+            sayHello: function () {
+                console.log("hello " + this.name);
+            },
+        };
+
+        function ShoppingCartItem(name, price, description, quantity) {
+            this.store = "My Store",
+                this.name = name;
+            this.price = price;
+            this.description = description;
+            this.quantity = quantity;
+            this.sayHello = function () {
+                console.log("hello " + this.name);
+            }
+        }
+
+        // const sampleLocation = {
+        //     name: "town square",
+        //     "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        //     "button functions": [goStore, goCave, fightDragon],
+        //     text: "You are in the town square. You see a sign that says \"Store\"."
+        // };
+
+        function Location(name, buttonText, buttonFunctions, displayText) {
+            if (buttonFunctions.length < 3) {
+                throw new Error("you must provide 3 button functions");
+            }
+            this.name = name;
+            this["button text"] = buttonText;
+            this["button functions"] = buttonFunctions;
+            this.text = displayText;
+        }
+
+        const baseLocation = {
+            name: "town square",
+            "button text": ["Go to store", "Go to cave", "Fight dragon"],
+            "button functions": [() => { }, () => { }, () => { }],
+            text: "You are in the town square. You see a sign that says \"Store\"."
+        }
+
+        const myLocation = Object.create(baseLocation);
+        myLocation.name = "new name";
+        console.log(myLocation);
+
+        try {
+            const newLocation = new Location("my location", ["btn1", "btn2", "btn3"], [ShoppingCartItem, Location, () => { }], "check out this new location!");
+        } catch (err) {
+            console.log("you made a mistake: ", err);
+            throw new Error("everything is broken");
+        }
+
+        const newItem = new ShoppingCartItem("new name", 9.99, "my shiny new constructed item", 7);
+        console.log(newItem);
+
+        const anotherNewItem = new ShoppingCartItem("other name", .99, "some words", 3);
+        console.log(anotherNewItem)
+
+        console.log("Values", Object.values(shoppingCartObject));
+        console.log("Keys", Object.keys(shoppingCartObject));
+        console.log("Entries", Object.entries(shoppingCartObject));
+
+        shoppingCartObject.quantity = 3;
+        shoppingCartObject.newProperty = "foo";
+        shoppingCartObject.description = null;
+
+
+        const shoppingCart = [
+            shoppingCartObject,
+            {
+                name: "Paper Towels",
+                description: "Cleans well",
+                price: 6.99,
+                quantity: 1,
+            },
+        ];
+
+        function avatarString() {
+            const firstInitial = name[0];
+            const spaceIndex = name.indexOf(" ");
+            const lastInitial = name[spaceIndex + 1];
+            return firstInitial + lastInitial;
+        }
+
+        console.log(shoppingCartObject.name);
+        console.log(shoppingCartObject["name"]);
+
+        shoppingCartObject.sayHello();
+
+        shoppingCartObject.ratings = 5.0;
+        shoppingCartObject.price *= 2;
+        console.log(shoppingCartObject.price);
+        delete shoppingCartObject.ratings;
+        console.log(shoppingCartObject);
+
+        console.log(shoppingCart[0].price);
+    </script>
+</body>
+
+</html>

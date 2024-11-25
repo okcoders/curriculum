@@ -1,135 +1,32 @@
-# Day 2
+# Module 1 - Day 5
 
-## Finish what we didn't get to on day 1
+## Box Model
 
-## Ensure setup is done for VSCode, Live Server, Chrome (or Arc)
 
-## Curriculum
+### Introduction to the Box Model (10 minutes)
+- **Definition and Importance**: Explain what the box model is and its role in web design. It's the foundation of layout on the web, determining how elements are sized and spaced.
+- **Components of the Box Model**: Briefly introduce the four parts of the box model: content, padding, border, and margin.
 
-- how page is loaded
-- anatomy of element
-- head and body
-- display content (text, images, videos, audio), input, navigation
-- dev tools
-- documentation
-- exercise
+### Understanding Each Component (20 minutes)
+1. **Content**: The actual content of the box, where text and images appear. Size can be controlled using width and height properties.
+2. **Padding**: Space between the content and the border. It increases the size of the box but does not add to the content area. Demonstrates how padding affects the overall dimensions of an element.
+3. **Border**: Surrounds the padding (if any) and content. It's the boundary between the margin and the padding. Explain how the border's thickness, style, and color can be controlled.
+4. **Margin**: Space outside the border. It separates the box from other elements. Highlight how margins can collapse or combine under certain conditions.
 
-### Setting up your First HTML Document
+### Visualizing the Box Model (10 minutes)
+- Use diagrams or live coding examples to show how each part of the box model contributes to the element's final appearance on a webpage.
+- Tools like browser developer tools can be helpful in visually demonstrating the box model in action.
 
-Explain what HTML is (HyperText Markup Language) and its role in creating web pages. Show how to create a basic HTML file.
+### Box Model Properties in CSS (15 minutes)
+- **CSS Properties**: Teach how to manipulate the box model with CSS, including `width`, `height`, `padding`, `margin`, `border`, and `box-sizing`.
+- **Box-sizing Property**: Explain the difference between `content-box` (default) and `border-box`, highlighting how `border-box` makes it easier to control the element's size as padding and border sizes are included.  W3 documentation: https://www.w3schools.com/css/css3_box-sizing.asp
 
-```html
-<!-- This is a comment in HTML -->
-<!DOCTYPE html> <!-- This declaration defines the document to be HTML5 -->
-<html>
-<head>
-    <title>My First HTML Page</title> <!-- The title of the document shown in browser tab -->
-</head>
-<body>
-    <h1>Hello, World!</h1> <!-- A header element that is displayed on the web page -->
-</body>
-</html>
-```
+#### Box Model Properties in CSS (20 minutes)
+- Dedicate a portion of this section to explain the `overflow` property, including its values: `visible` (default), `hidden`, `scroll`, and `auto`.
+  - **`visible`**: Content overflows the box and is visible outside of it.
+  - **`hidden`**: Content that overflows is not visible, effectively clipping the overflow.
+  - **`scroll`**: Adds scrollbars to the container so users can scroll to see the hidden content.
+  - **`auto`**: Browser decides whether to add scrollbars depending on whether content overflows.
+- Discuss how `overflow-x` and `overflow-y` properties can be used to control overflow along specific axes, providing greater control over the layout and appearance.
 
-### Structure of an HTML Document
-
-Discuss the two main sections of an HTML document: the `<head>` and the `<body>`. Explain the purpose of each section.
-
-- **head**: Contains meta-information about the document, such as its title, links to stylesheets, and character encoding.
-- **body**: Contains the content of the page that is displayed in the web browser.
-
-Introduce additional structural elements.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Page Title</title>
-</head>
-<body>
-    <header> <!-- Website header with navigation links -->
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home"> <!-- A section of the page -->
-        <h2>Welcome to My Website</h2>
-        <p>This is a paragraph of text in the home section.</p>
-    </section>
-    
-    <footer> <!-- Footer of the website -->
-        <p>Contact us at email@example.com</p>
-    </footer>
-</body>
-</html>
-```
-
-### Basic HTML Elements
-
-Introduce basic HTML elements with examples. Explain each tag briefly.
-
-```html
-<h1>Heading 1</h1> <!-- Largest heading -->
-<h2>Heading 2</h2> <!-- Subheading -->
-<p>This is a paragraph.</p> <!-- Paragraph text -->
-<img src="image.jpg" alt="An example image"> <!-- Image tag with source and alt text -->
-<a href="https://www.example.com">Visit Example</a> <!-- Link to another web page -->
-<ul> <!-- Unordered list -->
-    <li>List item 1</li>
-    <li>List item 2</li>
-</ul>
-<ol> <!-- Ordered list -->
-    <li>First item</li>
-    <li>Second item</li>
-</ol>
-<form action="/submit-form" method="post"> <!-- Form for user input -->
-    <input type="text" name="username">
-    <input type="submit" value="Submit">
-</form>
-<table> <!-- Table structure -->
-    <tr> <!-- Table row -->
-        <th>Header 1</th> <!-- Table header -->
-        <th>Header 2</th>
-    </tr>
-    <tr>
-        <td>Data 1</td> <!-- Table data -->
-        <td>Data 2</td>
-    </tr>
-</table>
-```
-
-### Inline vs. Block Element
-
-Explain the difference between inline and block-level elements. Inline elements do not start on a new line and only take up as much width as necessary. Block-level elements start on a new line and take up the full width available.
-
-- **Block Elements**: `<div>`, `<p>`, `<h1>`...`<h6>`
-- **Inline Elements**: `<span>`, `<a>`, `<img>`
-
-### Nesting
-
-Show how elements can be nested inside one another and explain the importance of proper nesting.
-
-```html
-<div>
-    <p>This paragraph is inside a div element. <a href="#">This is a link</a>.</p>
-</div>
-```
-
-## Exercise if time
-
-Try to re-create this [website](https://en.wikipedia.org/wiki/Tim_Berners-Lee)
-
-## Additional Reading
-
-- [Intro to html](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [All Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-
-## Homework
-
-- spend a little time trying to re-create this [website](https://en.wikipedia.org/wiki/Tim_Berners-Lee)
-- lookup the html video tag. See if you can embed a video from your computer
-- learn [css](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1)
+### Border Radius

@@ -1,0 +1,65 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Latte",
+      "description": "A couple of espresso shots with steamed milk",
+      "price": 5
+    },
+    {
+      "id": 2,
+      "name": "Flat White",
+      "description": "Espresso shots with steamed milk and a little foam",
+      "price": 4
+    },
+    {
+      "id": 3,
+      "name": "Long Black",
+      "description": "Double shot of espresso with hot water",
+      "price": 2
+    },
+    {
+      "id": 4,
+      "name": "Cappuccino",
+      "description": "Espresso shots with steamed milk, foam and chocolate",
+      "price": 6
+    },
+    {
+      "id": 5,
+      "name": "Affogato",
+      "description": "Vanilla ice cream with a shot of espresso",
+      "price": 5
+    },
+    {
+      "id": 6,
+      "name": "Macchiato",
+      "description": "Espresso with a dash of frothy milk",
+      "price": 5
+    },
+    {
+      "id": 7,
+      "name": "Mocha",
+      "description": "Espresso with steamed milk, chocolate and whipped cream",
+      "price": 5
+    },
+    {
+      "id": 8,
+      "name": "Piccolo",
+      "description": "Espresso with steamed milk",
+      "price": 5
+    },
+    {
+      "id": 9,
+      "name": "Ristretto",
+      "description": "Espresso with less water",
+      "price": 5
+    },
+    {
+      "id": 10,
+      "name": "Espresso",
+      "description": "A shot of espresso",
+      "price": 3
+    }
+  ],
+  "cart": []
+}

@@ -1,0 +1,20 @@
+
+.more-paragraph-style {
+ font-size:larger;   
+}
+
+#carl {
+    width: 50vw;
+}
+
+#email {
+    margin: 10px;
+}
+
+#email-input {
+    background-color: pink;
+}
+
+#email-input:focus {
+    background-color: black;
+}

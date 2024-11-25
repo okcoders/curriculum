@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>For Loops</title>
+</head>
+
+<body>
+    <script>
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(i);
+        // }
+
+        // bottles of beer song
+        // for (let i = 5; i >= 0; i--) {
+        //     if (i > 0) {
+        //         printSongLine(i);
+        //     } else {
+        //         console.log("no more bottles on the wall");
+        //     }
+        // }
+
+        // function printSongLine(numBottles) {
+        //     let noun = i > 1 ? "bottles" : "bottle";
+        //     console.log(i + ` ${noun} of beer on the wall`);
+        //     console.log(i + ` ${noun} of beer`);
+        //     console.log(
+        //         "take one down pass it around ",
+        //         i - 1 + " bottles of beer on the wall"
+        //     );
+        // }
+
+        const simpleShoppingCart = ["toilet paper", "dog treats", "la croix"];
+
+        // for (let i = 0; i < simpleShoppingCart.length; i++) {
+        //     console.log(simpleShoppingCart[i]);
+        // }
+
+        // function forEachCallback(elem, index) {
+        //     console.log("for each element: " + elem + "is at index: " + index);
+        // }
+        // simpleShoppingCart.forEach(forEachCallback);
+
+        // simpleShoppingCart.forEach(function (elem) {
+        //     console.log("for each element anonymous: " + elem);
+        // });
+
+        // simpleShoppingCart.forEach((elem) => console.log(elem));
+
+        const shoppingCart = [
+            { name: "toilet paper", price: 5.99, quantity: 1 },
+            { name: "dog treats", price: 10.99, quantity: 2 },
+            { name: "la croix", price: 3.99, quantity: 4 },
+        ];
+
+        // console.log("=========================================");
+        // let totalPrice = 0;
+        // for (let i = 0; i < shoppingCart.length; i++) {
+        //     const shoppingCartItem = shoppingCart[i];
+        //     const totalItemPrice =
+        //         shoppingCartItem.price * shoppingCartItem.quantity;
+        //     const itemString =
+        //         i +
+        //         ") " +
+        //         "item: " +
+        //         shoppingCartItem.name +
+        //         ", total price: " +
+        //         totalItemPrice;
+        //     console.log(itemString);
+        //     totalPrice += totalItemPrice;
+        // }
+        // console.log("total price: " + totalPrice);
+        // console.log("=========================================");
+
+          console.log("=========================================");
+          let totalPrice = 0;
+          shoppingCart.forEach(function (shoppingCartItem, i) {
+            const totalItemPrice =
+              shoppingCartItem.price * shoppingCartItem.quantity;
+            const itemString =
+              i + 1 +
+              ") " +
+              "item: " +
+              shoppingCartItem.name +
+              ", total price: " +
+              totalItemPrice;
+            console.log(itemString);
+            totalPrice += totalItemPrice;
+          });
+          console.log("total price: " + totalPrice);
+          console.log("=========================================");
+    </script>
+</body>
+
+</html>

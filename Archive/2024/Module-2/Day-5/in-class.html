@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>Booleans!</title>
+</head>
+
+<body>
+    <h1 id="welcome-message"></h1>
+    <script>
+        const age = prompt("how old are you?");
+        if (age !== null) {
+            alert("you must enter an age!");
+        }
+        if (isNaN(age)) {
+            alert("you must enter a valid number");
+        }
+        const isOfAge = Number(age) >= 21;
+        const isLoggedIn = true;
+        const notLoggedIn = !isLoggedIn;
+        // number comparisons: === >= > !== < <=
+        // string comparisons: === !==
+        // boolean logic: && || 
+
+        // true && true -> true
+        // const isOvery18 = age > 18
+        // const noHistoryOfBadCredit = creditScore > 600
+        // isOver18 && noHistoryOfBadCredit
+
+        // true && false -> false
+        // true || true -> true
+        // true || false -> true
+        // false && false -> false
+        // false || false -> false
+        console.log(isOfAge);
+
+        const welcomeMessageElement = document.getElementById("welcome-message");
+
+        if (isOfAge) {
+            welcomeMessageElement.textContent =
+                "Great! You are over 21, check out our site";
+        } else {
+            welcomeMessageElement.textContent =
+                "Uh oh! You are not over 21, perhaps come back later";
+        }
+
+        function fizzBuzz(num) {
+            if (num % 15 === 0) {
+                console.log("FizzBuzz");
+            } else if (num % 3 === 0) {
+                console.log("Fizz");
+            } else if (num % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(num);
+            }
+        }
+
+        fizzBuzz(2);
+        fizzBuzz(3);
+        fizzBuzz(5);
+        fizzBuzz(15);
+    </script>
+</body>
+
+</html>
