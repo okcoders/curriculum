@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></link>
+</head>
+<style>
+    body{
+        font-size: 1.25rem;
+        margin: 20px;
+    }
+
+    .columns{
+        border: 1px solid black;
+        text-align: center;
+        background-color: lightgray;
+        padding: 20px;
+    }
+</style>
+<body>
+    <h3>Bootstrap</h3>
+    <p>Bootstrap is a popular open-source front-end framework that helps developers create responsive, mobile-first websites quickly. It includes pre-designed components, CSS styles, and JavaScript functionality.</p>
+    <ul>
+        <li>CSS Framework</li>
+        <li>Mobile-first</li>
+        <li>Responsive Design</li>
+        <li>Pre-designed components</li>
+        <li>Easy to use</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <div style="border: 1px solid black;"></div>
+
+    <br>
+    <br>
+
+    
+    <h3>Setup</h3>
+    <p>To get started with Bootstrap, you need to include the Bootstrap CSS and JavaScript files in your HTML document. You can either download the files and host them on your own server, or include them from a CDN (Content Delivery Network).</p>
+
+    <h4>CDN</h4>
+    <p>To include Bootstrap from a CDN, you can use the following HTML code:</p>
+
+
+    <code>
+        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"&gt;<br>
+        &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    </code>
+
+
+    <br>
+    <br>
+
+    <div style="border: 1px solid black;"></div>
+
+    <br>
+    <br>
+   
+
+    <h3>Grid System</h3>
+    <p>Bootstrap's grid system is built with flexbox, which allows for responsive layouts. Introduce students to the 12-column grid and how it automatically adjusts based on screen size.</p>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 columns">Column 1</div>
+            <div class="col-md-4 columns">Column 2</div>
+            <div class="col-md-4 columns">Column 3</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <ul>
+        <li>Container - A fixed-width container that holds the grid.</li>
+        <li>Row - A row that holds the columns.</li>
+        <li>Column - Defines a column that takes up 4/12 of the grid (1/3 of the container width on medium and larger screens).</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <h4>Breakpoints</h4>
+    <p>Bootstrap uses a responsive grid system that allows you to specify different column widths at different screen sizes. This is done using breakpoints, which are defined in the Bootstrap CSS file.</p>
+
+    <br>
+
+    <ul>
+        <li>xs - Extra small devices (phones)</li>
+        <li>sm - Small devices (tablets)</li>
+        <li>md - Medium devices (laptops)</li>
+        <li>lg - Large devices (desktops)</li>
+    </ul>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 1</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 2</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 3</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 4</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 5</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 6</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 7</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 8</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 9</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 10</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 11</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 columns">Column 12</div>
+       
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div style="border: 1px solid black;"></div>
+
+    <br>
+    <br>
+
+
+    <h3>Components</h3>
+    <p>Bootstrap includes many pre-designed components that can be easily customized and added to your website.</p>
+    <br>
+
+    <h4>Buttons</h4>
+    
+    <button class="btn" style="background-color: purple;">Primary Button</button>
+    <button class="btn btn-secondary">Secondary Button</button>
+    <button class="btn btn-success">Success Button</button>
+
+    <br>
+    <br>
+    <br>
+
+    <h4>Navbar</h4>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <br>
+    <br>
+    <br>
+
+    <h4>Cards</h4>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://placehold.co/50" class="card-img-top" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card Title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      
+    <br>
+    <br>
+    <br>
+      
+
+    <div style="border: 1px solid black;"></div>
+
+    <br>
+    <br>
+
+    <h3>Utilities</h3>
+    <p>Bootstrap provides utility classes for common CSS tasks. These classes help you style elements quickly without writing custom CSS.</p>
+
+    <br>
+    <br>
+
+    <p class="text-center">Text alignment - This text is centered</p>
+
+    <br>
+
+    <div class="mt-0 mb-5 p-4">This div has top margin of 3 and bottom margin of 5</div>
+
+    <br>
+    <div class="d-none d-md-block">This content is hidden on smaller screens and visible on medium screens and up</div>
+
+      
+    <br>
+    <div class="bg-primary text-info p-3">This div has a primary background color and white text</div>
+
+
+
+    
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

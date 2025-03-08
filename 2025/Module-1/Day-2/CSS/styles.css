@@ -1,0 +1,41 @@
+/* Reset margins, paddings, and borders */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Standardize typography */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+  }
+
+
+/* 
+body {
+    background-color: blue;
+} */
+
+
+
+
+
+/* body {
+  background: peru
+}
+
+div h2 {
+  font-size: 200px;
+}
+
+#idSelector {
+  font-size:  30px;
+}
+
+.classDiv {
+  background-color: purple;
+  margin: 20px
+} */

@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ally</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+
+    .focus-link:focus {
+      outline: 3px solid #FF5733;
+      outline-offset: 2px;
+    }
+
+
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 10px;
+        background-color: #000;
+        color: white;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    .skip-link:focus {
+        top: 10px;
+    }
+
+
+
+</style>
+<body>
+
+    <header>
+        <h1>Welcome to My Accessible Website</h1>
+    </header>
+      
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <main>
+        <section id="home">
+          <h2>Home Section</h2>
+          <p>This section is accessible with semantic HTML.</p>
+        </section>
+        <section id="about">
+          <h2>About Section</h2>
+          <p>Here's some information about the website.</p>
+        </section>
+      </main>
+
+      
+      <footer>
+        <p>&copy; 2025 Accessible Website</p>
+      </footer>
+
+      <div style="font-weight: bold;">*** Semantic HTML tags like <<span>header</span>>, <<span>nav</span>>,  <<span>main</span>>, and <<span>footer</span>> help make content more accessible for screen readers. ***</div>
+
+      <br>
+
+      <div style="border-top: 1px solid black"></div>
+
+ 
+      <br>
+
+      <div role="alert" aria-live="assertive">
+        <p>This is an important message for screen readers!</p>
+      </div>
+
+      <div style="font-weight: bold;">*** Use ARIA (Accessible Rich Internet Applications) attributes to improve accessibility, especially for dynamic content. ***</div>
+
+      <br>
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+      <br>
+
+      <img src="" width=200 alt="Photo of a large white and tan spoiled rotten pit bull protecting his toys." />
+
+      <br>
+
+      <div style="font-weight: bold;">*** Adding alt text ensures that screen readers can describe images for visually impaired users. ***</div>
+
+      <br>
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+      <br>
+
+      <button onclick="alert('You pressed the button!')" tabindex="0">Press Me</button>
+
+      <br>
+      <br>
+
+      <div style="font-weight: bold;">*** Ensure that interactive elements like buttons and links are accessible with a keyboard. ***</div>
+
+      <br>
+      <br>
+      <br>
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+
+      <p style="color: #333; background-color: #fff;">This text has good contrast.</p>
+      <p style="color: #888; background-color: #fff;">This text might not be accessible due to low contrast.</p>
+
+      <br>
+      <br>
+
+      <div style="font-weight: bold;">*** Ensure that text has enough contrast with its background. ***</div>
+
+      <br>
+      
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+      <br>
+      <br>
+
+      <a href="#home" class="focus-link">Go to Home</a>
+
+      <br>
+      <br>
+
+      <div style="font-weight: bold;">*** Make links more accessible by highlighting them when focused using the keyboard (tab navigation). ***</div>
+
+      <br>
+      
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+      <br>
+      <br>
+
+
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+      <br>
+      <br>
+
+      <div style="font-weight: bold;">***  Ensure every form input has an associated label, making it accessible for screen readers. ***</div>
+
+      <br>
+
+      <div style="border-top: 1px solid black"></div>
+
+      <br>
+      <br>
+      <br>
+
+
+      <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+        </nav>
+
+        <main id="main-content">
+        <h1>Welcome to the Main Content</h1>
+        <p>Content goes here.</p>
+        </main>
+        
+
+        <br>
+        <br>
+  
+        <div style="font-weight: bold;">***  Provide a way for keyboard and screen reader users to skip repetitive content, like navigation. ***</div>
+  
+        <br>
+  
+        <div style="border-top: 1px solid black"></div>
+  
+        <br>
+        <br>
+        <br>
+
+        <a href="https://www.example.com" title="Visit our About Us page to learn more about us">About Us</a>
+
+        <br>
+        <br>
+  
+        <div style="font-weight: bold;">***  Ensure links are descriptive so users know what they'll find when they click, especially for screen reader users. ***</div>
+  
+        <br>
+  
+        <div style="border-top: 1px solid black"></div>
+
+        <br>
+        <br>
+        <br>
+
+        <table style="margin: 0 auto">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>29</td>
+                <td>New York</td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>34</td>
+                <td>Los Angeles</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+          <br>
+          <br>
+    
+          <div style="font-weight: bold;">***  Adding scope and proper headers for accessibility in tables. ***</div>
+    
+          <br>
+    
+          <div style="border-top: 1px solid black"></div>
+  
+          <br>
+          <br>
+          <br>
+
+          <p style="color: #ffffff; background-color: #333333; padding: 20px;">
+            This text has high contrast for better readability.
+          </p>
+
+
+
+          <br>
+          <br>
+    
+          <div style="font-weight: bold;">***  Ensure text has sufficient contrast for readability. This example uses a dark background with light text. ***</div>
+    
+          <br>
+    
+          <div style="border-top: 1px solid black"></div>
+  
+          <br>
+          <br>
+          <br>
+          
+
+
+      <br>
+      <br>
+      <br>
+
+
+    
+</body>
+</html>

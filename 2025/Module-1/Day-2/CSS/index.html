@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media screen and (max-width: 600px) {
+            body{
+                background-color: blue;
+                width: 50%;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+        }
+
+        h2 {
+            background-color: pink;
+        }
+
+        #boxModel{
+            width: 200px; padding: 20px;border: 5px solid black;margin: 10px;
+        }
+
+        .numberBox{
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h2>HTML Forms</h2>
+</div>
+
+    <p>Forms are the transportation for data. They allow users to input data into a web page.</p>
+    
+
+
+    
+    <form action="index.js">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Submit</button>   
+    </form>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h2>Box Model</h2>
+    <p>The box model describes how elements are displayed as rectangular boxes with margins, borders, padding, and content.</p>
+
+    <div id="boxModel">
+    Box Model
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Flexbox</h2>
+    <p>Flexbox is a layout model method for arranging items in rows or columns.</p>
+
+    <div 
+    style=" 
+        height: 20px;
+        padding: 20px;
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items:center
+    ">
+    <span>Flexbox Right</span>
+    </div>
+    <br>
+    <div 
+    style=" 
+        padding: 20px;
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    ">
+    <span>Flexbox Center</span>
+    </div>
+    <br>
+    <div 
+    style=" 
+        padding: 20px;
+        border: 5px solid black;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    ">
+    <span>Flexbox Left</span>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- show flex wrap -->
+    <div style="
+        display: flex;
+        flex-wrap: wrap;
+        background-color: DodgerBlue;
+        text-align: center;
+        ">
+        <div class="numberBox">1</div>
+        <div class="numberBox">2</div>
+        <div class="numberBox">3</div>
+        <div class="numberBox">4</div>
+        <div class="numberBox">5</div>
+        <div class="numberBox">6</div>
+        <div class="numberBox">7</div>
+        <div class="numberBox">8</div>
+        <div class="numberBox">9</div>
+      </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Positioning</h2>
+    <p>CSS positioning allows elements to be positioned in different ways using static, relative, absolute, and fixed positioning.
+
+    <!-- uncomment the code below to see the positioning -->
+
+    <div style="
+    
+        background-color: pink;
+        width: 50%;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    "> 
+    Positioning
+    </div>
+</p>
+    <div>Where is the box?</div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Media Queries</h2>
+    <p>Media queries are used to make web pages responsive to different screen sizes.</p>
+
+    <div>Shrink screen below 600px</div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <h2>Styling methods</h2>
+    <ul>
+        <li>Inline - within element</li>
+        <li>Internal - in head</li>
+        <li>External - in separate css file - link tag in head</li>
+    </ul>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Selectors</h2>
+    <ul>
+        <li id="idSelector">id - uses #</li>
+        <li>class - uses .</li>
+    </ul>
+
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+    <div class="classDiv">class div</div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>CSS Reset</h2>
+    <p>Different browsers have different default styles. To normalize the styles across browsers, use a CSS reset.</p>
+
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Exercise</h2>
+    <p>Take all styles and put in styles.css</p>
+    <p>Use ids and classes to style the elements</p>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

@@ -2,85 +2,89 @@
 
 ## Module 1: Html and CSS
 
-### Week 1: Intro to HTML
+### Pre-Work - Week 1
 
-- Wed: Intro to Class
-  - HW: [Intro to HTML](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1)
-- Sat: Machine Setup & Intro to HTML
-  - HW: [Basic CSS](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1)
+[Intro to HTML](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1)
+[Basic CSS](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-1)
 
-### Week 2: Basic CSS
+### Week 1: Intro to Class - Machine Setup 
+In-Class: Intro to HTML/CSS - Build out https://elementalcoffee.com/contact/
 
-- Wed: Learning Basic Css
-  - HW: [HTML Forms](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1)
-- Sat: In Class group creating Coffee Shop Menu with basic HTML and CSS
-  - In-Class: Build out https://elementalcoffee.com/contact/
-  - HW: [CSS Box Model](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1)
 
-### Week 3: Box Model and Flexbox
 
-- Wed: Learning Box Model & Complex Units
-  - HW: [CSS FlexBox](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
-- Sat: Flex Box 
-  - HW: [CSS Positioning](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-cat-painting/step-1)
+### Pre-Work - Week 2
+[HTML Forms](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1)
+[CSS Box Model](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1)
+[CSS FlexBox](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
+[CSS Positioning](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-cat-painting/step-1)
+[CSS Media Queries](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-responsive-web-design-by-building-a-piano/step-1)
 
-### Week 4: Responsive Design and Final Project (Build a Coffee Shop)
 
-- Wed: Learn Positioning and Multi-Page apps
-  - HW: [CSS Media Queries](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-responsive-web-design-by-building-a-piano/step-1)
-- Sat: Final Project
+### Week 2: HTML Forms, Box Model, Flexbox, Positioning, Media Queries
 
-Above follows this [curriculum](https://www.freecodecamp.org/learn/2022/responsive-web-design)
+In-Class: In class explanation and continue to Build out https://elementalcoffee.com/contact/
+
+### Pre-Work - Week 3
+[W3 - Bootstrap](https://www.w3schools.com/bootstrap5/)
+[Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+[Free Code Camp - Bootstrap](https://www.freecodecamp.org/learn/front-end-development-libraries/bootstrap/use-responsive-design-with-bootstrap-fluid-containers)
+
+### Week 3: Bootstrap
+
+In-Class: In class explanation and continue to Build out https://elementalcoffee.com/contact/ with Bootstrap
+
+### Pre-Work - Week 4
+
+find animation and accessibility resources
+[Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility)
+[Animation](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-animation-by-building-a-ferris-wheel/step-1)
+
+### Week 4: Animation and Accessibility
+
+- In-Class: In class explanation and continue to Build out https://elementalcoffee.com/contact/ with Bootstrap
+- Deployment with Github Pages
+
+
 
 ## Module 2: Intro to Javascript
 
-[follows this - Free Code Camp intro to JS](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+### Pre-Work for Day 1
+ 
+- [Variables and basic math](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+    - Basic Javascript section
+        - Sections: Comment Your Javascript Code through Shopping List
 
-Core concepts:
-- DOM (Concept, querying, manipulating)
-- Syntax (Comments, declaration and assignment, calls)
-- Native Types
-- Control Flow / Logic Branching
-- The Event Loop / Listeners / Handlers
-- Transforms - Destructuring, Map / Filter / Reduce
-- Scopes
-- Mutability
-- Working with Objects (dot/bracket notation, use as map, JSON stringify/parse intro)
+- In-Class: Go over Variables and Arrays and do Bottles of Beer on the wall demonstration. Then have class build it themselves. 
+
+### Pre-Work for Day 2
+ 
+- [Functions and Scope](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+    - Basic Javascript section
+        - Sections: Write Reusable JavaScript with Functions through Stand in Line
+
+- In-Class: Go over Functions and Scope and have students create login and shopping cart functionality to their coffee shop site. 
 
 
-### Pre-Work
-- [Learn Basic Javascript by Building a Role Playing Game](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-javascript-by-building-a-role-playing-game/step-1) 
+### Pre-Work for Day 3
+ 
+- [Booleans, Logical Operators(if/else), and Objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+    - Basic Javascript section
+        - Sections: Understanding Boolean Values through Record Collection
 
-### Week 1
-- Weds: Intro to JS Ecosystem and Data Structures
-  - HW:
-    - Finish RPG (if needed) 
-    - review:
-      - [The Modern JS Tutorial](https://javascript.info) 1.1-2.8 OR 
-      - [Legacy FCC Intro to JS **through "Shopping List**"](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
-- Sat: Interacting with the DOM, Strings, and Arrays
-  - HW: [Learn Form Validation by Building a Calorie Counter](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter)
+- In-Class: Go over Booleans, Logical Operators(if/else), and Objects and have students do Fizz Buzz and update shopping cart to use objects instead of arrays
 
-### Week 2
-- Weds: Functions and Scopes 
-  - HW: [Learn Basic String and Array Methods by Building a Music Player](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-basic-string-and-array-methods-by-building-a-music-player)
-- Sat: Build Day - Coffee Shop 2.0! 
-  - HW: FCC / Coffee Shop catch up as needed
-    - review:
-      - [The Modern JS Tutorial](https://javascript.info/) 2.9-2.18 OR 
-      - [Legacy FCC Intro to JS **Shopping list through multiple ternary operators**"](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
-### Week 3
-- Weds: Boolean Logic and Control Flow 
-  - HW:[Build a Palindrome Checker (Certification Project)](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#build-a-palindrome-checker-project)
-- Sat: Objects in More Depth (Maps, Sets, Classes)
-  - HW:[Learn the Date Object](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-the-date-object-by-building-a-date-formatter/step-1)
+### Pre-Work for Day 4
+ 
+- [Loops](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
+    - Basic Javascript section
+        - Sections: Iterate with Javascipt While Loops through Use Multiple Conditional (Ternaray) Operators
 
-### Week 4
-- Weds: Iterators / Loops
-  - HW:[Learn Modern JavaScript Methods by Building Football Team Cards](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-modern-javascript-methods-by-building-football-team-cards)
-- Sat: Build Day - Coffee Shop 2.5!
-  - HW: Review and rest! 
+- In-Class: Go over Loops and ternanry operators and have students refactor 99 bottles with for loop and add menu coffee shop to show menu using loop. could also update cart to use loop. 
+
+
+
+
 
 ## Module 3: Intermediate Javascript
 
@@ -90,7 +94,7 @@ Core Concepts:
 - Week 3: Functional Programming
 - Week 4: Algorithm Scripting
 
-### Pre-Work for Day 18
+### Pre-Work for Day 1
 
 - [First Github Tutorial](https://github.com/skills/introduction-to-github)
 - [Learn the Commandline](https://www.freecodecamp.org/news/command-line-for-beginners/)
@@ -167,6 +171,9 @@ Above follows this [curriculum](https://reactjs.org/tutorial/tutorial.html)
     - Week 2: Nextjs and MongoDb
     - Week 3: Intro to Mongoose
     - Week 4: Intro to building Restful Apis
+
+
+
 
 # Continued Learning
 
