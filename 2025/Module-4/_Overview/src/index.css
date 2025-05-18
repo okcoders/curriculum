@@ -83,6 +83,19 @@ ol {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: black;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
 /* code {
   display: inline-block;
   background: #f4f4f4;
@@ -109,11 +122,12 @@ pre code::before,
 pre code::after {
   content: '';
 } */
+
 .chakra-card__root {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   margin: 1rem 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
