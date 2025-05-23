@@ -62,9 +62,7 @@ button:focus-visible {
 }
 
 ul {
-  list-style: initial; /* Ensures bullets or numbers are displayed */
-  margin-left: 1.5rem; /* Adds spacing for better visibility */
-  padding-left: 1.5rem; /* Adds padding for alignment */
+  list-style: none; /* Ensures bullets or numbers are displayed */
 }
 ol {
   list-style: decimal; /* Ensures bullets or numbers are displayed */

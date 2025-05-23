@@ -7,8 +7,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <h1>Module 4: Day 1</h1>
-        <GenerateCards cardData={cardData} />
+        <h1>Module 4: OKCoders</h1>
       </div>
     </>
   );
