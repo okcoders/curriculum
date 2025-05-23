@@ -1,10 +1,9 @@
 import { useState } from "react";
 import cardData from "./cardData/day1Data";
-import GenerateCards from "./components/cards/generate-cards";
+import GenerateCards from "./components/cards/generate_cards";
 import "./App.css";
 
 function App() {
-  
   return (
     <>
       <div className="App">
