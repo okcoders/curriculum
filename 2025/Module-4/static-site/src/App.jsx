@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Header title="Static Web Page" />
-      <div>
         <Body />
-        </div>
     </>
   )
 }
