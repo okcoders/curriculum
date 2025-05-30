@@ -34,7 +34,7 @@ export default function Day2() {
                 <SideMenu data={lessons} onSelection={handleSelection} selected={selected} />
                 </div>
                 </div>
-                <div className={`${showMenu ? "" : "w-full m-auto"} transition-all duration-500`}>
+                <div className={`${showMenu ? "" : "w-full m-auto"} transition-all duration-500 text-2xl`}>
                     <RenderCard header={selected} body={day2Data.find((lesson) => lesson.header === selected)?.body} />
                 </div>
             </div>

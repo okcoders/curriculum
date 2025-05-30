@@ -1,10 +1,13 @@
 import Card from "./card";
 import cardData from "../assets/card-data";
+import Counter from "./counter";
 
 export default function Body() {
 
   return (
-    <div>
+    <div className="">
+      {/* <Counter /> */}
+
       {cardData.map((card) => (
         <Card
           key={card.title}

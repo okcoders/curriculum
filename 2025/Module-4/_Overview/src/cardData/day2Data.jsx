@@ -174,23 +174,24 @@ const day2Data = [
     {
       header: (
         <>
-          <h3>Project: Build a Movie Explorer App</h3>
+          <h3>Project: Build a Simple Weather App</h3>
         </>
       ),
       body: (
         <>
           <p>
-            <strong>Goal:</strong> Create a fun and engaging app that uses state
+            <strong>Goal:</strong> Create an app that uses state
             management and Tailwind CSS for styling.
           </p>
           <p>
-            <strong>App Description:</strong> A "Movie Explorer" app where users
+            <strong>App Description:</strong> A weather app where users
             can:
           </p>
           <ul>
-            <li>Browse a list of movies (static data for now).</li>
-            <li>Like/unlike movies (state management with useState).</li>
-            <li>Persist liked movies in localStorage.</li>
+            <li>Input field that takes a zip code.</li>
+            <li>Submit button that triggers API fetch</li>
+            <li>Show temperature, conditions, and city name</li>
+            <li>Persist location with localStorage</li>
             <li>Style the app using Tailwind CSS and daisyUI.</li>
           </ul>
           <p>
