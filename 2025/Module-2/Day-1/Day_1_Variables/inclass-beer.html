@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="startingNumber"></p>
+
+    <script>
+
+        let startingNumber = prompt('How many bottles are on the wall?');
+        console.log('startingNumber', startingNumber)
+
+        let startingNumberElement = document.getElementById("startingNumber");
+
+        startingNumberElement.textContent = `There are ${startingNumber} bottle of beer on the wall`;
+
+        startingNumber--;
+        console.log('after one bottle taken down', startingNumber)
+
+        let nextPTag = document.createElement('p')
+        console.log('nextPTag', nextPTag)
+
+        startingNumberElement.appendChild(nextPTag);
+
+        nextPTag.textContent = `There are now ${startingNumber} bottle of beer on the wall`;
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

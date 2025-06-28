@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Interaction Example</title>
+</head>
+<body>
+
+  <h1 id="main-heading">Welcome to My Web Page</h1>
+  <p id="text">Click the button to change this text!</p>
+  <button id="change-text-btn">Change Text</button>
+
+  <script>
+    // Access elements
+    const changeTextButton = document.getElementById("change-text-btn");
+    const paragraph = document.getElementById("text");
+
+    // Add event listener for button click
+    changeTextButton.addEventListener("click", function() {
+      // Change the text content of the paragraph
+      paragraph.textContent = "The text has been changed!";
+    });
+  </script>
+
+</body>
+</html>

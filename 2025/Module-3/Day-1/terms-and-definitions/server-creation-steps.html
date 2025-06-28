@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Creation Steps</title>
+</head>
+<body style="background-color: rgb(48, 146, 232); color: aliceblue;">
+
+    <h2>In your terminal, run the following commands:</h2>
+    <h3><pre>
+        mkdir my-express-server
+        cd my-express-server
+        npm init -y
+        npm install express
+        touch server.js
+    </pre></h3>
+    
+
+    <p>---------------------------------</p>
+
+    <h2>Paste the following into the <code>server.js</code> file:</h2>
+    <h3><pre>
+        const express = require('express');
+        const app = express();
+        const port = 3000;
+
+        app.get('/', (req, res) => {
+        res.send('Hello, world!');
+        });
+
+        app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+        });
+    </pre></h3>
+
+    <p>---------------------------------</p>
+
+    <h2>Run the following command in your terminal:</h2>
+    <h3><pre>
+        node server.js
+    </pre></h3>
+
+    <p>---------------------------------</p>
+
+    <h2>Open your browser and navigate to <code>http://localhost:3000</code></h2>
+    
+
+    <p>---------------------------------</p>
+
+    <h2 style="margin-bottom: 100px;">Run the following command in your terminal:</h2>
+    <h3><pre>
+        curl -i http://localhost:3000/
+    </pre></h3>
+
+    <!-- <p>6. Create a new file called <code>database.js</code> in the root directory of your project</p>
+    <p>7. Add the following to the <code>database.js</code> file:</p>
+    <pre>
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('messages.db');
+
+module.exports = {
+  all: cb => db.all('SELECT * FROM messages', cb),
+  run: (sql, params, cb) => db.run(sql, params, cb)
+};
+    </pre>
+    <p>8. Create a new file called <code>messages.db</code> in the root directory of your project</p>
+    <p>9. Create a new table called <code>messages</code> in the <code>messages.db</code> file</p>
+    <p>10. Add the following to the <code>messages.db</code> file:</p>
+    <pre>
+CREATE TABLE messages (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  text TEXT
+);
+    </pre>
+    <p>11. Run the following command in your terminal:</p>
+    <pre>
+npm install
+    </pre>
+    <p>12. Run the following command in your terminal:</p>
+    <pre>
+node index.js
+    </pre>
+    <p>13. Open your browser and navigate to <code>http://localhost:3000</code></p>
+     -->
+</body>
+</html>

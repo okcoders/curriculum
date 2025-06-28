@@ -71,7 +71,7 @@ find animation and accessibility resources
     - Basic Javascript section
         - Sections: Understanding Boolean Values through Record Collection
 
-- In-Class: Go over Booleans, Logical Operators(if/else), and Objects and have students do Fizz Buzz and update shopping cart to use objects instead of arrays
+- In-Class: Go over Booleans, Logical Operators(if/else), and Objects and have students do Fizz Buzz 
 
 
 ### Pre-Work for Day 4
@@ -88,73 +88,43 @@ find animation and accessibility resources
 
 ## Module 3: Intermediate Javascript
 
-Core Concepts:
-- Week 1: Terminal, Github, Node.js, 
-- Week 2: Data Structures Continued
-- Week 3: Functional Programming
-- Week 4: Algorithm Scripting
-
 ### Pre-Work for Day 1
+ 
+- [Learn the Commandline](https://www.freecodecamp.org/news/how-to-use-the-cli-beginner-guide/) - read
+- [promises and async/await](https://www.freecodecamp.org/news/asynchronous-programming-in-javascript-examples/) - read
+- [intro to http](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/) - read
+- [fetch api](https://www.freecodecamp.org/news/how-to-make-api-calls-with-fetch/) - read
+- [ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6)
+    - Do all of ES6 section
+   
+- In-Class: Go over prework.  For coffee shop, set up express server and create routes for login, getting menu, weather api, and checkout. This will cover Node.js and Express, HTTP Methods, fetch api, and promises.
 
-- [First Github Tutorial](https://github.com/skills/introduction-to-github)
-- [Learn the Commandline](https://www.freecodecamp.org/news/command-line-for-beginners/)
 
-Above follows multiple free code camp sections:
 
-    - [ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6)
-    - [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
-    - [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
-    - [Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
-    - [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
-
-### Week 1
-- 
 ### Pre-Work For Day 2
 
-- Compare Scopes of the var and let Keywords
-- Mutate an Array Declared with const
-- Prevent Object Mutation
-- Use Arrow Functions to Write Concise Anonymous Functions
-- Write Arrow Functions with Parameters
-- Set Default Parameters for Your Functions
-- Use the Rest Parameter with Function Parameters
-- Use the Spread Operator to Evaluate Arrays In-Place
-- Use Destructuring Assignment to Extract Values from Objects
-- Use Destructuring Assignment to Assign Variables from Objects
-- Use Destructuring Assignment to Assign Variables from Nested Objects
-- Use Destructuring Assignment to Assign Variables from Arrays
-- Destructuring via rest elements
-- Use Destructuring Assignment to Pass an Object as a Function's Parameters
-- Create Strings using Template Literals
-- Write Concise Object Literal Declarations Using Object Property Shorthand
-- Write Concise Declarative Functions with ES6
+- [debugging](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#debugging) - everything in here
+- [data structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures) - everything in here
+
+- In-Class: Go over prework. finish what didnt get done on day 1.
+
 
 ### Pre-Work For Day 3
 
-- everything in here: [debugging](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#debugging)
-- everything in here: - [data structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-data-structures)
+- [SQL]https://www.sqlitetutorial.net/sqlite-nodejs/
+- [functional programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming) - everything in here
+- [algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting) - do what you can
+
+- In-Class: Go over prework. Set up SQLite, create a database for the coffee shop, modify server code to use database. This will cover SQL, SQLite, and SQL Queries.
+
 
 ### Pre-Work For Day 4
+- [testing](https://www.freecodecamp.org/news/how-to-start-unit-testing-javascript/) - read, dont worry if doesnt make a lot of sense
+- [intermediate algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting) - as much as you can
 
-- everything in here: - [functional programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#functional-programming)
+- In-Class: Go over prework. Cover tests briefly. finish what didnt get done on day 3.
 
-### Pre-Work For Day 5
 
-- everything in here: [algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting)
-
-### Pre-Work For Day 6
-
-- as much as you can in here: [intermediate algorithm scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
-
-### Pre-Work For Day 7
-
-- [promises and async/await](https://javascript.info/async) - read chapters 1, 2, 3, 4, and 8
-- [intro to http](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/)
-- [fetch api](https://dev.to/attacomsian/introduction-to-javascript-fetch-api-4f4c)
-
-### Pre-Work For Day 8
-
-- catch-up
 
 ## Module 4: React
 

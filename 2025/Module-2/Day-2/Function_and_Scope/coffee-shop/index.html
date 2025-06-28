@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1 id="somethingStupid">☕ Coffee Shop</h1>
+        <!-- <div id="login-section">
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="handleLogin()">Login</button>
+            <span id="welcome-message"></span>
+        </div> -->
+        <form id="login-form" onsubmit="handleLogin2(event)">
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+            <span id="welcome-message"></span>
+        </form>
+    </header>
+
+    <main>
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Menu</h2>
+            <ul id="menu"></ul>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
