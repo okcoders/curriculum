@@ -18,7 +18,7 @@ export default function Day1() {
 
 
     return (
-        <div className="bg-purple-100 h-auto pb-20">
+        <div className="bg-purple-100 h-auto pb-20 text-black">
             <h1 className="text-center text-2xl pt-24 font-bolds">Module 5: Day 1</h1>
             <div className="card w-1/2 card-lg m-auto mt-25 shadow-sm bg-white">
                 <div className="card-body">

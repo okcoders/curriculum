@@ -1,5 +1,5 @@
 {
-  "name": "course-app",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.3.4",
-    "node": "^24.2.0",
-    "nvm": "^0.0.4",
-    "prismjs": "^1.30.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "next": "15.3.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "daisyui": "^5.0.43",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "@eslint/eslintrc": "^3"
   }
 }
