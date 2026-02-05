@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - HTML Foundations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            background-color: #2d3436;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .example-box {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+
+        .tag {
+            color: #d63031;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Week 1 Day 1 — HTML Foundations</h1>
+    <p>Review of freeCodeCamp Basic HTML homework. These are the core concepts you should understand.</p>
+
+
+    <br>
+    <h2>HTML Boilerplate</h2>
+    <p>Every HTML page needs this structure. The browser uses it to know how to render the page.</p>
+
+    <div class="example-box">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- visible content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> — tells the browser this is HTML5</li>
+        <li><code>&lt;html&gt;</code> — root element, wraps everything</li>
+        <li><code>&lt;head&gt;</code> — metadata, not visible on page (title, charset, links to CSS)</li>
+        <li><code>&lt;body&gt;</code> — everything the user sees</li>
+    </ul>
+
+
+    <br>
+    <br>
+    <h2>Headings &amp; Paragraphs</h2>
+    <p>HTML has 6 heading levels. <code>&lt;h1&gt;</code> is the most important, <code>&lt;h6&gt;</code> is the least. Use them in order — don't skip levels.</p>
+
+    <h1>h1 — Main Heading</h1>
+    <h2 style="background: none; color: black; padding: 0;">h2 — Section Heading</h2>
+    <h3>h3 — Subsection</h3>
+    <h4>h4 — Sub-subsection</h4>
+    <h5>h5 — Minor heading</h5>
+    <h6>h6 — Smallest heading</h6>
+
+    <p>This is a paragraph. The <code>&lt;p&gt;</code> tag creates a block of text with spacing above and below.</p>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> Why shouldn't you use <code>&lt;h1&gt;</code> just to make text big?</p>
+        <p><em>Answer: Headings have semantic meaning — screen readers and search engines use them to understand page structure. Use CSS for sizing.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Text Formatting</h2>
+    <p>Common inline elements for formatting text:</p>
+
+    <p><strong>This is bold</strong> — uses <code>&lt;strong&gt;</code> (semantic: important text)</p>
+    <p><em>This is italic</em> — uses <code>&lt;em&gt;</code> (semantic: emphasized text)</p>
+    <p><b>This is also bold</b> — uses <code>&lt;b&gt;</code> (visual only, no semantic meaning)</p>
+    <p><i>This is also italic</i> — uses <code>&lt;i&gt;</code> (visual only, no semantic meaning)</p>
+
+    <div class="example-box">
+        <p><strong>Key difference:</strong> <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> tell the browser the text is <em>important</em>. Screen readers will emphasize them. <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> just change how text looks.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Lists</h2>
+    <p>Two types of lists. Both use <code>&lt;li&gt;</code> for each item.</p>
+
+    <h3>Unordered List (bullets)</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Ordered List (numbers)</h3>
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+    </ol>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> When would you use <code>&lt;ol&gt;</code> vs <code>&lt;ul&gt;</code>?</p>
+        <p><em>Answer: Use ordered when sequence matters (steps, rankings). Use unordered when order doesn't matter (grocery list, features).</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Links</h2>
+    <p>The anchor tag <code>&lt;a&gt;</code> creates hyperlinks. The <code>href</code> attribute holds the URL.</p>
+
+    <a href="https://www.freecodecamp.org">Visit freeCodeCamp</a>
+    <br><br>
+    <a href="https://www.freecodecamp.org" target="_blank">Opens in new tab</a>
+    <br><br>
+    <a href="#lists">Jump to Lists section (internal link)</a>
+
+    <div class="example-box">
+        <pre><code>&lt;a href="https://example.com"&gt;External link&lt;/a&gt;
+&lt;a href="about.html"&gt;Link to another page&lt;/a&gt;
+&lt;a href="#section-id"&gt;Jump link within page&lt;/a&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Opens new tab&lt;/a&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Images</h2>
+    <p>Images use the <code>&lt;img&gt;</code> tag. It is a <strong>self-closing</strong> tag — no closing tag needed.</p>
+
+    <img src="https://via.placeholder.com/300x150" alt="Placeholder image showing 300 by 150 pixels" width="300">
+
+    <div class="example-box">
+        <pre><code>&lt;img src="photo.jpg" alt="Description of image" width="300"&gt;</code></pre>
+        <p><strong>Required attributes:</strong></p>
+        <ul>
+            <li><code>src</code> — path to the image file</li>
+            <li><code>alt</code> — describes the image (accessibility + shows if image fails to load)</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> What happens if you leave out the <code>alt</code> attribute?</p>
+        <p><em>Answer: Screen readers can't describe the image to visually impaired users. Also, if the image fails to load, users see nothing instead of a description.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Audio &amp; Video</h2>
+    <p>HTML5 added native media elements so you don't need plugins.</p>
+
+    <div class="example-box">
+        <h3>Video</h3>
+        <pre><code>&lt;video src="movie.mp4" controls width="400"&gt;
+    Your browser does not support video.
+&lt;/video&gt;</code></pre>
+
+        <h3>Audio</h3>
+        <pre><code>&lt;audio src="song.mp3" controls&gt;
+    Your browser does not support audio.
+&lt;/audio&gt;</code></pre>
+
+        <p><strong>Key attribute:</strong> <code>controls</code> — without this, the player is invisible. The text between the tags is a fallback for old browsers.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Iframes</h2>
+    <p>Embeds another webpage inside your page. Common for YouTube videos, maps, etc.</p>
+
+    <div class="example-box">
+        <pre><code>&lt;iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    width="560" 
+    height="315" 
+    title="Video description"
+    allowfullscreen
+&gt;&lt;/iframe&gt;</code></pre>
+        <p><strong>Always include</strong> a <code>title</code> attribute for accessibility.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>SVGs</h2>
+    <p>SVG (Scalable Vector Graphics) creates images with code. They scale to any size without losing quality.</p>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="#0984e3" />
+    </svg>
+
+    <svg width="150" height="100">
+        <rect x="10" y="10" width="130" height="80" fill="#00b894" rx="10" />
+    </svg>
+
+    <div class="example-box">
+        <pre><code>&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" fill="blue" /&gt;
+&lt;/svg&gt;</code></pre>
+        <p><strong>When to use SVG vs <code>&lt;img&gt;</code>:</strong> SVGs are best for icons, logos, and simple shapes. Photos should use <code>&lt;img&gt;</code> with jpg/png.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>HTML Attributes</h2>
+    <p>Attributes add extra information to elements. They go inside the opening tag.</p>
+
+    <div class="example-box">
+        <pre><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;</code></pre>
+    </div>
+
+    <p>Common attributes you've seen:</p>
+    <ul>
+        <li><code>id</code> — unique identifier (one per page)</li>
+        <li><code>class</code> — reusable identifier (many elements can share)</li>
+        <li><code>src</code> — source file (images, video, audio)</li>
+        <li><code>href</code> — hyperlink reference (links)</li>
+        <li><code>alt</code> — alternative text (images)</li>
+        <li><code>type</code> — input type (forms)</li>
+        <li><code>target</code> — where to open link (<code>_blank</code> = new tab)</li>
+        <li><code>width</code> / <code>height</code> — size of element</li>
+    </ul>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> What's the difference between <code>id</code> and <code>class</code>?</p>
+        <p><em>Answer: <code>id</code> must be unique — only one element on the page should have that id. <code>class</code> can be reused on as many elements as you want.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Semantic HTML</h2>
+    <p>Semantic elements describe their meaning. This helps search engines, screen readers, and other developers understand your page structure.</p>
+
+    <div class="example-box">
+        <h3>Non-semantic (bad)</h3>
+        <pre><code>&lt;div id="header"&gt;...&lt;/div&gt;
+&lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;div id="main"&gt;...&lt;/div&gt;
+&lt;div id="footer"&gt;...&lt;/div&gt;</code></pre>
+
+        <h3>Semantic (good)</h3>
+        <pre><code>&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+    </div>
+
+    <p>Key semantic elements:</p>
+    <ul>
+        <li><code>&lt;header&gt;</code> — top of page or section (logo, nav)</li>
+        <li><code>&lt;nav&gt;</code> — navigation links</li>
+        <li><code>&lt;main&gt;</code> — primary content (only one per page)</li>
+        <li><code>&lt;section&gt;</code> — thematic grouping of content</li>
+        <li><code>&lt;article&gt;</code> — self-contained content (blog post, news story)</li>
+        <li><code>&lt;aside&gt;</code> — sidebar or related content</li>
+        <li><code>&lt;footer&gt;</code> — bottom of page or section</li>
+        <li><code>&lt;figure&gt;</code> / <code>&lt;figcaption&gt;</code> — image with caption</li>
+    </ul>
+
+    <figure>
+        <img src="https://via.placeholder.com/200x120" alt="Example image">
+        <figcaption>Figure 1: This is a caption for the image above</figcaption>
+    </figure>
+
+
+    <br>
+    <br>
+    <h2>HTML Comments</h2>
+    <p>Comments are not displayed in the browser. Use them to leave notes in your code.</p>
+
+    <div class="example-box">
+        <pre><code>&lt;!-- This is a comment --&gt;
+
+&lt;!-- 
+    This is a 
+    multi-line comment 
+--&gt;
+
+&lt;!-- TODO: add navigation here --&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Nesting &amp; Indentation</h2>
+    <p>Elements inside other elements are called <strong>children</strong>. Proper indentation makes code readable.</p>
+
+    <div class="example-box">
+        <h3>Bad (no indentation)</h3>
+        <pre><code>&lt;div&gt;
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;p&gt;Text&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Good (indented)</h3>
+        <pre><code>&lt;div&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <p><strong>Rule:</strong> Every time an element is nested inside another, indent 2 or 4 spaces (pick one and be consistent).</p>
+
+
+    <br>
+    <br>
+    <h2>Block vs Inline Elements</h2>
+    <p>Understanding this difference is critical for layout.</p>
+
+    <div class="example-box">
+        <h3>Block elements — take full width, start on new line</h3>
+        <div style="background: #dfe6e9; padding: 5px; margin: 5px 0;">This is a &lt;div&gt;</div>
+        <p style="background: #dfe6e9; padding: 5px; margin: 5px 0;">This is a &lt;p&gt;</p>
+
+        <h3>Inline elements — only take needed width, stay on same line</h3>
+        <p>
+            This has a <span style="background: #ffeaa7; padding: 2px 5px;">&lt;span&gt;</span> and a 
+            <strong style="background: #ffeaa7; padding: 2px 5px;">&lt;strong&gt;</strong> and a 
+            <a href="#" style="background: #ffeaa7; padding: 2px 5px;">&lt;a&gt;</a> inline.
+        </p>
+    </div>
+
+    <p><strong>Block:</strong> <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></p>
+    <p><strong>Inline:</strong> <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;code&gt;</code></p>
+
+
+    <br>
+    <br>
+    <h2>HTML Entities</h2>
+    <p>Special characters that HTML reserves need entity codes:</p>
+
+    <div class="example-box">
+        <ul>
+            <li><code>&amp;lt;</code> → &lt; (less than)</li>
+            <li><code>&amp;gt;</code> → &gt; (greater than)</li>
+            <li><code>&amp;amp;</code> → &amp; (ampersand)</li>
+            <li><code>&amp;copy;</code> → &copy; (copyright)</li>
+            <li><code>&amp;nbsp;</code> → non-breaking space</li>
+        </ul>
+        <p><strong>Why?</strong> If you type <code>&lt;</code> in your HTML, the browser thinks it's a tag. Entities let you display these characters as text.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Putting It All Together</h2>
+    <p>A well-structured HTML page uses all of these concepts:</p>
+
+    <div class="example-box">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Portfolio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Jane Doe&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+            &lt;a href="#projects"&gt;Projects&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;I'm a &lt;strong&gt;web developer&lt;/strong&gt; learning HTML.&lt;/p&gt;
+            &lt;img src="headshot.jpg" alt="Jane smiling"&gt;
+        &lt;/section&gt;
+
+        &lt;section id="projects"&gt;
+            &lt;h2&gt;Projects&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Project One&lt;/h3&gt;
+                &lt;p&gt;Built a recipe page using &lt;em&gt;semantic HTML&lt;/em&gt;.&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 Jane Doe&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Exercise</h2>
+    <ul>
+        <li><a href='https://gist.github.com/bryanrigsby/f2d0918ece0a6f95a73095aecda9d9fa'>Debug exercise</a></li>
+        <li><a href='https://gist.github.com/bryanrigsby/516e00bb813f652bd73241ce08e469da'>Read the code exercise</a></li>
+        <li>At least one of each: heading, paragraph, list, link, image</li>
+        <li>A comment explaining one section</li>
+        <li>An <code>&lt;img&gt;</code> with a proper <code>alt</code> attribute</li>
+    </ul>
+
+
+    <br>
+    <br>
+</body>
+</html>
