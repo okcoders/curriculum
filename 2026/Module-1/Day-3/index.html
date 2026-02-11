@@ -1,0 +1,608 @@
+<!-- debug gist - https://gist.github.com/bryanrigsby/f40fe89da57359b7c1e30f5c2b3323b2
+read code gist - https://gist.github.com/bryanrigsby/de872dff480a773a8f441e9c498aa1e2
+index.html link - 
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - CSS Fundamentals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            background-color: #0984e3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .example-box {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+
+        .demo-box {
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            margin: 5px;
+            border: 1px solid #333;
+            text-align: center;
+            line-height: 40px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Week 2 Day 1 — CSS Fundamentals</h1>
+    <p>Review of freeCodeCamp CSS homework. CSS (Cascading Style Sheets) controls how HTML elements look.</p>
+
+
+    <br>
+    <h2>How CSS Works</h2>
+    <p>CSS consists of <strong>selectors</strong> and <strong>declarations</strong>. The selector targets elements, and declarations set the styles.</p>
+
+    <div class="example-box">
+        <pre><code>selector {
+    property: value;
+    property: value;
+}</code></pre>
+    </div>
+
+    <div class="example-box">
+        <pre><code>h1 {
+    color: blue;
+    font-size: 24px;
+}</code></pre>
+        <p>This targets all <code>&lt;h1&gt;</code> elements and makes them blue with 24px font size.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Three Ways to Add CSS</h2>
+
+    <h3>1. Inline (in the element)</h3>
+    <div class="example-box">
+        <pre><code>&lt;p style="color: red;"&gt;Red text&lt;/p&gt;</code></pre>
+        <p><strong>Use:</strong> Quick fixes, overrides. <strong>Avoid:</strong> For most styling — hard to maintain.</p>
+    </div>
+
+    <h3>2. Internal (in the head)</h3>
+    <div class="example-box">
+        <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        <p><strong>Use:</strong> Single-page styles, demos, emails. <strong>Avoid:</strong> Multi-page sites.</p>
+    </div>
+
+    <h3>3. External (separate file)</h3>
+    <div class="example-box">
+        <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+        <p><strong>Use:</strong> Most projects. <strong>Why:</strong> Reusable across pages, easier to maintain.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>CSS Selectors</h2>
+    <p>Selectors determine which elements get styled.</p>
+
+    <h3>Element Selector</h3>
+    <div class="example-box">
+        <pre><code>p {
+    color: gray;
+}</code></pre>
+        <p>Targets <strong>all</strong> <code>&lt;p&gt;</code> elements on the page.</p>
+    </div>
+
+    <h3>Class Selector (uses .)</h3>
+    <div class="example-box">
+        <pre><code>.highlight {
+    background-color: yellow;
+}
+
+&lt;p class="highlight"&gt;I'm highlighted&lt;/p&gt;
+&lt;p&gt;I'm not&lt;/p&gt;</code></pre>
+        <p><strong>Reusable:</strong> Multiple elements can share the same class.</p>
+    </div>
+
+    <h3>ID Selector (uses #)</h3>
+    <div class="example-box">
+        <pre><code>#main-title {
+    font-size: 32px;
+}
+
+&lt;h1 id="main-title"&gt;Welcome&lt;/h1&gt;</code></pre>
+        <p><strong>Unique:</strong> Only ONE element per page should have each ID.</p>
+    </div>
+
+    <h3>Descendant Selector</h3>
+    <div class="example-box">
+        <pre><code>.card p {
+    color: gray;
+}</code></pre>
+        <p>Targets <code>&lt;p&gt;</code> elements <strong>inside</strong> elements with class <code>card</code>.</p>
+    </div>
+
+    <h3>Multiple Selectors</h3>
+    <div class="example-box">
+        <pre><code>h1, h2, h3 {
+    font-family: Georgia, serif;
+}</code></pre>
+        <p>Applies the same style to multiple elements. Separate with commas.</p>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> What's the difference between <code>.card p</code> and <code>.card, p</code>?</p>
+        <p><em>Answer: <code>.card p</code> = paragraphs inside .card only. <code>.card, p</code> = all .card elements AND all paragraphs.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>CSS Specificity</h2>
+    <p>When multiple rules target the same element, specificity determines which wins.</p>
+
+    <div class="example-box">
+        <h3>Specificity hierarchy (highest to lowest):</h3>
+        <ol>
+            <li><strong>Inline styles</strong> — <code>style="..."</code> (1000 points)</li>
+            <li><strong>ID selectors</strong> — <code>#id</code> (100 points)</li>
+            <li><strong>Class selectors</strong> — <code>.class</code> (10 points)</li>
+            <li><strong>Element selectors</strong> — <code>p</code>, <code>div</code> (1 point)</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <pre><code>&lt;style&gt;
+    p { color: black; }           /* 1 point */
+    .text { color: blue; }        /* 10 points */
+    #intro { color: red; }        /* 100 points */
+&lt;/style&gt;
+
+&lt;p id="intro" class="text"&gt;What color am I?&lt;/p&gt;</code></pre>
+        <p><strong>Answer:</strong> Red — ID selector wins.</p>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> If you can't figure out why your style isn't applying, what should you check?</p>
+        <p><em>Answer: Check if a more specific selector is overriding it. Use browser DevTools to see which rules are applied/overridden.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Colors</h2>
+    <p>CSS supports multiple ways to define colors.</p>
+
+    <h3>Named Colors</h3>
+    <div class="example-box">
+        <div class="color-swatch" style="background: red; color: white;">red</div>
+        <div class="color-swatch" style="background: blue; color: white;">blue</div>
+        <div class="color-swatch" style="background: green; color: white;">green</div>
+        <div class="color-swatch" style="background: tomato; color: white;">tomato</div>
+        <div class="color-swatch" style="background: steelblue; color: white;">steelblue</div>
+        <p>CSS has 140+ named colors. Good for quick prototyping.</p>
+    </div>
+
+    <h3>Hex Colors</h3>
+    <div class="example-box">
+        <pre><code>color: #ff0000;  /* red */
+color: #00ff00;  /* green */
+color: #0000ff;  /* blue */
+color: #000000;  /* black */
+color: #ffffff;  /* white */
+color: #333;     /* shorthand for #333333 (dark gray) */</code></pre>
+        <p>6 digits: <code>#RRGGBB</code> — each pair is 00-FF (0-255 in hex).</p>
+    </div>
+
+    <h3>RGB / RGBA</h3>
+    <div class="example-box">
+        <pre><code>color: rgb(255, 0, 0);       /* red */
+color: rgb(0, 128, 0);       /* green */
+background: rgba(0, 0, 0, 0.5);  /* black at 50% opacity */</code></pre>
+        <p><code>rgba</code> adds alpha channel (0 = transparent, 1 = opaque).</p>
+    </div>
+
+    <h3>HSL / HSLA</h3>
+    <div class="example-box">
+        <pre><code>color: hsl(0, 100%, 50%);    /* red */
+color: hsl(120, 100%, 50%);  /* green */
+color: hsl(240, 100%, 50%);  /* blue */</code></pre>
+        <p><strong>H</strong>ue (0-360°), <strong>S</strong>aturation (0-100%), <strong>L</strong>ightness (0-100%). Easier to adjust than hex.</p>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> You want a button that's red but slightly transparent. Which color format would you use?</p>
+        <p><em>Answer: <code>rgba(255, 0, 0, 0.8)</code> or <code>hsla(0, 100%, 50%, 0.8)</code> — any format with alpha channel.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Units</h2>
+    <p>CSS has absolute and relative units.</p>
+
+    <h3>Absolute Units</h3>
+    <div class="example-box">
+        <ul>
+            <li><code>px</code> — pixels (most common for web)</li>
+            <li><code>pt</code> — points (print)</li>
+            <li><code>cm</code>, <code>mm</code>, <code>in</code> — physical units (rarely used on web)</li>
+        </ul>
+    </div>
+
+    <h3>Relative Units</h3>
+    <div class="example-box">
+        <ul>
+            <li><code>em</code> — relative to parent's font-size</li>
+            <li><code>rem</code> — relative to root (<code>&lt;html&gt;</code>) font-size</li>
+            <li><code>%</code> — percentage of parent</li>
+            <li><code>vw</code> — 1% of viewport width</li>
+            <li><code>vh</code> — 1% of viewport height</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <pre><code>html { font-size: 16px; }
+
+.container {
+    font-size: 20px;
+}
+
+.container p {
+    font-size: 1em;   /* 20px (parent's size) */
+    font-size: 1rem;  /* 16px (root's size) */
+}</code></pre>
+        <p><strong>Tip:</strong> Use <code>rem</code> for consistent sizing, <code>em</code> when you want scaling relative to parent.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>The Box Model</h2>
+    <p>Every element is a box with four layers: content, padding, border, margin.</p>
+
+    <div style="background: #ffeaa7; padding: 30px; margin: 20px; border: 5px solid #333; width: 200px;">
+        <div style="background: #74b9ff; padding: 20px; text-align: center;">
+            Content
+        </div>
+        <p style="margin: 5px 0; font-size: 12px; text-align: center;">← padding →</p>
+    </div>
+
+    <div class="example-box">
+        <pre><code>.box {
+    width: 200px;
+    padding: 20px;      /* inside the border */
+    border: 5px solid black;
+    margin: 10px;       /* outside the border */
+}</code></pre>
+    </div>
+
+    <h3>Calculating Total Width (default box-sizing)</h3>
+    <div class="example-box">
+        <p><strong>Total width = width + padding-left + padding-right + border-left + border-right</strong></p>
+        <pre><code>.box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+}
+/* Total width = 200 + 20 + 20 + 5 + 5 = 250px */</code></pre>
+    </div>
+
+    <h3>box-sizing: border-box</h3>
+    <div class="example-box">
+        <pre><code>.box {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+}
+/* Total width = 200px (padding & border included) */
+/* Content width = 200 - 20 - 20 - 5 - 5 = 150px */</code></pre>
+        <p><strong>Best practice:</strong> Use <code>border-box</code> — width means total width, much easier to work with.</p>
+    </div>
+
+    <div class="example-box">
+        <pre><code>/* Apply border-box to everything (common reset) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}</code></pre>
+    </div>
+
+    <h3>Margin Collapse</h3>
+    <div class="example-box">
+        <pre><code>.box1 { margin-bottom: 20px; }
+.box2 { margin-top: 30px; }
+
+/* Space between them is 30px, NOT 50px */</code></pre>
+        <p>Vertical margins collapse — the larger one wins. Horizontal margins do NOT collapse.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Pseudo-Classes</h2>
+    <p>Style elements based on their <strong>state</strong>.</p>
+
+    <div class="example-box">
+        <pre><code>a:link { color: blue; }      /* unvisited */
+a:visited { color: purple; } /* visited */
+a:hover { color: red; }      /* mouse over */
+a:active { color: orange; }  /* being clicked */
+
+button:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: blue;
+    outline: none;
+}</code></pre>
+    </div>
+
+    <h3>Structural Pseudo-Classes</h3>
+    <div class="example-box">
+        <pre><code>li:first-child { font-weight: bold; }
+li:last-child { color: gray; }
+li:nth-child(odd) { background: #f5f5f5; }
+li:nth-child(3) { color: red; }  /* third item */</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Pseudo-Elements</h2>
+    <p>Style <strong>parts</strong> of an element. Use <code>::</code> (double colon).</p>
+
+    <div class="example-box">
+        <pre><code>p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 2em;
+    float: left;
+}
+
+/* Add content before/after an element */
+.required::after {
+    content: " *";
+    color: red;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+blockquote::after {
+    content: close-quote;
+}</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> What's the difference between <code>:hover</code> and <code>::before</code>?</p>
+        <p><em>Answer: <code>:hover</code> is a pseudo-class (state). <code>::before</code> is a pseudo-element (part of element). Single colon for classes, double for elements.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Styling Forms</h2>
+    <p>Forms need special attention for usability.</p>
+
+    <div class="example-box">
+        <pre><code>/* Basic input styling */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Focus state */
+input:focus {
+    border-color: #0984e3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(9, 132, 227, 0.3);
+}
+
+/* Placeholder text */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Invalid state */
+input:invalid {
+    border-color: red;
+}
+
+/* Disabled state */
+input:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}</code></pre>
+    </div>
+
+    <h3>Styling Buttons</h3>
+    <div class="example-box">
+        <pre><code>button {
+    background-color: #0984e3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0773c7;
+}
+
+button:active {
+    transform: translateY(1px);
+}</code></pre>
+    </div>
+
+    <h3>Styling Checkboxes & Radio Buttons</h3>
+    <div class="example-box">
+        <pre><code>/* Custom checkbox using pseudo-elements */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #0984e3;  /* modern browsers */
+}</code></pre>
+        <p><code>accent-color</code> is the modern way to color checkboxes/radios. Older techniques hide the input and style a <code>::before</code> pseudo-element.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Common CSS Properties Reference</h2>
+
+    <h3>Text & Font</h3>
+    <div class="example-box">
+        <pre><code>font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;        /* or 100-900 */
+font-style: italic;
+text-align: left | center | right | justify;
+text-decoration: underline | none | line-through;
+text-transform: uppercase | lowercase | capitalize;
+line-height: 1.5;
+letter-spacing: 2px;</code></pre>
+    </div>
+
+    <h3>Background</h3>
+    <div class="example-box">
+        <pre><code>background-color: #f5f5f5;
+background-image: url('image.jpg');
+background-size: cover | contain | 100px 200px;
+background-position: center | top left;
+background-repeat: no-repeat | repeat-x | repeat-y;
+
+/* Shorthand */
+background: #f5f5f5 url('image.jpg') no-repeat center/cover;</code></pre>
+    </div>
+
+    <h3>Border</h3>
+    <div class="example-box">
+        <pre><code>border: 1px solid #333;
+border-width: 1px;
+border-style: solid | dashed | dotted | none;
+border-color: #333;
+border-radius: 4px;       /* rounded corners */
+border-radius: 50%;       /* circle */</code></pre>
+    </div>
+
+    <h3>Display</h3>
+    <div class="example-box">
+        <pre><code>display: block;        /* full width, new line */
+display: inline;       /* flows with text, no width/height */
+display: inline-block; /* flows with text, but accepts width/height */
+display: none;         /* removes from page */
+visibility: hidden;    /* invisible but takes up space */</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>CSS Reset / Normalize</h2>
+    <p>Browsers have different default styles. A reset creates consistency.</p>
+
+    <div class="example-box">
+        <pre><code>/* Minimal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Or use a full reset like normalize.css */
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Debugging CSS</h2>
+    <p>Browser DevTools are essential for debugging CSS.</p>
+
+    <div class="example-box">
+        <h3>How to use DevTools:</h3>
+        <ol>
+            <li>Right-click an element → <strong>Inspect</strong></li>
+            <li>See applied styles in the <strong>Styles</strong> panel</li>
+            <li>Crossed-out styles are being overridden</li>
+            <li>Click the <strong>box model</strong> diagram to see spacing</li>
+            <li>Toggle styles on/off with checkboxes</li>
+            <li>Edit values live to test changes</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Common issues to check:</strong></p>
+        <ul>
+            <li>Is your selector correct? (typo in class name?)</li>
+            <li>Is a more specific rule overriding yours?</li>
+            <li>Is the element display type correct? (block vs inline)</li>
+            <li>Is box-sizing causing unexpected sizes?</li>
+            <li>Are margins collapsing?</li>
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Exercise</h2>
+    <p>Create a styled form with the following requirements:</p>
+    <ul>
+        <li>External stylesheet linked to your HTML</li>
+        <li>At least 3 different selectors (element, class, ID)</li>
+        <li>Styled inputs with <code>:focus</code> states</li>
+        <li>A button with <code>:hover</code> effect</li>
+        <li>Use <code>box-sizing: border-box</code> on all elements</li>
+        <li>At least one use of <code>rgba()</code> for transparency</li>
+    </ul>
+
+
+    <br>
+    <br>
+</body>
+</html>
