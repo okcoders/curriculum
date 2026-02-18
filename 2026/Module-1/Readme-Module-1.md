@@ -113,9 +113,9 @@ Students should be able to:
 
 ### Homework (Before Wednesday) — ~100 steps, ~10 hrs
 **freeCodeCamp:**
-- The Box Model (54 steps) — Complete all
-- Flexbox (27 steps) — Complete all
-- Positioning (~19 steps) — First portion only
+- The Box Model — Complete all
+- Flexbox — Complete all
+- Positioning — Complete all
 
 ### Learning Goals
 Students should be able to:

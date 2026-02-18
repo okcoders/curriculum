@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - CSS Layout & Responsive Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            background-color: #00b894;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        h3 {
+            border-bottom: 2px solid #00b894;
+            padding-bottom: 5px;
+        }
+
+        .example-box {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+
+        .flex-demo {
+            display: flex;
+            background: #dfe6e9;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 80px;
+        }
+
+        .flex-demo > div {
+            background: #0984e3;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+        }
+
+        .position-demo {
+            position: relative;
+            background: #dfe6e9;
+            height: 150px;
+            margin: 10px 0;
+        }
+
+        .position-demo > div {
+            padding: 10px;
+            background: #e17055;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Week 3 Day 1 — CSS Layout & Responsive Design</h1>
+    <p>Review of freeCodeCamp CSS layout homework. This week covers how to arrange elements on the page.</p>
+
+
+    <br>
+    <h2>Flexbox</h2>
+    <p>Flexbox is a one-dimensional layout system — arrange items in a row OR column.</p>
+
+    <div class="example-box">
+        <pre><code>.container {
+    display: flex;
+}</code></pre>
+        <p>This makes the container a <strong>flex container</strong> and its direct children become <strong>flex items</strong>.</p>
+    </div>
+
+    <h3>Flex Direction</h3>
+    <div class="example-box">
+        <pre><code>flex-direction: row;         /* default: left to right */
+flex-direction: row-reverse;  /* right to left */
+flex-direction: column;       /* top to bottom */
+flex-direction: column-reverse; /* bottom to top */</code></pre>
+    </div>
+
+    <p><strong>row (default):</strong></p>
+    <div class="flex-demo" style="flex-direction: row;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>column:</strong></p>
+    <div class="flex-demo" style="flex-direction: column; min-height: 150px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>Justify Content (main axis)</h3>
+    <div class="example-box">
+        <pre><code>justify-content: flex-start;    /* pack items to start */
+justify-content: flex-end;      /* pack items to end */
+justify-content: center;        /* center items */
+justify-content: space-between; /* even space, no edge gaps */
+justify-content: space-around;  /* even space, half-size edge gaps */
+justify-content: space-evenly;  /* equal space everywhere */</code></pre>
+    </div>
+
+    <p><strong>space-between:</strong></p>
+    <div class="flex-demo" style="justify-content: space-between;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p><strong>center:</strong></p>
+    <div class="flex-demo" style="justify-content: center;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>Align Items (cross axis)</h3>
+    <div class="example-box">
+        <pre><code>align-items: stretch;     /* default: fill container height */
+align-items: flex-start;  /* align to top */
+align-items: flex-end;    /* align to bottom */
+align-items: center;      /* center vertically */
+align-items: baseline;    /* align text baselines */</code></pre>
+    </div>
+
+    <p><strong>center</strong> (items centered vertically):</p>
+    <div class="flex-demo" style="align-items: center; height: 100px;">
+        <div>Short</div>
+        <div style="padding: 20px;">Tall</div>
+        <div>Short</div>
+    </div>
+
+    <h3>Flex Wrap</h3>
+    <div class="example-box">
+        <pre><code>flex-wrap: nowrap;   /* default: all on one line, may overflow */
+flex-wrap: wrap;     /* wrap to next line */
+flex-wrap: wrap-reverse; /* wrap upward */</code></pre>
+    </div>
+
+    <p><strong>wrap</strong> (items wrap when they don't fit):</p>
+    <div class="flex-demo" style="flex-wrap: wrap; width: 300px;">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+    </div>
+
+    <h3>Gap</h3>
+    <div class="example-box">
+        <pre><code>gap: 20px;           /* same gap row and column */
+gap: 10px 20px;      /* row-gap column-gap */
+row-gap: 10px;
+column-gap: 20px;</code></pre>
+        <p><strong>Note:</strong> <code>gap</code> replaces the need for margins on flex items.</p>
+    </div>
+
+    <h3>Flex Item Properties</h3>
+    <div class="example-box">
+        <pre><code>/* On the children, not the container */
+flex-grow: 1;    /* grow to fill space (0 = don't grow) */
+flex-shrink: 1;  /* shrink if needed (0 = don't shrink) */
+flex-basis: 200px; /* starting size before grow/shrink */
+
+/* Shorthand */
+flex: 1;         /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+flex: 0 0 200px; /* don't grow, don't shrink, 200px wide */
+
+/* Align single item differently */
+align-self: center;</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> You want to center a div both horizontally AND vertically in its parent. What CSS do you need?</p>
+        <p><em>Answer:</em></p>
+        <pre><code>.parent {
+    display: flex;
+    justify-content: center;  /* horizontal */
+    align-items: center;      /* vertical */
+    height: 100vh;            /* parent needs height! */
+}</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Positioning</h2>
+    <p>The <code>position</code> property controls how an element is placed in the document.</p>
+
+    <h3>Static (default)</h3>
+    <div class="example-box">
+        <pre><code>position: static;</code></pre>
+        <p>Normal document flow. <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> have no effect.</p>
+    </div>
+
+    <h3>Relative</h3>
+    <div class="example-box">
+        <pre><code>position: relative;
+top: 20px;
+left: 30px;</code></pre>
+        <p>Offset from its <strong>normal position</strong>. Still takes up original space in the flow.</p>
+    </div>
+
+    <div class="position-demo">
+        <div style="position: relative; top: 20px; left: 30px; width: fit-content;">
+            I'm offset 20px down, 30px right
+        </div>
+    </div>
+
+    <h3>Absolute</h3>
+    <div class="example-box">
+        <pre><code>position: absolute;
+top: 0;
+right: 0;</code></pre>
+        <p>Removed from flow. Positioned relative to nearest <strong>positioned ancestor</strong> (not static). If none, uses the viewport.</p>
+    </div>
+
+    <div class="position-demo">
+        <div style="position: absolute; top: 10px; right: 10px; width: fit-content;">
+            I'm in the top-right corner
+        </div>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Common pattern:</strong> Parent with <code>position: relative</code>, child with <code>position: absolute</code>.</p>
+        <pre><code>.card {
+    position: relative;  /* establishes positioning context */
+}
+
+.card .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}</code></pre>
+    </div>
+
+    <h3>Fixed</h3>
+    <div class="example-box">
+        <pre><code>position: fixed;
+top: 0;
+left: 0;
+width: 100%;</code></pre>
+        <p>Removed from flow. Positioned relative to the <strong>viewport</strong>. Stays in place when scrolling.</p>
+        <p><strong>Use for:</strong> Sticky headers, floating buttons, modals.</p>
+    </div>
+
+    <h3>Sticky</h3>
+    <div class="example-box">
+        <pre><code>position: sticky;
+top: 0;</code></pre>
+        <p>Hybrid of relative and fixed. Acts relative until you scroll past it, then sticks.</p>
+        <p><strong>Use for:</strong> Headers that stick when scrolled, table headers.</p>
+    </div>
+
+    <h3>Z-Index</h3>
+    <div class="example-box">
+        <pre><code>z-index: 100;</code></pre>
+        <p>Controls stacking order. Higher values appear on top. Only works on <strong>positioned elements</strong> (not static).</p>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> You have a dropdown menu that appears behind other content. How do you fix it?</p>
+        <p><em>Answer: Add <code>position: relative</code> (or absolute) and <code>z-index: 10</code> (or higher than surrounding elements).</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Typography</h2>
+    <p>Text styling properties for readability and design.</p>
+
+    <h3>Font Properties</h3>
+    <div class="example-box">
+        <pre><code>font-family: 'Helvetica Neue', Arial, sans-serif;
+font-size: 16px;
+font-weight: 400;       /* 100-900, or normal/bold */
+font-style: italic;
+line-height: 1.5;       /* multiplier of font-size */
+letter-spacing: 0.5px;
+word-spacing: 2px;</code></pre>
+    </div>
+
+    <h3>Text Properties</h3>
+    <div class="example-box">
+        <pre><code>text-align: left | center | right | justify;
+text-decoration: none | underline | line-through;
+text-transform: uppercase | lowercase | capitalize;
+text-indent: 2em;       /* first line indent */
+white-space: nowrap;    /* prevent wrapping */
+overflow: hidden;
+text-overflow: ellipsis; /* show ... when text overflows */</code></pre>
+    </div>
+
+    <h3>Truncate Text with Ellipsis</h3>
+    <div class="example-box">
+        <pre><code>.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;  /* needs a width */
+}</code></pre>
+        <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 200px; background: #dfe6e9; padding: 5px;">
+            This is a very long text that will be truncated with an ellipsis
+        </div>
+    </div>
+
+    <h3>Web Fonts</h3>
+    <div class="example-box">
+        <pre><code>/* Google Fonts - add to &lt;head&gt; */
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+
+/* Then use in CSS */
+body {
+    font-family: 'Roboto', sans-serif;
+}</code></pre>
+    </div>
+
+    <h3>Font Stack Best Practices</h3>
+    <div class="example-box">
+        <pre><code>/* Always end with a generic fallback */
+font-family: 'Custom Font', 'Fallback Font', sans-serif;
+
+/* Common stacks */
+font-family: Georgia, 'Times New Roman', serif;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Attribute Selectors</h2>
+    <p>Target elements based on their attributes.</p>
+
+    <div class="example-box">
+        <pre><code>/* Has attribute */
+[disabled] { opacity: 0.5; }
+
+/* Exact match */
+[type="text"] { border: 1px solid #ccc; }
+
+/* Starts with */
+[href^="https"] { color: green; }
+
+/* Ends with */
+[href$=".pdf"] { background: url('pdf-icon.png'); }
+
+/* Contains */
+[class*="btn"] { cursor: pointer; }
+
+/* Contains word (space-separated) */
+[class~="featured"] { border: 2px solid gold; }</code></pre>
+    </div>
+
+    <h3>Practical Examples</h3>
+    <div class="example-box">
+        <pre><code>/* Style external links differently */
+a[href^="http"]:not([href*="mysite.com"]) {
+    color: orange;
+}
+a[href^="http"]::after {
+    content: " ↗";
+}
+
+/* Style required inputs */
+input[required] {
+    border-left: 3px solid red;
+}
+
+/* Style different input types */
+input[type="email"],
+input[type="password"] {
+    padding-left: 30px;
+    background: url('icon.svg') no-repeat 5px center;
+}</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> How would you select all links that point to PDF files?</p>
+        <p><em>Answer: <code>a[href$=".pdf"]</code> — the <code>$=</code> means "ends with".</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Responsive Design</h2>
+    <p>Make layouts adapt to different screen sizes.</p>
+
+    <h3>Viewport Meta Tag</h3>
+    <div class="example-box">
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        <p><strong>Required</strong> for responsive design. Without it, mobile browsers assume desktop width.</p>
+    </div>
+
+    <h3>Media Queries</h3>
+    <div class="example-box">
+        <pre><code>/* Mobile-first approach (recommended) */
+.container {
+    width: 100%;  /* default: mobile */
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;  /* tablet and up */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 960px;  /* desktop */
+    }
+}</code></pre>
+    </div>
+
+    <h3>Common Breakpoints</h3>
+    <div class="example-box">
+        <ul>
+            <li><code>576px</code> — small phones → larger phones</li>
+            <li><code>768px</code> — phones → tablets</li>
+            <li><code>1024px</code> — tablets → laptops</li>
+            <li><code>1200px</code> — laptops → desktops</li>
+        </ul>
+        <p><strong>Note:</strong> These are guidelines, not rules. Design for your content.</p>
+    </div>
+
+    <h3>Mobile-First vs Desktop-First</h3>
+    <div class="example-box">
+        <pre><code>/* Mobile-first: start small, add complexity */
+@media (min-width: 768px) { ... }
+
+/* Desktop-first: start big, simplify */
+@media (max-width: 768px) { ... }</code></pre>
+        <p><strong>Mobile-first is recommended</strong> — easier to add features than remove them.</p>
+    </div>
+
+    <h3>Responsive Images</h3>
+    <div class="example-box">
+        <pre><code>img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+        <p>Images scale down but never larger than their natural size.</p>
+    </div>
+
+    <h3>Responsive Units</h3>
+    <div class="example-box">
+        <pre><code>/* Viewport units */
+width: 50vw;   /* 50% of viewport width */
+height: 100vh; /* 100% of viewport height */
+
+/* Percentage */
+width: 80%;    /* 80% of parent */
+
+/* Clamp (min, preferred, max) */
+font-size: clamp(1rem, 2.5vw, 2rem);
+width: clamp(300px, 50%, 600px);</code></pre>
+    </div>
+
+    <h3>Hiding/Showing Elements</h3>
+    <div class="example-box">
+        <pre><code>.mobile-only {
+    display: block;
+}
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    .desktop-only {
+        display: block;
+    }
+}</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> Your nav looks good on desktop but items stack awkwardly on mobile. What's a common solution?</p>
+        <p><em>Answer: Use flexbox with <code>flex-direction: column</code> on mobile and <code>flex-direction: row</code> on desktop, or hide the desktop nav and show a hamburger menu on mobile.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>CSS Accessibility</h2>
+    <p>Make your styles work for everyone, including users with disabilities.</p>
+
+    <h3>Focus States</h3>
+    <div class="example-box">
+        <pre><code>/* Never do this without an alternative */
+*:focus { outline: none; }  /* BAD - removes keyboard nav indicator */
+
+/* Do this instead */
+button:focus {
+    outline: 2px solid #0984e3;
+    outline-offset: 2px;
+}
+
+/* Or use focus-visible for keyboard-only */
+button:focus-visible {
+    outline: 2px solid #0984e3;
+}</code></pre>
+    </div>
+
+    <h3>Color Contrast</h3>
+    <div class="example-box">
+        <p><strong>WCAG Requirements:</strong></p>
+        <ul>
+            <li>Normal text: 4.5:1 contrast ratio minimum</li>
+            <li>Large text (18px+ bold or 24px+): 3:1 minimum</li>
+            <li>Use tools like WebAIM Contrast Checker</li>
+        </ul>
+        <div style="background: #333; color: #999; padding: 10px; margin: 5px 0;">❌ Low contrast - hard to read</div>
+        <div style="background: #333; color: #fff; padding: 10px; margin: 5px 0;">✓ Good contrast - easy to read</div>
+    </div>
+
+    <h3>Don't Rely on Color Alone</h3>
+    <div class="example-box">
+        <pre><code>/* Bad: only color indicates error */
+.error { color: red; }
+
+/* Good: color + icon/text */
+.error {
+    color: red;
+    border-left: 3px solid red;
+}
+.error::before {
+    content: "⚠ ";
+}</code></pre>
+    </div>
+
+    <h3>Hiding Content Accessibly</h3>
+    <div class="example-box">
+        <pre><code>/* Visually hidden but available to screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Completely hidden (including screen readers) */
+.hidden {
+    display: none;
+}
+
+/* Or */
+.hidden {
+    visibility: hidden;
+}</code></pre>
+    </div>
+
+    <h3>Reduced Motion</h3>
+    <div class="example-box">
+        <pre><code>/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}</code></pre>
+        <p>Some users have vestibular disorders where motion causes nausea or dizziness.</p>
+    </div>
+
+    <h3>Touch Targets</h3>
+    <div class="example-box">
+        <pre><code>/* Minimum 44x44px for touch targets */
+button, a {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+}</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Common Layout Patterns</h2>
+
+    <h3>Navbar</h3>
+    <div class="example-box">
+        <pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Hide, show hamburger instead */
+    }
+}</code></pre>
+    </div>
+
+    <h3>Card Grid</h3>
+    <div class="example-box">
+        <pre><code>.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 300px;  /* grow, shrink, min 300px */
+    max-width: 400px;
+}</code></pre>
+    </div>
+
+    <h3>Sticky Footer</h3>
+    <div class="example-box">
+        <pre><code>body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;  /* takes remaining space */
+}
+
+footer {
+    /* stays at bottom */
+}</code></pre>
+    </div>
+
+    <h3>Centered Content</h3>
+    <div class="example-box">
+        <pre><code>/* Horizontal center */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Dead center (both axes) */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Exercise</h2>
+    <p>Build a responsive card layout:</p>
+    <ul>
+        <li>Use Flexbox for the layout</li>
+        <li>3 cards on desktop, 2 on tablet, 1 on mobile</li>
+        <li>Cards have an image, title, description</li>
+        <li>Position a "badge" in the top-right corner using absolute positioning</li>
+        <li>Add hover effects with accessible focus states</li>
+        <li>Use at least one attribute selector</li>
+        <li>Include a sticky header</li>
+    </ul>
+
+
+    <br>
+    <br>
+</body>
+</html>
