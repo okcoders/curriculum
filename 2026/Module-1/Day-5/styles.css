@@ -1,0 +1,34 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .sections {
+    flex: 2;
+} */
+
+main {
+    flex: 2;
+}
+
+footer {
+    flex: 1;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    display: none;
+  }
+}
