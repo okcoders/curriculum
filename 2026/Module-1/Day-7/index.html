@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Responsive Design & Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            background-color: #7c3aed;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        h3 {
+            border-bottom: 2px solid #7c3aed;
+            padding-bottom: 5px;
+        }
+
+        .example-box {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+
+        .demo-container {
+            border: 2px dashed #7c3aed;
+            padding: 15px;
+            margin: 10px 0;
+            background: #faf5ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Week 4 — Responsive Design & Bootstrap</h1>
+    <p>This week focuses on making sites work on all screen sizes using Bootstrap — a CSS framework that gives you pre-built responsive components.</p>
+
+
+    <br>
+    <h2>Why Bootstrap?</h2>
+    
+    <div class="example-box">
+        <p><strong>What it is:</strong> A CSS (and JS) library with pre-built classes for layout, components, and utilities.</p>
+        <p><strong>Why use it:</strong></p>
+        <ul>
+            <li>Fast prototyping — build UIs in minutes</li>
+            <li>Responsive by default — works on mobile out of the box</li>
+            <li>Consistent styling — buttons, forms, cards all match</li>
+            <li>Huge ecosystem — tons of templates, examples, docs</li>
+            <li>AI knows it well — generated code often uses Bootstrap</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Trade-offs:</strong></p>
+        <ul>
+            <li>Adds ~25-50kb to your page</li>
+            <li>Sites can look "Bootstrap-y" without customization</li>
+            <li>Less control than writing CSS from scratch</li>
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Adding Bootstrap to Your Project</h2>
+
+    <h3>Option 1: CDN (easiest)</h3>
+    <div class="example-box">
+        <pre><code>&lt;!-- In your &lt;head&gt; --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Before closing &lt;/body&gt; (for JS components) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p><strong>Use when:</strong> Quick projects, learning, prototypes.</p>
+    </div>
+
+    <h3>Option 2: npm install</h3>
+    <div class="example-box">
+        <pre><code>npm install bootstrap</code></pre>
+        <p><strong>Use when:</strong> Production apps, need to customize, using a build tool.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Bootstrap Grid System</h2>
+    <p>Bootstrap uses a <strong>12-column grid</strong>. Rows contain columns, columns add up to 12.</p>
+
+    <div class="example-box">
+        <pre><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;Half (6/12)&lt;/div&gt;
+        &lt;div class="col-6"&gt;Half (6/12)&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <p><strong>Live demo:</strong></p>
+    <div class="demo-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 bg-primary text-white p-2">col-6</div>
+                <div class="col-6 bg-secondary text-white p-2">col-6</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Column Sizes</h3>
+    <div class="example-box">
+        <pre><code>.col      /* auto-width, equal distribution */
+.col-1    /* 1/12 width */
+.col-6    /* 6/12 = half */
+.col-12   /* 12/12 = full width */</code></pre>
+    </div>
+
+    <p><strong>Different column widths:</strong></p>
+    <div class="demo-container">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-4 bg-primary text-white p-2">col-4</div>
+                <div class="col-8 bg-secondary text-white p-2">col-8</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-3 bg-primary text-white p-2">col-3</div>
+                <div class="col-6 bg-secondary text-white p-2">col-6</div>
+                <div class="col-3 bg-primary text-white p-2">col-3</div>
+            </div>
+            <div class="row">
+                <div class="col bg-info text-white p-2">col</div>
+                <div class="col bg-warning text-dark p-2">col</div>
+                <div class="col bg-info text-white p-2">col</div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Responsive Breakpoints</h2>
+    <p>Bootstrap has 6 breakpoints. Add the breakpoint to column classes to change layout at different screen sizes.</p>
+
+    <div class="example-box">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Breakpoint</th>
+                    <th>Class infix</th>
+                    <th>Screen width</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Extra small</td><td><code>(none)</code></td><td>&lt;576px</td></tr>
+                <tr><td>Small</td><td><code>sm</code></td><td>≥576px</td></tr>
+                <tr><td>Medium</td><td><code>md</code></td><td>≥768px</td></tr>
+                <tr><td>Large</td><td><code>lg</code></td><td>≥992px</td></tr>
+                <tr><td>Extra large</td><td><code>xl</code></td><td>≥1200px</td></tr>
+                <tr><td>XXL</td><td><code>xxl</code></td><td>≥1400px</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Responsive Column Classes</h3>
+    <div class="example-box">
+        <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+        Card
+    &lt;/div&gt;
+&lt;/div&gt;
+
+/* Translation:
+   - Mobile (default): full width (12 columns)
+   - Tablet (md+): half width (6 columns)  
+   - Desktop (lg+): third width (4 columns)
+*/</code></pre>
+    </div>
+
+    <p><strong>Resize your browser to see this change:</strong></p>
+    <div class="demo-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 bg-primary text-white p-3 border">col-12 col-md-6 col-lg-4</div>
+                <div class="col-12 col-md-6 col-lg-4 bg-secondary text-white p-3 border">col-12 col-md-6 col-lg-4</div>
+                <div class="col-12 col-md-12 col-lg-4 bg-dark text-white p-3 border">col-12 col-md-12 col-lg-4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> What does <code>col-sm-6 col-lg-3</code> mean?</p>
+        <p><em>Answer: Full width on extra-small (default), half width on small screens and up, quarter width on large screens and up.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Container Types</h2>
+
+    <div class="example-box">
+        <pre><code>.container       /* Fixed max-width at each breakpoint */
+.container-fluid /* Full width always */
+.container-md    /* Full width until md, then fixed */</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>When to use:</strong></p>
+        <ul>
+            <li><code>.container</code> — most sites, content stays centered with margins</li>
+            <li><code>.container-fluid</code> — dashboards, full-bleed designs</li>
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Common Bootstrap Components</h2>
+
+    <h3>Buttons</h3>
+    <div class="example-box">
+        <pre><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline-primary"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-lg btn-success"&gt;Large Green&lt;/button&gt;</code></pre>
+    </div>
+
+    <div class="demo-container">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-outline-primary">Outline</button>
+    </div>
+
+    <h3>Cards</h3>
+    <div class="example-box">
+        <pre><code>&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;img src="..." class="card-img-top" alt="..."&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some text here.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="demo-container">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+    <h3>Navbar</h3>
+    <div class="example-box">
+        <pre><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;div class="container"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        <p><strong>Note:</strong> Navbar requires Bootstrap JS for the mobile hamburger menu toggle.</p>
+    </div>
+
+    <div class="demo-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="demoNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h3>Forms</h3>
+    <div class="example-box">
+        <pre><code>&lt;form&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="email"&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="password" class="form-label"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="password"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <div class="demo-container">
+        <form style="max-width: 400px;">
+            <div class="mb-3">
+                <label for="demoEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="demoEmail" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="demoPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="demoPassword">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="demoCheck">
+                <label class="form-check-label" for="demoCheck">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+
+    <h3>Alerts</h3>
+    <div class="example-box">
+        <pre><code>&lt;div class="alert alert-success"&gt;Success message!&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;Error message!&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Warning message!&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="demo-container">
+        <div class="alert alert-success">Success! Your changes have been saved.</div>
+        <div class="alert alert-danger">Error! Something went wrong.</div>
+        <div class="alert alert-warning">Warning! Please review your input.</div>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Bootstrap Utility Classes</h2>
+    <p>Quick styling without writing CSS. These are your most-used utilities.</p>
+
+    <h3>Spacing (Margin & Padding)</h3>
+    <div class="example-box">
+        <pre><code>/* Pattern: {property}{sides}-{size} */
+
+/* Properties */
+m = margin
+p = padding
+
+/* Sides */
+t = top
+b = bottom
+s = start (left)
+e = end (right)
+x = left & right
+y = top & bottom
+(blank) = all sides
+
+/* Sizes: 0, 1, 2, 3, 4, 5, auto */
+
+/* Examples */
+.mt-3     /* margin-top: 1rem */
+.px-4     /* padding-left & padding-right: 1.5rem */
+.mb-0     /* margin-bottom: 0 */
+.p-5      /* padding: 3rem on all sides */
+.mx-auto  /* center horizontally */</code></pre>
+    </div>
+
+    <h3>Display</h3>
+    <div class="example-box">
+        <pre><code>.d-none           /* display: none */
+.d-block          /* display: block */
+.d-flex           /* display: flex */
+.d-inline         /* display: inline */
+
+/* Responsive */
+.d-none .d-md-block   /* hidden on mobile, visible on tablet+ */
+.d-md-none            /* visible on mobile, hidden on tablet+ */</code></pre>
+    </div>
+
+    <h3>Flexbox Utilities</h3>
+    <div class="example-box">
+        <pre><code>.d-flex                   /* enable flexbox */
+.justify-content-center   /* center horizontally */
+.justify-content-between  /* space between */
+.align-items-center       /* center vertically */
+.flex-column              /* stack vertically */
+.gap-3                    /* gap between items */</code></pre>
+    </div>
+
+    <h3>Text</h3>
+    <div class="example-box">
+        <pre><code>.text-center    /* center text */
+.text-start     /* left align */
+.text-end       /* right align */
+.fw-bold        /* font-weight: bold */
+.fs-1 to .fs-6  /* font sizes (1 = largest) */
+.text-muted     /* gray text */
+.text-primary   /* blue text */
+.text-danger    /* red text */</code></pre>
+    </div>
+
+    <h3>Background & Borders</h3>
+    <div class="example-box">
+        <pre><code>.bg-primary, .bg-secondary, .bg-success, .bg-danger
+.bg-light, .bg-dark, .bg-white
+
+.border
+.border-primary
+.rounded        /* border-radius */
+.rounded-pill   /* fully rounded */
+.shadow         /* box shadow */
+.shadow-lg      /* larger shadow */</code></pre>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Question:</strong> How would you center a div horizontally with Bootstrap?</p>
+        <p><em>Answer: <code>mx-auto</code> (sets margin-left and margin-right to auto). The element needs a set width or <code>d-block</code>.</em></p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Responsive Utilities</h2>
+    <p>Most utilities can be made responsive by adding a breakpoint.</p>
+
+    <div class="example-box">
+        <pre><code>/* Show/hide at breakpoints */
+.d-none .d-md-block     /* hidden mobile, show tablet+ */
+.d-block .d-lg-none     /* show until large, then hide */
+
+/* Text alignment */
+.text-center .text-md-start  /* center on mobile, left on tablet+ */
+
+/* Flex direction */
+.flex-column .flex-md-row    /* stack on mobile, row on tablet+ */
+
+/* Spacing */
+.p-2 .p-md-4                 /* less padding mobile, more on tablet+ */</code></pre>
+    </div>
+
+    <p><strong>Common pattern — mobile menu:</strong></p>
+    <div class="example-box">
+        <pre><code>&lt;!-- Desktop nav --&gt;
+&lt;nav class="d-none d-lg-flex"&gt;...&lt;/nav&gt;
+
+&lt;!-- Mobile hamburger --&gt;
+&lt;button class="d-lg-none"&gt;☰&lt;/button&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Customizing Bootstrap</h2>
+
+    <h3>Override with Your Own CSS</h3>
+    <div class="example-box">
+        <pre><code>&lt;!-- Load Bootstrap first --&gt;
+&lt;link href="bootstrap.min.css" rel="stylesheet"&gt;
+&lt;!-- Then your overrides --&gt;
+&lt;link href="custom.css" rel="stylesheet"&gt;</code></pre>
+        <pre><code>/* custom.css */
+.btn-primary {
+    background-color: #7c3aed;  /* your brand purple */
+    border-color: #7c3aed;
+}
+
+.navbar {
+    padding: 1rem 2rem;  /* more padding */
+}</code></pre>
+    </div>
+
+    <h3>Use Bootstrap's Variables (Advanced)</h3>
+    <div class="example-box">
+        <pre><code>/* If using Sass */
+$primary: #7c3aed;
+$font-family-base: 'Inter', sans-serif;
+
+@import "bootstrap/scss/bootstrap";</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Reading Bootstrap Docs</h2>
+    <p>Bootstrap's documentation is excellent. Get comfortable navigating it.</p>
+
+    <div class="example-box">
+        <p><strong>Key sections:</strong></p>
+        <ul>
+            <li><a href="https://getbootstrap.com/docs/5.3/layout/grid/" target="_blank">Layout → Grid</a> — column system</li>
+            <li><a href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">Components</a> — buttons, cards, navbars, modals</li>
+            <li><a href="https://getbootstrap.com/docs/5.3/utilities/spacing/" target="_blank">Utilities</a> — spacing, display, flex, text</li>
+            <li><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">Examples</a> — full page templates to learn from</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <p><strong>Pro tip:</strong> When AI generates Bootstrap code you don't recognize, search the docs. Understanding the class names helps you customize and debug.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Bootstrap vs Writing CSS</h2>
+
+    <div class="example-box">
+        <h3>Same result, different approaches:</h3>
+        
+        <p><strong>Custom CSS:</strong></p>
+        <pre><code>.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card-grid > div {
+    flex: 1 1 300px;
+}</code></pre>
+
+        <p><strong>Bootstrap:</strong></p>
+        <pre><code>&lt;div class="row g-3"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p><strong>When to use which:</strong></p>
+        <ul>
+            <li>Bootstrap: rapid prototyping, admin dashboards, standard layouts</li>
+            <li>Custom CSS: unique designs, performance-critical, learning fundamentals</li>
+            <li>Both: Bootstrap for structure, custom CSS for brand-specific styling</li>
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <h2>Exercise</h2>
+    <p>Build a responsive landing page using Bootstrap:</p>
+    <ul>
+        <li>Responsive navbar with hamburger menu on mobile</li>
+        <li>Hero section with centered text</li>
+        <li>3-column feature section (stacks on mobile)</li>
+        <li>Card grid (4 cards, responsive)</li>
+        <li>Contact form with Bootstrap form classes</li>
+        <li>Footer with multiple columns</li>
+        <li>Use at least 5 different utility classes</li>
+    </ul>
+
+
+    <br>
+    <br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

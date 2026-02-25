@@ -20,7 +20,7 @@
 | 1 | Basic HTML (partial) | ~100 | HTML structure, elements, attributes |
 | 2 | Forms & Tables + Basic CSS (partial) | ~100 | Forms, selectors, basic styling |
 | 3 | Box Model + Flexbox + Positioning (partial) | ~100 | Layout fundamentals |
-| 4 | Responsive Design + Grid + Bootstrap | ~100 | Responsive layouts, frameworks |
+| 4 | Responsive Design + Bootstrap | ~100 | Responsive layouts, frameworks |
 
 **Certification Projects:** Survey Form (Week 2), Technical Documentation Page (Week 4)
 
@@ -147,12 +147,19 @@ Students should be able to:
 
 ---
 
-## Week 4: Responsive Design, Grid & Bootstrap
+## Week 4: Responsive Design & Bootstrap
 
 ### Homework (Before Wednesday) — ~100 steps + Bootstrap docs, ~10 hrs
 **freeCodeCamp:**
 - Responsive Design (37 steps) — Complete all
-- Grid (~63 steps) — Most of section
+- Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - This is not in freecodecamp.
+    - Go to url above and dive into the documentation.
+    - Main areas of focus will be Introduction (CDN links), Breakpoints, Grid, Forms, and Components.
+    - Check out the Examples.
+    - This is a lot so have your AI buddy help you understand it.
+
+
 
 **Bootstrap 5 Documentation (read & experiment):**
 - [Getting Started](https://getbootstrap.com/docs/5.3/getting-started/introduction/) — CDN setup
@@ -163,14 +170,13 @@ Students should be able to:
 ### Learning Goals
 Students should be able to:
 - Read and write media queries
-- Understand CSS Grid basics (`grid-template-columns`, `gap`)
 - Use Bootstrap grid classes (`container`, `row`, `col-md-6`)
-- Know when to use CSS Grid vs Flexbox vs Bootstrap
+- Know when to use Flexbox vs Bootstrap
 
 ### Wednesday (1 hr) — Review & Comprehension Check
 | Time | Activity |
 |------|----------|
-| 0:00-0:10 | Quick check: When would you use Grid vs Flexbox? |
+| 0:00-0:10 | Quick check: What's the difference between `col-6` and `col-md-6`? |
 | 0:10-0:25 | **Read the code:** Decode Bootstrap classes, predict layout |
 | 0:25-0:45 | **Debug exercise:** Fix responsive + Bootstrap issues (see Debug Bank Week 4) |
 | 0:45-0:55 | Portfolio planning: Sketch your layout |
@@ -184,7 +190,7 @@ Students should be able to:
 | 1:00-1:25 | **Manual debugging** — Fix responsive breakpoints | Debug (Manual) |
 | 1:25-1:40 | **Break** | |
 | 1:40-2:05 | **AI-assisted debugging** — "Why doesn't my nav collapse on mobile?" | Debug (AI) |
-| 2:05-2:45 | **AI-assisted building** — Use AI to add Grid sections, Bootstrap components | Build (AI) |
+| 2:05-2:45 | **AI-assisted building** — Use AI to add Bootstrap components | Build (AI) |
 | 2:45-3:05 | **Verify AI output** — Explain responsive behavior at each breakpoint | Verify |
 | 3:05-3:40 | **Rebuild test** — Rebuild the responsive grid WITHOUT AI | Verify |
 | 3:40-4:00 | Portfolio demos, module celebration |
@@ -200,7 +206,7 @@ Students should be able to:
 | 1 | Basic HTML (partial) | ~100 | — |
 | 2 | Forms & Tables + Basic CSS | ~100 | Survey Form |
 | 3 | Box Model + Flexbox + Positioning | ~100 | — |
-| 4 | Responsive Design + Grid + Bootstrap | ~100 | Tech Docs Page |
+| 4 | Responsive Design + Bootstrap | ~100 | Tech Docs Page |
 | **Total** | | **~400** | **2 projects** |
 
 ### What's Skipped (Optional/Self-Study)
@@ -210,6 +216,7 @@ Students should be able to:
 - Typography (78 steps)
 - Pseudo Classes (74 steps)
 - Attribute Selectors (71 steps)
+- CSS Grid (91 steps)
 - Variables (120 steps)
 - Animations (139 steps)
 
@@ -405,17 +412,28 @@ FIND THESE BUGS:
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .hero {
       height: 100vh
-      display: grid;
-      place-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     /* Why doesn't this work on mobile? */
     @media (max-width: 768) {
       .hero { height: 50vh; }
+    }
+    
+    /* Why don't cards stack on mobile? */
+    .card-grid {
+      display: flex;
+      gap: 20px;
+    }
+    .card-grid .card {
+      width: 300px;
     }
   </style>
 </head>
@@ -430,6 +448,13 @@ FIND THESE BUGS:
       <div class="col-6">Left</div>
       <div class="col-6">Right</div>
     </div>
+  </div>
+  
+  <!-- Custom flexbox cards that don't wrap -->
+  <div class="card-grid">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
   </div>
   
   <!-- Why doesn't navbar collapse? -->
@@ -447,7 +472,7 @@ FIND THESE BUGS:
     </div>
   </nav>
   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
@@ -455,8 +480,9 @@ FIND THESE BUGS:
 FIND THESE BUGS:
 1. Missing semicolon after height: 100vh
 2. Media query missing px unit: (max-width: 768px)
-3. col-6 always stays 6 columns — need col-12 col-md-6
-4. Navbar toggler missing data-bs-toggle="collapse" data-bs-target="#navMenu"
+3. col-6 always stays 6 columns — need col-12 col-md-6 to stack on mobile
+4. card-grid needs flex-wrap: wrap to allow cards to stack
+5. Navbar toggler missing data-bs-toggle="collapse" data-bs-target="#navMenu"
 -->
 ```
 
@@ -687,37 +713,43 @@ FIND THESE BUGS:
 
 ### Week 4 - Responsive & Bootstrap
 
-**Exercise 1: Predict the breakpoints**
+**Exercise 1: Predict the responsive behavior**
 ```html
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
+  .card {
+    flex: 1 1 100%;
+    padding: 20px;
+    background: #eee;
+  }
   @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
+    .card {
+      flex: 1 1 45%;
     }
   }
   @media (min-width: 1024px) {
-    .grid {
-      grid-template-columns: 1fr 1fr 1fr;
+    .card {
+      flex: 1 1 30%;
     }
   }
 </style>
 
-<div class="grid">
-  <div>Card 1</div>
-  <div>Card 2</div>
-  <div>Card 3</div>
+<div class="cards">
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+  <div class="card">Card 3</div>
 </div>
 ```
 **Questions:**
-1. How many columns at 500px screen width?
-2. How many columns at 800px screen width?
-3. How many columns at 1200px screen width?
-4. What does `1fr` mean?
+1. How many cards per row at 500px screen width?
+2. How many cards per row at 800px screen width?
+3. How many cards per row at 1200px screen width?
+4. What does `flex: 1 1 45%` mean?
+5. Why is `flex-wrap: wrap` necessary?
 
 ---
 
@@ -799,7 +831,7 @@ FIND THESE BUGS:
 
 ### Good Building Prompts
 - "Add a responsive navbar that collapses on mobile using Bootstrap"
-- "Create a 3-column card grid using CSS Grid that stacks on mobile"
+- "Create a 3-column card layout using flexbox that stacks on mobile"
 - "Style this form with proper spacing and hover states on the button"
 
 ### Bad Prompts (Too Vague)
@@ -809,7 +841,7 @@ FIND THESE BUGS:
 
 ### Verification Questions to Ask AI
 - "Explain what this CSS does line by line"
-- "Why did you use flexbox instead of grid here?"
+- "Why did you use flexbox instead of Bootstrap here?"
 - "What happens to this layout at 600px screen width?"
 
 ---

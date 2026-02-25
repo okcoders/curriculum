@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    /* Why won't items center vertically? */
+    .nav {
+      display: flex;
+      flex-direction: row;
+      height: 100px;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      color: white;
+    }
+    
+    /* Why won't cards wrap to next row? */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      width: 300px;
+      padding: 20px;
+      background: #eee;
+    }
+    
+    /* Why is sidebar not next to content? */
+    .layout {
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background: #ddd;
+      padding: 20px;
+      position: absolute;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">MyBrand</div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+  
+  <div class="cards">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+  </div>
+  
+  <div class="layout">
+    <aside class="sidebar">Sidebar</aside>
+    <main class="content">Main Content</main>
+  </div>
+</body>
+</html>

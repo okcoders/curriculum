@@ -32,3 +32,14 @@ footer {
     display: none;
   }
 }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container p {
+    border: 1px solid purple;
+    padding: 10px;
+}
