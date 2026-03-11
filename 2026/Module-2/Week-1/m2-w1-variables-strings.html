@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Week 1 - Variables and Strings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #0984e3;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #0984e3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #0984e3;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #0984e3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0984e3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 2 Week 1 — Variables and Strings</h1>
+    <p>This week covers the building blocks of JavaScript: how to store data in variables and work with text.</p>
+
+
+    <h2>Variable Declaration</h2>
+
+    <p>JavaScript has three ways to declare variables:</p>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// let — can be reassigned</span>
+let count = 0;
+count = 1;  <span class="comment">// OK</span>
+
+<span class="comment">// const — cannot be reassigned</span>
+const name = "Alice";
+name = "Bob";  <span class="comment">// Error!</span>
+
+<span class="comment">// var — old way, avoid using</span>
+var old = "don't use this";</code></pre>
+    </div>
+
+    <div class="tip-box">
+        <strong>Rule of thumb:</strong> Use <code>const</code> by default. Only use <code>let</code> when you need to reassign the variable later.
+    </div>
+
+
+    <h2>Primitive Data Types</h2>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Example</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>String</td>
+            <td><code>"hello"</code> or <code>'hello'</code></td>
+            <td>Text wrapped in quotes</td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td><code>42</code> or <code>3.14</code></td>
+            <td>Integers and decimals</td>
+        </tr>
+        <tr>
+            <td>Boolean</td>
+            <td><code>true</code> or <code>false</code></td>
+            <td>Yes/no values</td>
+        </tr>
+        <tr>
+            <td>undefined</td>
+            <td><code>undefined</code></td>
+            <td>Variable declared but not assigned</td>
+        </tr>
+        <tr>
+            <td>null</td>
+            <td><code>null</code></td>
+            <td>Intentionally empty</td>
+        </tr>
+    </table>
+
+    <div class="example-box">
+        <pre><code>let message = "Hello";     <span class="comment">// string</span>
+let age = 25;              <span class="comment">// number</span>
+let isActive = true;       <span class="comment">// boolean</span>
+let data;                  <span class="comment">// undefined</span>
+let empty = null;          <span class="comment">// null</span></code></pre>
+    </div>
+
+
+    <h2>Type Coercion</h2>
+
+    <p>JavaScript automatically converts types in certain situations:</p>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// String + Number = String (concatenation)</span>
+"Hello " + 42        <span class="comment">// "Hello 42"</span>
+"3" + 4              <span class="comment">// "34" (not 7!)</span>
+
+<span class="comment">// Comparisons</span>
+"5" == 5             <span class="comment">// true (loose equality)</span>
+"5" === 5            <span class="comment">// false (strict equality)</span></code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Always use <code>===</code></strong> (strict equality) to avoid unexpected type conversions.
+    </div>
+
+
+    <h2>String Methods</h2>
+
+    <p>Strings have built-in methods for manipulation:</p>
+
+    <div class="example-box">
+        <pre><code>const text = "  Hello World  ";
+
+<span class="comment">// Remove whitespace</span>
+text.trim()                    <span class="comment">// "Hello World"</span>
+
+<span class="comment">// Change case</span>
+text.toLowerCase()             <span class="comment">// "  hello world  "</span>
+text.toUpperCase()             <span class="comment">// "  HELLO WORLD  "</span>
+
+<span class="comment">// Get length</span>
+text.length                    <span class="comment">// 15</span>
+
+<span class="comment">// Access characters</span>
+text[0]                        <span class="comment">// " "</span>
+text.charAt(2)                 <span class="comment">// "H"</span>
+
+<span class="comment">// Find position</span>
+text.indexOf("World")          <span class="comment">// 8</span>
+text.indexOf("xyz")            <span class="comment">// -1 (not found)</span>
+
+<span class="comment">// Extract parts</span>
+text.slice(2, 7)               <span class="comment">// "Hello"</span>
+
+<span class="comment">// Split into array</span>
+"a,b,c".split(",")             <span class="comment">// ["a", "b", "c"]</span>
+
+<span class="comment">// Check contents</span>
+"hello".includes("ell")        <span class="comment">// true</span>
+"hello".startsWith("he")       <span class="comment">// true</span>
+"hello".endsWith("lo")         <span class="comment">// true</span></code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Important:</strong> String methods return NEW strings. They don't change the original.
+        <pre><code>const name = "alice";
+name.toUpperCase();     <span class="comment">// Returns "ALICE" but name is still "alice"</span>
+const upper = name.toUpperCase();  <span class="comment">// Save it!</span></code></pre>
+    </div>
+
+
+    <h2>Template Literals</h2>
+
+    <p>Use backticks (<code>`</code>) for strings with variables:</p>
+
+    <div class="example-box">
+        <pre><code>const name = "Alice";
+const age = 25;
+
+<span class="comment">// Old way (concatenation)</span>
+const msg1 = "Hello, " + name + "! You are " + age + ".";
+
+<span class="comment">// New way (template literal)</span>
+const msg2 = `Hello, ${name}! You are ${age}.`;
+
+<span class="comment">// Expressions inside ${}</span>
+const msg3 = `Next year you'll be ${age + 1}`;</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Common mistake:</strong> Using regular quotes instead of backticks
+        <pre><code>"Hello, ${name}"   <span class="comment">// Wrong! Outputs: Hello, ${name}</span>
+`Hello, ${name}`   <span class="comment">// Correct! Outputs: Hello, Alice</span></code></pre>
+    </div>
+
+
+    <h2>Working with Numbers</h2>
+
+    <div class="example-box">
+        <pre><code>const price = 4.5;
+
+<span class="comment">// Format to 2 decimal places</span>
+price.toFixed(2)              <span class="comment">// "4.50" (returns string!)</span>
+
+<span class="comment">// Convert string to number</span>
+parseInt("42")                <span class="comment">// 42</span>
+parseFloat("3.14")            <span class="comment">// 3.14</span>
+Number("42")                  <span class="comment">// 42</span>
+
+<span class="comment">// Check if valid number</span>
+isNaN("hello")                <span class="comment">// true</span>
+isNaN(42)                     <span class="comment">// false</span></code></pre>
+    </div>
+
+
+    <h2>Expense Tracker Preview</h2>
+
+    <p>This week we're storing expense data in variables:</p>
+
+    <div class="example-box">
+        <pre><code>const description = "Coffee";
+const amount = 4.50;
+const category = "Food";
+
+<span class="comment">// Format for display</span>
+const currencyString = "$" + amount.toFixed(2);  <span class="comment">// "$4.50"</span>
+
+<span class="comment">// Build display text</span>
+const displayText = `${description} - ${currencyString} (${category})`;
+<span class="comment">// "Coffee - $4.50 (Food)"</span>
+
+<span class="comment">// Get today's date</span>
+const today = new Date().toLocaleDateString();  <span class="comment">// "3/11/2026"</span></code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td><code>const x = 5; x = 6;</code></td>
+            <td>Can't reassign const</td>
+            <td>Use <code>let</code> if reassigning</td>
+        </tr>
+        <tr>
+            <td><code>text.trim</code></td>
+            <td>Missing parentheses</td>
+            <td><code>text.trim()</code></td>
+        </tr>
+        <tr>
+            <td><code>"Hello ${name}"</code></td>
+            <td>Wrong quotes</td>
+            <td>Use backticks: <code>`Hello ${name}`</code></td>
+        </tr>
+        <tr>
+            <td><code>name.toUpperCase()</code></td>
+            <td>Doesn't save result</td>
+            <td><code>const upper = name.toUpperCase()</code></td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What's the difference between <code>let</code> and <code>const</code>?</li>
+        <li>What does <code>"3" + 4</code> return? Why?</li>
+        <li>What does <code>"hello".slice(1, 3)</code> return?</li>
+        <li>How do you check if a string contains "error"?</li>
+        <li>Write a template literal that says "The total is $X" where X is a variable.</li>
+    </ol>
+
+</body>
+</html>

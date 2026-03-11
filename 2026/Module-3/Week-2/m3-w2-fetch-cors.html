@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Week 2 - Fetch API and CORS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #00b894;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #00b894;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #00b894;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #00b894;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00b894;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 3 Week 2 — Fetch API and CORS</h1>
+    <p>This week we connect our frontend to our backend using the Fetch API and handle cross-origin requests with CORS.</p>
+
+
+    <h2>The Fetch API</h2>
+
+    <p>Fetch is the modern way to make HTTP requests from JavaScript in the browser.</p>
+
+    <h3>GET Request</h3>
+
+    <div class="example-box">
+        <pre><code>async function getExpenses() {
+  const response = await fetch("http://localhost:3000/api/expenses");
+  const data = await response.json();
+  return data;
+}</code></pre>
+    </div>
+
+    <h3>POST Request</h3>
+
+    <div class="example-box">
+        <pre><code>async function createExpense(expense) {
+  const response = await fetch("http://localhost:3000/api/expenses", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(expense)
+  });
+  return await response.json();
+}</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Two things required for POST:</strong>
+        <ol>
+            <li><code>Content-Type: application/json</code> header</li>
+            <li><code>JSON.stringify()</code> the body object</li>
+        </ol>
+    </div>
+
+    <h3>PUT Request</h3>
+
+    <div class="example-box">
+        <pre><code>async function updateExpense(id, updates) {
+  const response = await fetch("http://localhost:3000/api/expenses/" + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updates)
+  });
+  return await response.json();
+}</code></pre>
+    </div>
+
+    <h3>DELETE Request</h3>
+
+    <div class="example-box">
+        <pre><code>async function deleteExpense(id) {
+  await fetch("http://localhost:3000/api/expenses/" + id, {
+    method: "DELETE"
+  });
+}</code></pre>
+    </div>
+
+
+    <h2>CORS (Cross-Origin Resource Sharing)</h2>
+
+    <p>When your frontend and backend are on different origins (different ports count!), the browser blocks requests by default for security.</p>
+
+    <div class="example-box">
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Frontend: <code>http://localhost:5500</code></li>
+            <li>Backend: <code>http://localhost:3000</code></li>
+        </ul>
+        <p>These are different origins → CORS error!</p>
+    </div>
+
+    <h3>Fix: Add CORS Middleware</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment"># Install the cors package</span>
+npm install cors</code></pre>
+    </div>
+
+    <div class="example-box">
+        <pre><code>const cors = require("cors");
+
+<span class="comment">// Allow all origins (good for development)</span>
+app.use(cors());
+
+<span class="comment">// Or specify allowed origins (better for production)</span>
+app.use(cors({
+  origin: ["http://localhost:5500", "https://myapp.vercel.app"]
+}));</code></pre>
+    </div>
+
+
+    <h2>Error Handling</h2>
+
+    <p>Always wrap fetch calls in try/catch and check <code>response.ok</code>:</p>
+
+    <div class="example-box">
+        <pre><code>async function getExpenses() {
+  try {
+    const response = await fetch("http://localhost:3000/api/expenses");
+    
+    if (!response.ok) {
+      throw new Error("Failed to fetch: " + response.status);
+    }
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+    return [];
+  }
+}</code></pre>
+    </div>
+
+    <h3>Response Properties</h3>
+
+    <div class="example-box">
+        <pre><code>const response = await fetch(url);
+
+response.ok       <span class="comment">// true if status 200-299</span>
+response.status   <span class="comment">// status code (200, 404, etc.)</span>
+response.json()   <span class="comment">// parse body as JSON (returns Promise!)</span></code></pre>
+    </div>
+
+
+    <h2>Replacing localStorage with API</h2>
+
+    <h3>Before (localStorage)</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Load</span>
+const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+<span class="comment">// Save</span>
+localStorage.setItem("expenses", JSON.stringify(expenses));</code></pre>
+    </div>
+
+    <h3>After (API)</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Load</span>
+const expenses = await getExpenses();
+
+<span class="comment">// Save (create new)</span>
+await createExpense(newExpense);
+const expenses = await getExpenses();
+renderExpenses(expenses);</code></pre>
+    </div>
+
+
+    <h2>Loading States</h2>
+
+    <div class="example-box">
+        <pre><code>async function loadExpenses() {
+  const container = document.querySelector("#expense-list");
+  container.innerHTML = "Loading...";
+  
+  try {
+    const expenses = await getExpenses();
+    renderExpenses(expenses);
+  } catch (error) {
+    container.innerHTML = "Error loading expenses";
+  }
+}</code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td>CORS error</td>
+            <td>Backend missing CORS</td>
+            <td>Add <code>cors</code> middleware to Express</td>
+        </tr>
+        <tr>
+            <td>Body not received</td>
+            <td>Missing header or stringify</td>
+            <td>Add <code>Content-Type</code> + <code>JSON.stringify()</code></td>
+        </tr>
+        <tr>
+            <td>Promise &lt;pending&gt;</td>
+            <td>Missing await</td>
+            <td>Add <code>await</code> before <code>response.json()</code></td>
+        </tr>
+        <tr>
+            <td>Empty body on server</td>
+            <td>Missing middleware</td>
+            <td>Add <code>app.use(express.json())</code></td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What two things are required when making a POST request with JSON?</li>
+        <li>What is CORS and why does it exist?</li>
+        <li>How do you check if a fetch request was successful?</li>
+        <li>Why do you need to <code>await response.json()</code>?</li>
+        <li>What's the difference between <code>response.ok</code> and <code>response.status</code>?</li>
+    </ol>
+
+</body>
+</html>

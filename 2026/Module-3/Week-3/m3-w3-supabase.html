@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Week 3 - Supabase Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #00b894;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #00b894;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #00b894;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #00b894;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00b894;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 3 Week 3 — Supabase Database</h1>
+    <p>This week we replace our in-memory array with a real PostgreSQL database using Supabase.</p>
+
+
+    <h2>What is Supabase?</h2>
+
+    <p>Supabase is a hosted PostgreSQL database with:</p>
+    <ul>
+        <li>Dashboard UI for managing tables</li>
+        <li>JavaScript client library</li>
+        <li>Auto-generated REST API</li>
+        <li>Authentication (optional)</li>
+        <li>Free tier for development</li>
+    </ul>
+
+
+    <h2>Setup</h2>
+
+    <ol>
+        <li>Create account at <a href="https://supabase.com">supabase.com</a></li>
+        <li>Create a new project (pick a password, choose nearest region)</li>
+        <li>Go to <strong>Settings → API</strong> and find:
+            <ul>
+                <li>Project URL</li>
+                <li>anon public key</li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <h2>Create Table</h2>
+
+    <p>In Supabase dashboard, use the Table Editor to create an <code>expenses</code> table:</p>
+
+    <table>
+        <tr>
+            <th>Column</th>
+            <th>Type</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>int8</td>
+            <td>Primary key, auto-increment</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>amount</td>
+            <td>numeric</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>category</td>
+            <td>text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>date</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>created_at</td>
+            <td>timestamptz</td>
+            <td>Default: now()</td>
+        </tr>
+    </table>
+
+
+    <h2>Install Client</h2>
+
+    <div class="example-box">
+        <pre><code>npm install @supabase/supabase-js dotenv</code></pre>
+    </div>
+
+
+    <h2>Connect in Express</h2>
+
+    <div class="example-box">
+        <pre><code>require("dotenv").config();
+const { createClient } = require("@supabase/supabase-js");
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);</code></pre>
+    </div>
+
+
+    <h2>Environment Variables</h2>
+
+    <p>Create a <code>.env</code> file in your project root:</p>
+
+    <div class="example-box">
+        <pre><code>SUPABASE_URL=https://xxxxx.supabase.co
+SUPABASE_KEY=your-anon-key-here</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Important:</strong>
+        <ul>
+            <li>Add <code>.env</code> to <code>.gitignore</code> — never commit secrets!</li>
+            <li><code>require("dotenv").config()</code> must be at the TOP of your file</li>
+        </ul>
+    </div>
+
+
+    <h2>CRUD Operations</h2>
+
+    <h3>Select All</h3>
+
+    <div class="example-box">
+        <pre><code>app.get("/api/expenses", async (req, res) => {
+  const { data, error } = await supabase
+    .from("expenses")
+    .select("*");
+  
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+  res.json(data);
+});</code></pre>
+    </div>
+
+    <h3>Select One</h3>
+
+    <div class="example-box">
+        <pre><code>app.get("/api/expenses/:id", async (req, res) => {
+  const { data, error } = await supabase
+    .from("expenses")
+    .select("*")
+    .eq("id", req.params.id)
+    .single();
+  
+  if (error) {
+    return res.status(404).json({ error: "Not found" });
+  }
+  res.json(data);
+});</code></pre>
+    </div>
+
+    <h3>Insert</h3>
+
+    <div class="example-box">
+        <pre><code>app.post("/api/expenses", async (req, res) => {
+  const { description, amount, category } = req.body;
+  
+  const { data, error } = await supabase
+    .from("expenses")
+    .insert({ description, amount, category })
+    .select()
+    .single();
+  
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+  res.status(201).json(data);
+});</code></pre>
+    </div>
+
+    <div class="tip-box">
+        <strong>Note:</strong> Add <code>.select().single()</code> after <code>.insert()</code> to get the created row back!
+    </div>
+
+    <h3>Update</h3>
+
+    <div class="example-box">
+        <pre><code>app.put("/api/expenses/:id", async (req, res) => {
+  const { description, amount, category } = req.body;
+  
+  const { data, error } = await supabase
+    .from("expenses")
+    .update({ description, amount, category })
+    .eq("id", req.params.id)
+    .select()
+    .single();
+  
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+  res.json(data);
+});</code></pre>
+    </div>
+
+    <h3>Delete</h3>
+
+    <div class="example-box">
+        <pre><code>app.delete("/api/expenses/:id", async (req, res) => {
+  const { error } = await supabase
+    .from("expenses")
+    .delete()
+    .eq("id", req.params.id);
+  
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+  res.status(204).send();
+});</code></pre>
+    </div>
+
+
+    <h2>Query Filters</h2>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Filter by category</span>
+.from("expenses").select("*").eq("category", "Food")
+
+<span class="comment">// Greater than</span>
+.from("expenses").select("*").gt("amount", 100)
+
+<span class="comment">// Order by</span>
+.from("expenses").select("*").order("created_at", { ascending: false })
+
+<span class="comment">// Limit results</span>
+.from("expenses").select("*").limit(10)</code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td>data is null</td>
+            <td>Query failed</td>
+            <td>Check the <code>error</code> object</td>
+        </tr>
+        <tr>
+            <td>Column not found</td>
+            <td>Typo in column name</td>
+            <td>Check table schema matches code</td>
+        </tr>
+        <tr>
+            <td>Env var undefined</td>
+            <td>Missing dotenv</td>
+            <td><code>require("dotenv").config()</code> at top</td>
+        </tr>
+        <tr>
+            <td>Insert returns null</td>
+            <td>Missing .select()</td>
+            <td>Add <code>.select().single()</code></td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What two values do you need from Supabase to connect?</li>
+        <li>How do you filter expenses where category equals "Food"?</li>
+        <li>Why must <code>require("dotenv").config()</code> be at the top?</li>
+        <li>What does <code>.single()</code> do?</li>
+        <li>Where should you check for errors after a Supabase query?</li>
+    </ol>
+
+</body>
+</html>
