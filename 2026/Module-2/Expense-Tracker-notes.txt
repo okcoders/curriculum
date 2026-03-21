@@ -1,0 +1,24 @@
+
+Expense tracker tasks
+
+Week 1
+
+ - build table with placeholders
+ - create variables and console.log them
+ - get data to display in tables
+ - format dates and currency
+ - get total to display
+
+ * if time allows
+	- make drop downs
+	- display data with loop
+
+
+
+Ideas for upcoming weeks
+
+ - form to enter expenses
+ - save expenses locally
+ - save expenses to database
+ - deploy
+

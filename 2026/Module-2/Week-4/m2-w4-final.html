@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .form-row {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0770c2;
+    }
+    
+    .summary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .total-label {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    .total-amount {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0984e3;
+    }
+    
+    .expense-list {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    .expense-item {
+      padding: 15px 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .expense-item:last-child {
+      border-bottom: none;
+    }
+    
+    .expense-info {
+      flex: 1;
+    }
+    
+    .expense-description {
+      font-size: 16px;
+      color: #333;
+    }
+    
+    .expense-category {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+    
+    .expense-amount {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-right: 15px;
+    }
+    
+    .delete-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px;
+      width: auto;
+    }
+    
+    .delete-btn:hover {
+      background: #fee;
+      border-radius: 4px;
+    }
+    
+    .empty-message {
+      padding: 40px;
+      text-align: center;
+      color: #888;
+    }
+    
+    .filter-row {
+      margin-bottom: 15px;
+    }
+    
+    #category-filter {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💰 Expense Tracker</h1>
+  
+  <div class="form-container">
+    <form id="expense-form">
+      <div class="form-row">
+        <label for="description">Description</label>
+        <input type="text" id="description" placeholder="What did you spend on?" required>
+      </div>
+      
+      <div class="form-row">
+        <label for="amount">Amount ($)</label>
+        <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
+      </div>
+      
+      <div class="form-row">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="Food">🍔 Food</option>
+          <option value="Transport">🚗 Transport</option>
+          <option value="Entertainment">🎬 Entertainment</option>
+          <option value="Utilities">💡 Utilities</option>
+          <option value="Other">📦 Other</option>
+        </select>
+      </div>
+      
+      <button type="submit">Add Expense</button>
+    </form>
+  </div>
+  
+  <div class="summary">
+    <span class="total-label">Total Spent:</span>
+    <span class="total-amount" id="total">$0.00</span>
+  </div>
+  
+  <div class="filter-row">
+    <select id="category-filter">
+      <option value="All">All Categories</option>
+      <option value="Food">🍔 Food</option>
+      <option value="Transport">🚗 Transport</option>
+      <option value="Entertainment">🎬 Entertainment</option>
+      <option value="Utilities">💡 Utilities</option>
+      <option value="Other">📦 Other</option>
+    </select>
+  </div>
+  
+  <div class="expense-list" id="expense-list">
+    <div class="empty-message">No expenses yet. Add one above!</div>
+  </div>
+  
+  <script>
+    // ============================================
+    // MODULE 2, WEEK 4: FINAL PRODUCT
+    // Interactive Expense Tracker with localStorage
+    // ============================================
+    
+    // ---- DATA STORAGE ----
+    let expenses = [];
+    let nextId = 1;
+    
+    
+    // ---- FORMATTING FUNCTIONS ----
+    
+    function formatCurrency(amount) {
+      return "$" + amount.toFixed(2);
+    }
+    
+    function getCategoryEmoji(category) {
+      switch (category) {
+        case "Food": return "🍔";
+        case "Transport": return "🚗";
+        case "Entertainment": return "🎬";
+        case "Utilities": return "💡";
+        default: return "📦";
+      }
+    }
+    
+    
+    // ---- VALIDATION ----
+    
+    function validateExpense(description, amount, category) {
+      if (!description || description.trim() === "") {
+        return "Description is required";
+      }
+      if (!amount || amount <= 0) {
+        return "Amount must be greater than 0";
+      }
+      if (!category) {
+        return "Category is required";
+      }
+      return "Valid";
+    }
+    
+    
+    // ---- CRUD FUNCTIONS ----
+    
+    function addExpense(description, amount, category) {
+      const expense = {
+        id: nextId,
+        description: description,
+        amount: amount,
+        category: category,
+        date: new Date().toISOString().split('T')[0]
+      };
+      
+      expenses.push(expense);
+      nextId++;
+      saveExpenses();
+      
+      return expense;
+    }
+    
+    function deleteExpense(id) {
+      expenses = expenses.filter(exp => exp.id !== id);
+      saveExpenses();
+    }
+    
+    
+    // ---- CALCULATIONS ----
+    
+    function calculateTotal(expenseList) {
+      return expenseList.reduce((sum, exp) => sum + exp.amount, 0);
+    }
+    
+    function filterByCategory(category) {
+      if (category === "All") {
+        return expenses;
+      }
+      return expenses.filter(exp => exp.category === category);
+    }
+    
+    
+    // ---- LOCALSTORAGE ----
+    
+    function saveExpenses() {
+      localStorage.setItem("expenses", JSON.stringify(expenses));
+      localStorage.setItem("nextId", nextId.toString());
+    }
+    
+    function loadExpenses() {
+      const saved = localStorage.getItem("expenses");
+      if (saved) {
+        expenses = JSON.parse(saved);
+      }
+      
+      const savedId = localStorage.getItem("nextId");
+      if (savedId) {
+        nextId = parseInt(savedId);
+      }
+    }
+    
+    
+    // ---- RENDER UI ----
+    
+    function renderExpenses() {
+      const container = document.querySelector("#expense-list");
+      const filterValue = document.querySelector("#category-filter").value;
+      const filteredExpenses = filterByCategory(filterValue);
+      
+      // Clear container
+      container.innerHTML = "";
+      
+      if (filteredExpenses.length === 0) {
+        container.innerHTML = '<div class="empty-message">No expenses yet. Add one above!</div>';
+      } else {
+        // Render each expense
+        filteredExpenses.forEach(expense => {
+          const div = document.createElement("div");
+          div.classList.add("expense-item");
+          
+          div.innerHTML = `
+            <div class="expense-info">
+              <div class="expense-description">
+                ${getCategoryEmoji(expense.category)} ${expense.description}
+              </div>
+              <div class="expense-category">${expense.category} • ${expense.date}</div>
+            </div>
+            <div class="expense-amount">${formatCurrency(expense.amount)}</div>
+            <button class="delete-btn" data-id="${expense.id}">❌</button>
+          `;
+          
+          container.appendChild(div);
+        });
+      }
+      
+      // Update total (always show total of filtered expenses)
+      const total = calculateTotal(filteredExpenses);
+      document.querySelector("#total").textContent = formatCurrency(total);
+    }
+    
+    
+    // ---- EVENT HANDLERS ----
+    
+    // Form submit
+    const form = document.querySelector("#expense-form");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const description = document.querySelector("#description").value;
+      const amount = parseFloat(document.querySelector("#amount").value);
+      const category = document.querySelector("#category").value;
+      
+      // Validate
+      const validation = validateExpense(description, amount, category);
+      if (validation !== "Valid") {
+        alert(validation);
+        return;
+      }
+      
+      // Add expense
+      addExpense(description, amount, category);
+      
+      // Re-render
+      renderExpenses();
+      
+      // Reset form
+      form.reset();
+    });
+    
+    
+    // Delete button (event delegation)
+    document.querySelector("#expense-list").addEventListener("click", function(event) {
+      if (event.target.classList.contains("delete-btn")) {
+        const id = Number(event.target.getAttribute("data-id"));
+        deleteExpense(id);
+        renderExpenses();
+      }
+    });
+    
+    
+    // Category filter
+    document.querySelector("#category-filter").addEventListener("change", function() {
+      renderExpenses();
+    });
+    
+    
+    // ---- INITIALIZE ----
+    loadExpenses();
+    renderExpenses();
+  </script>
+</body>
+</html>
