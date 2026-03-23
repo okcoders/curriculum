@@ -1,6 +1,20 @@
 
 Expense tracker tasks
 
+
+Week 2
+ - build form
+ - add expenses to table dynamically (events)
+ - validation
+ - local storage
+ -
+
+
+
+
+
+
+
 Week 1
 
  - build table with placeholders
@@ -12,6 +26,8 @@ Week 1
  * if time allows
 	- make drop downs
 	- display data with loop
+
+
 
 
 
