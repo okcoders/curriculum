@@ -2,18 +2,18 @@
 Expense tracker tasks
 
 
+Week 3
+  - make drop downs
+  - display data with loop
+  - local storage
+  - delete expense
+  - modify expense
+
+
 Week 2
  - build form
  - add expenses to table dynamically (events)
  - validation
- - local storage
- -
-
-
-
-
-
-
 
 Week 1
 
@@ -24,8 +24,7 @@ Week 1
  - get total to display
 
  * if time allows
-	- make drop downs
-	- display data with loop
+	
 
 
 
@@ -37,4 +36,32 @@ Ideas for upcoming weeks
  - save expenses locally
  - save expenses to database
  - deploy
+
+
+
+todos                                                                                          
+
+  1. Create new repo
+  2. Create index.html, index.js, index.css (if needed)
+  3. Hook all files together
+  4. Set up Bootstrap
+  5. Build out HTML page
+    - title
+    - form
+    - table
+  6. Build out Javascrip
+    - Set up the expenses array - let expenses = [] to hold all expenses dynamically
+    - Dynamically populate the category dropdown - loadCategories() builds <option> elements from an array using a for loop on
+  DOMContentLoaded
+    - Listen for form submission - attach submit event listener, preventDefault(), grab form values
+    - Validate form input - validateExpenses() checks description, amount, and category before adding
+    - Build and add expense objects - addExpense() auto-generates an ID, creates the object, pushes to the array
+    - Render expenses in a table - renderExpenses() clears the <tbody>, loops through the array, creates <tr> elements with template literals
+    - Calculate and display total - getTotal() loops through expenses, sums amounts with parseFloat
+    - Delete an expense - deleteExpense() finds the index with a loop, uses splice() to remove, re-renders
+    - Edit an expense - editExpense() populates the form with existing data, sets editingID, changes button text to "Update Expense"
+    - Handle edit on submit - submit listener checks editingID - if set, updates the existing expense instead of adding new
+
+
+
 
