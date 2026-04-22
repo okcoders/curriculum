@@ -1,21 +1,166 @@
-# Module 3, Week 2: Debug Exercises (Fetch/CORS)
+# Module 3, Week 2: Debug Exercises (Supabase)
 
-## Bug 1: CORS error
-Frontend at localhost:5500, backend at localhost:3000
-Answer: Add cors middleware to Express
+Each exercise has broken code. Read it, find the bug, and fix it.
 
-## Bug 2: Body not received
-```javascript
-fetch(url, { method: "POST", body: { data: "x" } });
+---
+
+## Bug 1: Data is null
+
+```js
+app.get("/expenses", async (req, res) => {
+  const { data } = await supabase
+    .from('expenses')
+    .select('*');
+
+  res.json(data.map(e => e.description));
+});
 ```
-Answer: Use JSON.stringify(body) and add Content-Type header
 
-## Bug 3: Promise pending
-```javascript
-const data = response.json();
-console.log(data); // Promise
+**Problem:** When something goes wrong, `data` comes back as `null` and `.map()` throws.
+
+**Hint:** Check the error object for details.
+
+---
+
+## Bug 2: Column not found
+
+```js
+app.get("/expenses/food", async (req, res) => {
+  const { data, error } = await supabase
+    .from('expenses')
+    .select('*')
+    .eq('categroy', 'Food');
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data);
+});
 ```
-Answer: Add await before response.json()
 
-## Bug 4: Errors not handled
-Answer: Wrap fetch in try/catch
+**Problem:** Query returns an error about a missing column.
+
+**Hint:** Use correct column name matching table schema.
+
+---
+
+## Bug 3: Env var undefined
+
+```js
+const express = require("express");
+const { createClient } = require('@supabase/supabase-js');
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
+
+const app = express();
+app.use(express.json());
+
+app.listen(process.env.PORT, () => {
+  console.log("Server running on port " + process.env.PORT);
+});
+```
+
+**Problem:** `process.env.SUPABASE_URL` and the other env vars are all `undefined`.
+
+**Hint:** Add `require("dotenv").config()` at top.
+
+---
+
+## Bug 4: Insert returns null
+
+```js
+app.post('/expenses', async (req, res) => {
+  const { description, amount, category, date } = req.body;
+  const { data, error } = await supabase
+    .from('expenses')
+    .insert([{ description, amount, category, date }]);
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.status(201).json(data);
+});
+```
+
+**Problem:** Insert succeeds but the response body is `null` instead of the new row.
+
+**Hint:** Add `.select().single()` after insert.
+
+---
+
+<details>
+<summary><strong>Solutions (click to expand)</strong></summary>
+
+### Bug 1: Data is null
+
+Destructure `error` and bail out before touching `data`.
+
+```js
+app.get("/expenses", async (req, res) => {
+  const { data, error } = await supabase
+    .from('expenses')
+    .select('*');
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data.map(e => e.description));
+});
+```
+
+### Bug 2: Column not found
+
+Typo: `categroy` → `category`.
+
+```js
+app.get("/expenses/food", async (req, res) => {
+  const { data, error } = await supabase
+    .from('expenses')
+    .select('*')
+    .eq('category', 'Food');
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data);
+});
+```
+
+### Bug 3: Env var undefined
+
+Load `.env` before reading `process.env`.
+
+```js
+require('dotenv').config();
+
+const express = require("express");
+const { createClient } = require('@supabase/supabase-js');
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
+
+const app = express();
+app.use(express.json());
+
+app.listen(process.env.PORT, () => {
+  console.log("Server running on port " + process.env.PORT);
+});
+```
+
+### Bug 4: Insert returns null
+
+Chain `.select().single()` so Supabase returns the inserted row.
+
+```js
+app.post('/expenses', async (req, res) => {
+  const { description, amount, category, date } = req.body;
+  const { data, error } = await supabase
+    .from('expenses')
+    .insert([{ description, amount, category, date }])
+    .select()
+    .single();
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.status(201).json(data);
+});
+```
+
+</details>
+

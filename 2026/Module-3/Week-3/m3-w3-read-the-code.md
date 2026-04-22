@@ -1,36 +1,31 @@
-# Module 3, Week 3: Read the Code Exercises
+# Module 3, Week 2: Read the Code Exercises
 
-## Exercise 1: Supabase Select
+## Exercise 1: Fetch Response
 ```javascript
-const { data, error } = await supabase
-  .from("expenses")
-  .select("*")
-  .eq("category", "Food");
+const response = await fetch("/api/expenses");
+const data = await response.json();
 ```
-What does this return?
+What type is response? What type is data?
 
-Answer: All expenses where category equals "Food"
+Answer: Response object, then parsed JSON (array/object)
 
-## Exercise 2: Supabase Insert
+## Exercise 2: POST Body
 ```javascript
-const { data, error } = await supabase
-  .from("expenses")
-  .insert({ description: "Coffee", amount: 5 })
-  .select()
-  .single();
+fetch("/api/expenses", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ description: "Coffee" })
+});
 ```
-What does data contain?
+What does server receive in req.body?
 
-Answer: The newly inserted row with its generated id
+Answer: { description: "Coffee" }
 
-## Exercise 3: Error Handling
+## Exercise 3: Error Check
 ```javascript
-const { data, error } = await supabase
-  .from("expensess")  // typo!
-  .select("*");
-console.log(data);
-console.log(error);
+const response = await fetch("/api/expenses/999");
+console.log(response.ok, response.status);
 ```
-What happens?
+If 999 not found?
 
-Answer: data is null, error contains message about table not existing
+Answer: false, 404
