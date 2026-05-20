@@ -1,0 +1,19 @@
+h2 {
+    background-color: blue;
+}
+
+p {
+    font-size: 20px;
+}
+
+.example-box {
+    color: grey;
+}
+
+#test-id {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    font-size: 20px;
+}

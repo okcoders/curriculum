@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Week 1 - Node.js and Express</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #00b894;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #00b894;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #00b894;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #00b894;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00b894;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+
+        .bash {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 3 Week 1 — Node.js and Express</h1>
+    <p>This week we start backend development: running JavaScript on the server with Node.js and building APIs with Express.</p>
+
+
+    <h2>Node.js vs Browser JavaScript</h2>
+
+    <table>
+        <tr>
+            <th>Browser JS</th>
+            <th>Node.js</th>
+        </tr>
+        <tr>
+            <td>Runs in browser</td>
+            <td>Runs on server</td>
+        </tr>
+        <tr>
+            <td>Has <code>window</code>, <code>document</code></td>
+            <td>Has <code>process</code>, <code>fs</code>, <code>http</code></td>
+        </tr>
+        <tr>
+            <td>Frontend code</td>
+            <td>Backend code</td>
+        </tr>
+    </table>
+
+
+    <h2>npm and package.json</h2>
+
+    <p>npm (Node Package Manager) manages your project's dependencies.</p>
+
+    <div class="example-box">
+        <pre class="bash"><code># Create a new project
+mkdir expense-api
+cd expense-api
+npm init -y
+
+# Install Express
+npm install express</code></pre>
+    </div>
+
+    <p>This creates <code>package.json</code> which tracks your project info and dependencies.</p>
+
+
+    <h2>Express Setup</h2>
+
+    <div class="example-box">
+        <pre><code>const express = require("express");
+const app = express();
+
+<span class="comment">// Middleware to parse JSON bodies</span>
+app.use(express.json());
+
+<span class="comment">// Start server</span>
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Important:</strong> <code>app.use(express.json())</code> must come BEFORE your routes, or <code>req.body</code> will be undefined!
+    </div>
+
+
+    <h2>HTTP Methods</h2>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Purpose</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>Read data</td>
+            <td>Get all expenses</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>Create data</td>
+            <td>Add new expense</td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>Update data</td>
+            <td>Edit an expense</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>Remove data</td>
+            <td>Delete an expense</td>
+        </tr>
+    </table>
+
+
+    <h2>Basic Routes</h2>
+
+    <div class="example-box">
+        <pre><code>let expenses = [];
+let nextId = 1;
+
+<span class="comment">// GET all expenses</span>
+app.get("/api/expenses", (req, res) => {
+  res.json(expenses);
+});
+
+<span class="comment">// GET single expense</span>
+app.get("/api/expenses/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const expense = expenses.find(e => e.id === id);
+  
+  if (!expense) {
+    return res.status(404).json({ error: "Not found" });
+  }
+  res.json(expense);
+});
+
+<span class="comment">// POST new expense</span>
+app.post("/api/expenses", (req, res) => {
+  const { description, amount, category } = req.body;
+  
+  const expense = {
+    id: nextId++,
+    description,
+    amount,
+    category
+  };
+  
+  expenses.push(expense);
+  res.status(201).json(expense);
+});
+
+<span class="comment">// DELETE expense</span>
+app.delete("/api/expenses/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const index = expenses.findIndex(e => e.id === id);
+  
+  if (index === -1) {
+    return res.status(404).json({ error: "Not found" });
+  }
+  
+  expenses.splice(index, 1);
+  res.status(204).send();
+});</code></pre>
+    </div>
+
+
+    <h2>Request Object</h2>
+
+    <div class="example-box">
+        <pre><code>app.get("/api/expenses/:id", (req, res) => {
+  req.params.id    <span class="comment">// URL parameter - from /api/expenses/123</span>
+  req.query.sort   <span class="comment">// Query string - from ?sort=date</span>
+  req.body         <span class="comment">// Request body - from POST/PUT JSON</span>
+});</code></pre>
+    </div>
+
+
+    <h2>Response Object</h2>
+
+    <div class="example-box">
+        <pre><code>res.json({ data: "hello" });        <span class="comment">// Send JSON</span>
+res.status(201).json(expense);      <span class="comment">// Set status + JSON</span>
+res.status(404).json({ error: "Not found" });
+res.status(204).send();             <span class="comment">// No content</span></code></pre>
+    </div>
+
+    <h3>Common Status Codes</h3>
+
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>OK</td>
+        </tr>
+        <tr>
+            <td>201</td>
+            <td>Created</td>
+        </tr>
+        <tr>
+            <td>204</td>
+            <td>No Content</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Bad Request</td>
+        </tr>
+        <tr>
+            <td>404</td>
+            <td>Not Found</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>Server Error</td>
+        </tr>
+    </table>
+
+
+    <h2>Route Order Matters</h2>
+
+    <div class="warning-box">
+        <pre><code><span class="comment">// WRONG - :id catches "summary"</span>
+app.get("/api/expenses/:id", handler);
+app.get("/api/expenses/summary", handler); <span class="comment">// Never reached!</span>
+
+<span class="comment">// RIGHT - specific routes first</span>
+app.get("/api/expenses/summary", handler);
+app.get("/api/expenses/:id", handler);</code></pre>
+    </div>
+
+
+    <h2>Testing with curl</h2>
+
+    <div class="example-box">
+        <pre class="bash"><code># GET all
+curl http://localhost:3000/api/expenses
+
+# GET one
+curl http://localhost:3000/api/expenses/1
+
+# POST
+curl -X POST http://localhost:3000/api/expenses \
+  -H "Content-Type: application/json" \
+  -d '{"description":"Coffee","amount":5,"category":"Food"}'
+
+# DELETE
+curl -X DELETE http://localhost:3000/api/expenses/1</code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td><code>req.body</code> is undefined</td>
+            <td>Missing middleware</td>
+            <td>Add <code>app.use(express.json())</code> BEFORE routes</td>
+        </tr>
+        <tr>
+            <td>Route never reached</td>
+            <td>Wrong order</td>
+            <td>Put specific routes before <code>:id</code> routes</td>
+        </tr>
+        <tr>
+            <td>Can't find expense</td>
+            <td><code>params.id</code> is string</td>
+            <td>Use <code>parseInt(req.params.id)</code></td>
+        </tr>
+        <tr>
+            <td>"Headers already sent"</td>
+            <td>Sending two responses</td>
+            <td>Add <code>return</code> after first response</td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What's the difference between Node.js and browser JavaScript?</li>
+        <li>Why must <code>express.json()</code> come before routes?</li>
+        <li>How do you access URL parameters like <code>/api/expenses/5</code>?</li>
+        <li>What status code should you return when creating a new resource?</li>
+        <li>Why do specific routes need to come before <code>:id</code> routes?</li>
+    </ol>
+
+</body>
+</html>

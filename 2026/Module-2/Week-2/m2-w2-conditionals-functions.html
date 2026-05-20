@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Week 2 - Conditionals and Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #0984e3;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #0984e3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #0984e3;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #0984e3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0984e3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 2 Week 2 — Conditionals and Functions</h1>
+    <p>This week covers making decisions with conditionals and creating reusable code with functions.</p>
+
+
+    <h2>Comparison Operators</h2>
+
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><code>===</code></td>
+            <td>Strict equal (value AND type)</td>
+            <td><code>5 === 5</code> → true</td>
+        </tr>
+        <tr>
+            <td><code>!==</code></td>
+            <td>Strict not equal</td>
+            <td><code>5 !== "5"</code> → true</td>
+        </tr>
+        <tr>
+            <td><code>&gt;</code></td>
+            <td>Greater than</td>
+            <td><code>10 &gt; 5</code> → true</td>
+        </tr>
+        <tr>
+            <td><code>&lt;</code></td>
+            <td>Less than</td>
+            <td><code>3 &lt; 7</code> → true</td>
+        </tr>
+        <tr>
+            <td><code>&gt;=</code></td>
+            <td>Greater than or equal</td>
+            <td><code>5 &gt;= 5</code> → true</td>
+        </tr>
+        <tr>
+            <td><code>&lt;=</code></td>
+            <td>Less than or equal</td>
+            <td><code>4 &lt;= 3</code> → false</td>
+        </tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Rule:</strong> Always use <code>===</code> and <code>!==</code> to avoid type coercion bugs.
+    </div>
+
+
+    <h2>Logical Operators</h2>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// AND (&&) — both must be true</span>
+true && true      <span class="comment">// true</span>
+true && false     <span class="comment">// false</span>
+
+<span class="comment">// OR (||) — at least one must be true</span>
+true || false     <span class="comment">// true</span>
+false || false    <span class="comment">// false</span>
+
+<span class="comment">// NOT (!) — flips the value</span>
+!true             <span class="comment">// false</span>
+!false            <span class="comment">// true</span></code></pre>
+    </div>
+
+
+    <h2>Truthy and Falsy Values</h2>
+
+    <p><strong>Falsy values</strong> (evaluate to false in a boolean context):</p>
+    <ul>
+        <li><code>false</code></li>
+        <li><code>0</code></li>
+        <li><code>""</code> (empty string)</li>
+        <li><code>null</code></li>
+        <li><code>undefined</code></li>
+        <li><code>NaN</code></li>
+    </ul>
+
+    <p><strong>Everything else is truthy</strong> — including <code>"0"</code>, <code>"false"</code>, empty arrays <code>[]</code>, and empty objects <code>{}</code>.</p>
+
+    <div class="example-box">
+        <pre><code>if ("hello") {
+  <span class="comment">// This runs because "hello" is truthy</span>
+}
+
+if (0) {
+  <span class="comment">// This does NOT run because 0 is falsy</span>
+}</code></pre>
+    </div>
+
+
+    <h2>Conditionals</h2>
+
+    <h3>if / else if / else</h3>
+
+    <div class="example-box">
+        <pre><code>const score = 85;
+
+if (score >= 90) {
+  console.log("A");
+} else if (score >= 80) {
+  console.log("B");
+} else if (score >= 70) {
+  console.log("C");
+} else {
+  console.log("F");
+}</code></pre>
+    </div>
+
+    <h3>Switch Statement</h3>
+
+    <div class="example-box">
+        <pre><code>const category = "food";
+
+switch (category) {
+  case "food":
+    console.log("🍔 Food");
+    break;
+  case "transport":
+    console.log("🚗 Transport");
+    break;
+  default:
+    console.log("📦 Other");
+}</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Important:</strong> Don't forget <code>break</code>! Without it, code falls through to the next case. Also, switch uses strict equality — <code>"Food"</code> won't match <code>"food"</code>.
+    </div>
+
+    <h3>Ternary Operator</h3>
+
+    <p>A shorthand for simple if/else:</p>
+
+    <div class="example-box">
+        <pre><code>const age = 20;
+const status = age >= 18 ? "adult" : "minor";
+
+<span class="comment">// Same as:</span>
+let status;
+if (age >= 18) {
+  status = "adult";
+} else {
+  status = "minor";
+}</code></pre>
+    </div>
+
+
+    <h2>Numbers and Math</h2>
+
+    <div class="example-box">
+        <pre><code>const num = 3.14159;
+
+num.toFixed(2)          <span class="comment">// "3.14" (returns string!)</span>
+parseInt("42")          <span class="comment">// 42</span>
+parseFloat("3.14")      <span class="comment">// 3.14</span>
+
+Math.round(4.5)         <span class="comment">// 5</span>
+Math.floor(4.9)         <span class="comment">// 4 (rounds down)</span>
+Math.ceil(4.1)          <span class="comment">// 5 (rounds up)</span>
+Math.max(1, 5, 3)       <span class="comment">// 5</span>
+Math.min(1, 5, 3)       <span class="comment">// 1</span></code></pre>
+    </div>
+
+
+    <h2>Functions</h2>
+
+    <h3>Function Declaration</h3>
+
+    <div class="example-box">
+        <pre><code>function greet(name) {
+  return "Hello, " + name;
+}
+
+greet("Alice")  <span class="comment">// "Hello, Alice"</span></code></pre>
+    </div>
+
+    <h3>Arrow Functions</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Full syntax</span>
+const greet = (name) => {
+  return "Hello, " + name;
+};
+
+<span class="comment">// Short syntax (implicit return, no braces)</span>
+const greet = (name) => "Hello, " + name;
+
+<span class="comment">// Single parameter (parentheses optional)</span>
+const double = n => n * 2;</code></pre>
+    </div>
+
+    <h3>Parameters and Return</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Default parameters</span>
+function greet(name = "Guest") {
+  return "Hello, " + name;
+}
+
+greet()          <span class="comment">// "Hello, Guest"</span>
+greet("Alice")   <span class="comment">// "Hello, Alice"</span></code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Common mistake — missing return:</strong>
+        <pre><code><span class="comment">// ❌ No return</span>
+function add(a, b) {
+  a + b;
+}
+add(2, 3)  <span class="comment">// undefined</span>
+
+<span class="comment">// ✅ With return</span>
+function add(a, b) {
+  return a + b;
+}
+add(2, 3)  <span class="comment">// 5</span></code></pre>
+    </div>
+
+
+    <h2>Scope</h2>
+
+    <div class="example-box">
+        <pre><code>const globalVar = "I'm global";
+
+function example() {
+  const localVar = "I'm local";
+  console.log(globalVar);  <span class="comment">// ✅ Can access global</span>
+  console.log(localVar);   <span class="comment">// ✅ Can access local</span>
+}
+
+console.log(globalVar);    <span class="comment">// ✅ Works</span>
+console.log(localVar);     <span class="comment">// ❌ Error! Not defined</span></code></pre>
+    </div>
+
+
+    <h2>Expense Tracker Functions</h2>
+
+    <h3>Validate Expense</h3>
+
+    <div class="example-box">
+        <pre><code>function validateExpense(description, amount, category) {
+  if (!description) {
+    return "Description is required";
+  }
+  if (!amount || amount <= 0) {
+    return "Amount must be greater than 0";
+  }
+  if (!category) {
+    return "Category is required";
+  }
+  return "Valid";
+}
+
+<span class="comment">// Test it</span>
+validateExpense("Coffee", 5, "Food")    <span class="comment">// "Valid"</span>
+validateExpense("", 5, "Food")          <span class="comment">// "Description is required"</span>
+validateExpense("Coffee", -5, "Food")   <span class="comment">// "Amount must be greater than 0"</span></code></pre>
+    </div>
+
+    <h3>Get Budget Status</h3>
+
+    <div class="example-box">
+        <pre><code>function getBudgetStatus(spent, budget) {
+  if (spent > budget) {
+    return "over";
+  } else if (spent >= budget * 0.9) {
+    return "warning";
+  } else {
+    return "under";
+  }
+}</code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td><code>if (x = 5)</code></td>
+            <td>Assignment, not comparison</td>
+            <td><code>if (x === 5)</code></td>
+        </tr>
+        <tr>
+            <td><code>(n) => { n * 2 }</code></td>
+            <td>Missing return with braces</td>
+            <td><code>(n) => { return n * 2 }</code> or <code>n => n * 2</code></td>
+        </tr>
+        <tr>
+            <td><code>case "Food":</code></td>
+            <td>Case sensitive match fails</td>
+            <td><code>switch(val.toLowerCase())</code></td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What's the difference between <code>==</code> and <code>===</code>?</li>
+        <li>List all falsy values in JavaScript.</li>
+        <li>Write a function that returns "even" or "odd" based on a number.</li>
+        <li>What does this return? <code>const x = (n) => { n * 2 }; x(5);</code></li>
+        <li>When would you use a switch statement instead of if/else?</li>
+    </ol>
+
+</body>
+</html>

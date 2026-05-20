@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Week 4 - DOM and Higher Order Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            border-bottom: 3px solid #0984e3;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            background-color: #0984e3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2d3436;
+            border-left: 4px solid #0984e3;
+            padding-left: 10px;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #0984e3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0984e3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 2 Week 4 — DOM and Higher Order Functions</h1>
+    <p>This week covers array methods like map/filter/reduce and interacting with the browser DOM.</p>
+
+
+    <h2>Higher Order Functions</h2>
+
+    <p>Functions that take other functions as arguments.</p>
+
+    <h3>forEach</h3>
+
+    <p>Runs a function for each element (no return value):</p>
+
+    <div class="example-box">
+        <pre><code>const numbers = [1, 2, 3];
+
+numbers.forEach(num => console.log(num));
+<span class="comment">// 1</span>
+<span class="comment">// 2</span>
+<span class="comment">// 3</span></code></pre>
+    </div>
+
+    <h3>map</h3>
+
+    <p>Creates a <strong>new array</strong> by transforming each element:</p>
+
+    <div class="example-box">
+        <pre><code>const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+<span class="comment">// [2, 4, 6]</span>
+
+const expenses = [{ amount: 5 }, { amount: 15 }];
+const amounts = expenses.map(exp => exp.amount);
+<span class="comment">// [5, 15]</span></code></pre>
+    </div>
+
+    <h3>filter</h3>
+
+    <p>Creates a <strong>new array</strong> with elements that pass a test:</p>
+
+    <div class="example-box">
+        <pre><code>const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter(num => num % 2 === 0);
+<span class="comment">// [2, 4]</span>
+
+const expenses = [
+  { category: "Food", amount: 5 },
+  { category: "Transport", amount: 20 }
+];
+const foodOnly = expenses.filter(exp => exp.category === "Food");
+<span class="comment">// [{ category: "Food", amount: 5 }]</span></code></pre>
+    </div>
+
+    <h3>reduce</h3>
+
+    <p>Reduces an array to a <strong>single value</strong>:</p>
+
+    <div class="example-box">
+        <pre><code>const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+<span class="comment">// 15</span>
+
+const expenses = [{ amount: 5 }, { amount: 15 }];
+const total = expenses.reduce((acc, exp) => acc + exp.amount, 0);
+<span class="comment">// 20</span></code></pre>
+    </div>
+
+    <h3>find and findIndex</h3>
+
+    <div class="example-box">
+        <pre><code>const expenses = [
+  { id: 1, description: "Coffee" },
+  { id: 2, description: "Lunch" }
+];
+
+expenses.find(exp => exp.id === 2);
+<span class="comment">// { id: 2, description: "Lunch" }</span>
+
+expenses.findIndex(exp => exp.id === 2);
+<span class="comment">// 1</span></code></pre>
+    </div>
+
+    <h3>Method Chaining</h3>
+
+    <div class="example-box">
+        <pre><code>const foodTotal = expenses
+  .filter(exp => exp.category === "Food")
+  .map(exp => exp.amount)
+  .reduce((acc, amount) => acc + amount, 0);</code></pre>
+    </div>
+
+
+    <h2>DOM Manipulation</h2>
+
+    <h3>Selecting Elements</h3>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// By ID</span>
+const header = document.getElementById("header");
+
+<span class="comment">// By CSS selector (first match)</span>
+const button = document.querySelector(".submit-btn");
+
+<span class="comment">// All matches (returns NodeList)</span>
+const items = document.querySelectorAll(".item");</code></pre>
+    </div>
+
+    <h3>Modifying Elements</h3>
+
+    <div class="example-box">
+        <pre><code>const element = document.querySelector("#myElement");
+
+<span class="comment">// Text content</span>
+element.textContent = "Hello World";
+
+<span class="comment">// HTML content</span>
+element.innerHTML = "&lt;strong&gt;Bold&lt;/strong&gt;";
+
+<span class="comment">// Classes</span>
+element.classList.add("active");
+element.classList.remove("active");
+element.classList.toggle("active");
+element.classList.contains("active");  <span class="comment">// true/false</span>
+
+<span class="comment">// Styles</span>
+element.style.backgroundColor = "blue";
+element.style.display = "none";
+
+<span class="comment">// Attributes</span>
+element.setAttribute("data-id", "123");
+element.getAttribute("data-id");</code></pre>
+    </div>
+
+    <h3>Creating Elements</h3>
+
+    <div class="example-box">
+        <pre><code>const div = document.createElement("div");
+div.textContent = "New content";
+div.classList.add("item");
+
+document.body.appendChild(div);  <span class="comment">// Add to page</span>
+element.remove();                <span class="comment">// Remove from page</span></code></pre>
+    </div>
+
+
+    <h2>Events</h2>
+
+    <h3>Adding Event Listeners</h3>
+
+    <div class="example-box">
+        <pre><code>const button = document.querySelector("#myButton");
+
+button.addEventListener("click", function() {
+  console.log("Clicked!");
+});
+
+<span class="comment">// Arrow function</span>
+button.addEventListener("click", () => {
+  console.log("Clicked!");
+});</code></pre>
+    </div>
+
+    <h3>Common Events</h3>
+
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Trigger</th>
+        </tr>
+        <tr>
+            <td><code>click</code></td>
+            <td>Element clicked</td>
+        </tr>
+        <tr>
+            <td><code>submit</code></td>
+            <td>Form submitted</td>
+        </tr>
+        <tr>
+            <td><code>input</code></td>
+            <td>Input value changes</td>
+        </tr>
+        <tr>
+            <td><code>change</code></td>
+            <td>Input loses focus after change</td>
+        </tr>
+    </table>
+
+    <h3>Form Handling</h3>
+
+    <div class="example-box">
+        <pre><code>const form = document.querySelector("#expense-form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();  <span class="comment">// Stop page refresh!</span>
+  
+  const description = document.querySelector("#description").value;
+  const amount = parseFloat(document.querySelector("#amount").value);
+  
+  console.log({ description, amount });
+  form.reset();
+});</code></pre>
+    </div>
+
+    <div class="warning-box">
+        <strong>Always use <code>event.preventDefault()</code> in form submit handlers</strong> — otherwise the page will refresh!
+    </div>
+
+    <h3>Event Delegation</h3>
+
+    <p>One listener on parent instead of many on children:</p>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// ✅ Event delegation</span>
+document.querySelector("#expense-list").addEventListener("click", function(event) {
+  if (event.target.classList.contains("delete-btn")) {
+    const id = event.target.getAttribute("data-id");
+    deleteExpense(Number(id));
+  }
+});</code></pre>
+    </div>
+
+    <div class="tip-box">
+        <strong>Why event delegation?</strong> It works for dynamically added elements and is more performant with many items.
+    </div>
+
+
+    <h2>localStorage</h2>
+
+    <p>Store data that persists after page refresh:</p>
+
+    <div class="example-box">
+        <pre><code><span class="comment">// Save (must be string)</span>
+localStorage.setItem("expenses", JSON.stringify(expenses));
+
+<span class="comment">// Load</span>
+const saved = localStorage.getItem("expenses");
+const expenses = saved ? JSON.parse(saved) : [];
+
+<span class="comment">// Remove</span>
+localStorage.removeItem("expenses");</code></pre>
+    </div>
+
+
+    <h2>Expense Tracker UI</h2>
+
+    <h3>Render Expense List</h3>
+
+    <div class="example-box">
+        <pre><code>function renderExpenses(expenses) {
+  const container = document.querySelector("#expense-list");
+  container.innerHTML = "";
+  
+  expenses.forEach(expense => {
+    const div = document.createElement("div");
+    div.classList.add("expense-item");
+    div.innerHTML = `
+      &lt;span&gt;${expense.description}&lt;/span&gt;
+      &lt;span&gt;$${expense.amount.toFixed(2)}&lt;/span&gt;
+      &lt;button class="delete-btn" data-id="${expense.id}"&gt;Delete&lt;/button&gt;
+    `;
+    container.appendChild(div);
+  });
+}</code></pre>
+    </div>
+
+    <h3>Delete with Event Delegation</h3>
+
+    <div class="example-box">
+        <pre><code>document.querySelector("#expense-list").addEventListener("click", function(event) {
+  if (event.target.classList.contains("delete-btn")) {
+    const id = Number(event.target.getAttribute("data-id"));
+    expenses = expenses.filter(exp => exp.id !== id);
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+    renderExpenses(expenses);
+  }
+});</code></pre>
+    </div>
+
+
+    <h2>Common Mistakes</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Fix</th>
+        </tr>
+        <tr>
+            <td><code>addEventListener("click", handleClick())</code></td>
+            <td>Calls function immediately</td>
+            <td>Remove <code>()</code>: just <code>handleClick</code></td>
+        </tr>
+        <tr>
+            <td><code>numbers.map(n => { n * 2 })</code></td>
+            <td>No return with braces</td>
+            <td>Add <code>return</code> or remove braces</td>
+        </tr>
+        <tr>
+            <td>Form refreshes page</td>
+            <td>Missing preventDefault</td>
+            <td><code>event.preventDefault()</code></td>
+        </tr>
+        <tr>
+            <td><code>element.remove</code></td>
+            <td>Missing parentheses</td>
+            <td><code>element.remove()</code></td>
+        </tr>
+    </table>
+
+
+    <h2>Practice Questions</h2>
+
+    <ol>
+        <li>What's the difference between <code>map()</code> and <code>forEach()</code>?</li>
+        <li>How do you sum all numbers in an array using <code>reduce()</code>?</li>
+        <li>What's event delegation and why use it?</li>
+        <li>How do you stop a form from refreshing the page?</li>
+        <li>How do you store an array in localStorage?</li>
+    </ol>
+
+</body>
+</html>

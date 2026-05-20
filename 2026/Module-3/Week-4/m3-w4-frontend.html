@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    h1 { text-align: center; color: #333; }
+    .form-container { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .form-row { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+    input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+    button { padding: 12px 20px; background: #0984e3; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+    button:hover { background: #0770c2; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .btn-full { width: 100%; }
+    .summary { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .summary-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .summary-row:last-child { margin-bottom: 0; }
+    .total-amount { font-size: 28px; font-weight: bold; color: #0984e3; }
+    .converted-amount { font-size: 18px; color: #00b894; }
+    .currency-controls { display: flex; gap: 10px; margin-top: 15px; }
+    .currency-controls select { flex: 1; }
+    .currency-controls button { flex: 0 0 auto; }
+    .expense-list { background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+    .expense-item { padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+    .expense-info { flex: 1; }
+    .expense-description { font-size: 16px; color: #333; }
+    .expense-category { font-size: 12px; color: #888; margin-top: 4px; }
+    .expense-amount { font-size: 18px; font-weight: bold; color: #333; margin-right: 15px; }
+    .delete-btn { background: none; border: none; font-size: 20px; cursor: pointer; padding: 5px; width: auto; }
+    .delete-btn:hover { background: #fee; border-radius: 4px; }
+    .loading { text-align: center; padding: 40px; color: #888; }
+    .error { text-align: center; padding: 40px; color: #e74c3c; }
+    .empty { text-align: center; padding: 40px; color: #888; }
+    .filter-row { margin-bottom: 15px; display: flex; gap: 10px; }
+    .filter-row select { flex: 1; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h1>💰 Expense Tracker</h1>
+  
+  <div class="form-container">
+    <form id="expense-form">
+      <div class="form-row">
+        <label for="description">Description</label>
+        <input type="text" id="description" placeholder="What did you spend on?" required>
+      </div>
+      <div class="form-row">
+        <label for="amount">Amount ($)</label>
+        <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
+      </div>
+      <div class="form-row">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="Food">🍔 Food</option>
+          <option value="Transport">🚗 Transport</option>
+          <option value="Entertainment">🎬 Entertainment</option>
+          <option value="Utilities">💡 Utilities</option>
+          <option value="Other">📦 Other</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-full" id="submit-btn">Add Expense</button>
+    </form>
+  </div>
+  
+  <div class="summary">
+    <div class="summary-row">
+      <span>Total Spent:</span>
+      <span class="total-amount" id="total">$0.00</span>
+    </div>
+    <div class="summary-row">
+      <span>Converted:</span>
+      <span class="converted-amount" id="converted">-</span>
+    </div>
+    <div class="currency-controls">
+      <select id="currency-select">
+        <option value="EUR">🇪🇺 EUR</option>
+        <option value="GBP">🇬🇧 GBP</option>
+        <option value="JPY">🇯🇵 JPY</option>
+        <option value="CAD">🇨🇦 CAD</option>
+        <option value="AUD">🇦🇺 AUD</option>
+        <option value="MXN">🇲🇽 MXN</option>
+      </select>
+      <button id="convert-btn">Convert</button>
+    </div>
+  </div>
+  
+  <div class="filter-row">
+    <select id="category-filter">
+      <option value="All">All Categories</option>
+      <option value="Food">🍔 Food</option>
+      <option value="Transport">🚗 Transport</option>
+      <option value="Entertainment">🎬 Entertainment</option>
+      <option value="Utilities">💡 Utilities</option>
+      <option value="Other">📦 Other</option>
+    </select>
+  </div>
+  
+  <div class="expense-list" id="expense-list">
+    <div class="loading">Loading...</div>
+  </div>
+  
+  <script>
+    // ============================================
+    // MODULE 3, WEEK 4: FINAL FRONTEND
+    // Full-stack with currency conversion
+    // ============================================
+    
+    // API URL - switches between dev and production
+    const API_URL = window.location.hostname === "localhost"
+      ? "http://localhost:3000/api"
+      : "https://your-backend.vercel.app/api"; // UPDATE THIS!
+    
+    let currentTotal = 0;
+    
+    
+    // ---- API FUNCTIONS ----
+    
+    async function getExpenses(category) {
+      let url = API_URL + "/expenses";
+      if (category && category !== "All") {
+        url += "?category=" + encodeURIComponent(category);
+      }
+      
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Failed to fetch expenses");
+      return await response.json();
+    }
+    
+    async function createExpense(expense) {
+      const response = await fetch(API_URL + "/expenses", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(expense)
+      });
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || "Failed to create expense");
+      }
+      
+      return await response.json();
+    }
+    
+    async function deleteExpenseAPI(id) {
+      const response = await fetch(API_URL + "/expenses/" + id, {
+        method: "DELETE"
+      });
+      
+      if (!response.ok && response.status !== 204) {
+        throw new Error("Failed to delete expense");
+      }
+    }
+    
+    async function getExchangeRate(from, to) {
+      const response = await fetch(`${API_URL}/currency/${from}/${to}`);
+      if (!response.ok) throw new Error("Failed to fetch exchange rate");
+      const data = await response.json();
+      return data.rates[to];
+    }
+    
+    
+    // ---- HELPER FUNCTIONS ----
+    
+    function formatCurrency(amount, currency = "USD") {
+      const symbols = {
+        USD: "$", EUR: "€", GBP: "£", JPY: "¥", 
+        CAD: "C$", AUD: "A$", MXN: "MX$"
+      };
+      const symbol = symbols[currency] || currency + " ";
+      return symbol + amount.toFixed(2);
+    }
+    
+    function getCategoryEmoji(category) {
+      const emojis = {
+        Food: "🍔", Transport: "🚗", Entertainment: "🎬",
+        Utilities: "💡", Other: "📦"
+      };
+      return emojis[category] || "📦";
+    }
+    
+    
+    // ---- RENDER UI ----
+    
+    async function renderExpenses() {
+      const container = document.querySelector("#expense-list");
+      const filter = document.querySelector("#category-filter").value;
+      
+      try {
+        const expenses = await getExpenses(filter);
+        
+        if (expenses.length === 0) {
+          container.innerHTML = '<div class="empty">No expenses yet. Add one above!</div>';
+          currentTotal = 0;
+        } else {
+          container.innerHTML = "";
+          
+          expenses.forEach(expense => {
+            const div = document.createElement("div");
+            div.classList.add("expense-item");
+            div.innerHTML = `
+              <div class="expense-info">
+                <div class="expense-description">
+                  ${getCategoryEmoji(expense.category)} ${expense.description}
+                </div>
+                <div class="expense-category">${expense.category} • ${expense.date}</div>
+              </div>
+              <div class="expense-amount">${formatCurrency(expense.amount)}</div>
+              <button class="delete-btn" data-id="${expense.id}">❌</button>
+            `;
+            container.appendChild(div);
+          });
+          
+          currentTotal = expenses.reduce((sum, exp) => sum + parseFloat(exp.amount), 0);
+        }
+        
+        document.querySelector("#total").textContent = formatCurrency(currentTotal);
+        document.querySelector("#converted").textContent = "-";
+        
+      } catch (error) {
+        container.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+        console.error(error);
+      }
+    }
+    
+    
+    // ---- EVENT HANDLERS ----
+    
+    // Form submit
+    const form = document.querySelector("#expense-form");
+    const submitBtn = document.querySelector("#submit-btn");
+    
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      
+      const expense = {
+        description: document.querySelector("#description").value,
+        amount: parseFloat(document.querySelector("#amount").value),
+        category: document.querySelector("#category").value
+      };
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Adding...";
+      
+      try {
+        await createExpense(expense);
+        await renderExpenses();
+        form.reset();
+      } catch (error) {
+        alert("Error: " + error.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Add Expense";
+      }
+    });
+    
+    
+    // Delete handler
+    document.querySelector("#expense-list").addEventListener("click", async function(event) {
+      if (event.target.classList.contains("delete-btn")) {
+        const id = Number(event.target.getAttribute("data-id"));
+        event.target.disabled = true;
+        
+        try {
+          await deleteExpenseAPI(id);
+          await renderExpenses();
+        } catch (error) {
+          alert("Error: " + error.message);
+          event.target.disabled = false;
+        }
+      }
+    });
+    
+    
+    // Category filter
+    document.querySelector("#category-filter").addEventListener("change", renderExpenses);
+    
+    
+    // Currency conversion
+    const convertBtn = document.querySelector("#convert-btn");
+    convertBtn.addEventListener("click", async function() {
+      const currency = document.querySelector("#currency-select").value;
+      
+      convertBtn.disabled = true;
+      convertBtn.textContent = "...";
+      
+      try {
+        const rate = await getExchangeRate("USD", currency);
+        const converted = currentTotal * rate;
+        document.querySelector("#converted").textContent = formatCurrency(converted, currency);
+      } catch (error) {
+        document.querySelector("#converted").textContent = "Error";
+        console.error(error);
+      } finally {
+        convertBtn.disabled = false;
+        convertBtn.textContent = "Convert";
+      }
+    });
+    
+    
+    // ---- INITIALIZE ----
+    renderExpenses();
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.section-border-class {
+    /* border: 20px dashed purple; */
+    border-width: 2px;
+    border-style: dashed;
+    border-color: purple;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    border: 1px solid grey;
+}
+
+form p {
+    width: 30%;
+}
+
+form input {
+    width: 90%;
+}
+
+form textarea {
+    width: 90%;
+}

@@ -15,6 +15,22 @@ datasource db {
 }
 
 
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  projects  Projects[] 
+}
+
+model Projects {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+  userID    Int
+  user      User     @relation(fields: [userID], references: [id])
+}
+
 model Post {
   id String @id @default(cuid())
   title String

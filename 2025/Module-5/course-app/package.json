@@ -8,13 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
     "@prisma/client": "^6.11.1",
     "@prisma/extension-accelerate": "^2.0.1",
     "next": "15.3.4",
     "node": "^24.2.0",
     "nvm": "^0.0.4",
-    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
