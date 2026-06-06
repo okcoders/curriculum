@@ -1,4 +1,5 @@
 export default function Card({ header, body }) {
+
   return (
     <div className="card bg-base-100 w-full max-w-4xl h-[80vh] shadow-xl border border-base-300">
       <div className="card-body gap-6 overflow-hidden">

@@ -13,7 +13,7 @@ export default function MealCard({ meal }) {
 
 
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card m-auto h-100 w-100 bg-base-100 shadow-xl">
             <figure>
                 <img src={meal.strMealThumb} alt={meal.strMeal} />
             </figure>
