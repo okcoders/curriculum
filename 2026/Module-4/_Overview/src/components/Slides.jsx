@@ -1,15 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import Card from "./Card";
 
-// Renders a sequence of cards: { header, body }[].
-// Used by each per-day route (Day1, Day2, ...) to drive the same UI.
 export default function Slides({ cards }) {
   const [index, setIndex] = useState(0);
+  const { pathname } = useLocation();
 
-  // Reset to the first card whenever the set of cards changes (e.g. route change).
   useEffect(() => {
     setIndex(0);
-  }, [cards]);
+  }, [pathname]);
+
+  useEffect(() => {
+    setIndex((i) => Math.min(i, cards.length - 1));
+  }, [cards.length]);
 
   const go = useCallback(
     (delta) =>
@@ -17,7 +20,6 @@ export default function Slides({ cards }) {
     [cards.length]
   );
 
-  // Arrow keys / space to navigate.
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowRight" || e.key === " ") go(1);
